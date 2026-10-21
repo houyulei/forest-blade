@@ -1,0 +1,82 @@
+{
+	"arch": {
+		"anchor": 319,
+		"height": 507,
+		"width": 488
+	},
+	"birch": {
+		"anchor": 215,
+		"height": 639,
+		"width": 419
+	},
+	"bramble": {
+		"anchor": 264,
+		"height": 412,
+		"width": 488
+	},
+	"crooked": {
+		"anchor": 410,
+		"height": 574,
+		"width": 674
+	},
+	"fallen": {
+		"anchor": 148,
+		"height": 364,
+		"width": 481
+	},
+	"ferns": {
+		"anchor": 255,
+		"height": 436,
+		"width": 489
+	},
+	"flowers": {
+		"anchor": 262,
+		"height": 398,
+		"width": 497
+	},
+	"lantern": {
+		"anchor": 266,
+		"height": 507,
+		"width": 439
+	},
+	"log": {
+		"anchor": 145,
+		"height": 405,
+		"width": 489
+	},
+	"mushrooms": {
+		"anchor": 260,
+		"height": 389,
+		"width": 484
+	},
+	"oak": {
+		"anchor": 398,
+		"height": 640,
+		"width": 777
+	},
+	"pillar": {
+		"anchor": 255,
+		"height": 499,
+		"width": 399
+	},
+	"rocks": {
+		"anchor": 255,
+		"height": 426,
+		"width": 492
+	},
+	"sapling": {
+		"anchor": 277,
+		"height": 575,
+		"width": 547
+	},
+	"shrine": {
+		"anchor": 237,
+		"height": 506,
+		"width": 483
+	},
+	"wall": {
+		"anchor": 381,
+		"height": 407,
+		"width": 501
+	}
+}

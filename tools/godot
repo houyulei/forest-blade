@@ -1,0 +1,18 @@
+#!/bin/sh
+# Prefer an explicitly configured binary, then standard macOS locations or PATH.
+if [ -n "${GODOT_BIN:-}" ]; then
+    exec "$GODOT_BIN" "$@"
+fi
+for godot_app in "$HOME/Applications/Godot.app/Contents/MacOS/Godot" /Applications/Godot.app/Contents/MacOS/Godot; do
+    if [ -x "$godot_app" ]; then
+        exec "$godot_app" "$@"
+    fi
+done
+if command -v godot >/dev/null 2>&1; then
+    exec godot "$@"
+fi
+if command -v godot4 >/dev/null 2>&1; then
+    exec godot4 "$@"
+fi
+printf '%s\n' 'Godot was not found. Install Godot 4.x or set GODOT_BIN to its executable.' >&2
+exit 127
