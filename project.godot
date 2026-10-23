@@ -1,10 +1,12 @@
 config_version=5
 
 [application]
-config/name="Forest Blade — Painted Hero 2.5D"
-run/main_scene="res://main.tscn"
+config/name="森之刃"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Godot/app_userdata/Forest Blade — Painted Hero 2.5D"
+run/main_scene="res://journey_chapter.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/description="A small fixed-camera action adventure prototype."
+config/description="固定镜头的林间动作冒险。"
 
 [display]
 window/size/viewport_width=1440
@@ -22,3 +24,6 @@ anti_aliasing/quality/msaa_3d=2
 
 [physics]
 common/physics_ticks_per_second=60
+
+[gui]
+theme/custom="res://assets/fonts/game_theme.tres"

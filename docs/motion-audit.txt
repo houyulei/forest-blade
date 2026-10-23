@@ -1,0 +1,64 @@
+动作复核与独立检查台
+
+本轮发现的问题
+1. 旧长枪提示词本身要求导向手靠近枪杆中段，枪尾又偏长，形成近似短棍的中段握持。
+2. 持枪跑步图仍混入送枪、跨步刺的姿势，六帧腿部变化也不够可靠。
+3. 火大剑与长枪跳跃借用跑步帧，受击借用攻击准备帧，造成动作含义混乱。
+4. 图集左右朝向、连段接帧及脚底锚点需要与实际播放共用映射。
+自动化战斗检查通过，只能说明状态、数值、时间和碰撞逻辑通过，不能证明握法和步态正确。
+
+已落实
+- 长枪待机、三连和贯突重绘为后段双手握持，枪尾缩短，枪杆主要伸向前方。
+- 火与雷跑步采用两层：独立的完整持械上身，加上沿用旧版已修好的腿部步态。
+  上身保持同一握持姿势，只有微幅上下起伏；侧跑腿部16帧，正背面腿部6帧。
+  腿部从既有 run / run-side 透明图集中技术切分，去除不属于腿部的手与旧武器残片。
+  上身是单独生成的透明部件，没有用矩形截断白裤来拼接，避免裤腿重复和水平断口。
+- 火大剑与长枪各有独立的受击、上升、下降、落地、跪地状态图。
+- 分层材质显式跟随相机朝向，保持与原 Sprite3D 一致，避免实际游戏中被透视压扁。
+- HeroSprite.display_frame / run_parts 同时供游戏和动作检查台使用，朝向、裁切、镜像与脚底定位共用。
+- 普攻伤害、攻击速度、范围、电能和成长存档沿用上轮规则。
+
+更高效的检查流程
+一、先在独立检查台检查大图姿势
+  ./tools/animation-lab
+  或打开 tools/animation-lab.html（已附导出的 animation-lab-data.js，可离线打开）。
+  三武器 × 待机、跑步、三段普攻、整段三连、特殊动作、跳跃、受击、冲刺、倒地。
+  空格播放/暂停；左右键按 1/60 秒单步；Shift+左右键切关键姿势。
+  支持 0.1 / 0.25 / 0.5 / 1 / 2 倍速、四方向同屏、前后姿势叠影、稳定取景和脚底网格。
+  关键帧条可以直接点击，时间轴显示游戏导出的前摇、命中、收招。
+  握点标注：暂停后依次标注枪尾、后手、前手、枪尖，可计算握点沿枪长的比例。
+  标注保存在浏览器本地，可导出 JSON；工具不会替用户将草稿写入角色素材或存档。
+
+二、改时间轴后导出一次，避免预览与实机使用两套数值
+  ./tools/godot --headless --path . --script scripts/export_motion_lab.gd
+  原始动作是关键帧图集，检查台不通过补帧制造本不存在的姿势。
+  取景按整段动作包围盒确定，不能按每帧包围盒缩放，否则会掩盖身体大小和锚点跳变。
+
+三、最后用实机验证材质、位移、碰撞、遮挡和命中特效
+  ./tools/godot --fixed-fps 60 --path . --minimized --disable-render-loop --script scripts/verify_motion_audit.gd -- --mute
+  不再为每个姿势反复进入关卡截图，只在动作检查通过后做实机回归。
+
+素材与复现
+新增素材使用内置 image_gen 生成，全部在 assets/hero/motion-audit-v3/，原画及完整提示词均保留。
+spear-guard-v3 / spear-low-v3 / spear-lunge-v3：长枪基础三连及贯突。
+spear-poses-v3 / greatsword-poses-v3：受击、跳跃、落地等状态。
+spear-carry-upper / greatsword-carry-upper：干净的持械上身层。
+spear-run-v3：跑步姿势来源及冲刺展示参考；正式跑步由上身层与腿部层合成。
+run-legs-side / run-legs-front / run-legs-back：既有跑步图集中提取的腿部层，不是新绘图。
+regions.json / upper-regions.json：显式裁切、方向选取、头发到衣摆的尺度和锚点。
+  python3 scripts/locate_audit_frames.py
+  ./tools/godot --headless --path . --script scripts/prepare_weapon_art.gd -- --audit
+  python3 scripts/locate_run_upper.py
+  ./tools/godot --headless --path . --script scripts/prepare_carry_upper.gd
+  ./tools/godot --headless --path . --script scripts/prepare_run_parts.gd
+  ./tools/godot --headless --editor --path . --quit
+  ./tools/godot --headless --path . --script scripts/export_motion_lab.gd
+
+验收与边界
+实机动作专项22项、普攻78项、三武器系统51项、风剑动作回归28项通过。
+检查台浏览器自检19项，覆盖导出数据、实际图片路径、播放/暂停/单步、四向取景、标注、分层步态和专用跳跃状态。
+实机报告 artifacts/motion-audit-verification.json；浏览器报告 artifacts/motion-lab-selftest.html。
+画面复核 artifacts/audit-game-*.png；检查台示例 artifacts/audit-spear-run-final.png。
+当前采用四方向关键帧与上下身分层，尚不支持连续八方向。
+部分左向使用右向镜像，无法完全保留惯用手差别。背向贯刺的释放姿势复用同握法的干净平刺帧，
+避免缺帧或混入旧中段握法；第三击的时间、踏进距离和伤害仍独立。

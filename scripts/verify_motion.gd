@@ -3,6 +3,7 @@ extends SceneTree
 var game
 var checks: Array = []
 func _initialize() -> void:
+	set_meta("isolated_adventure",true)
 	run.call_deferred()
 func wait_physics(count: int) -> void:
 	for i in range(count):
@@ -24,6 +25,8 @@ func run() -> void:
 	root.add_child(game)
 	game.muted = true
 	game.enemy.set_physics_process(false)
+	for goblin in game.bokoblins:
+		goblin.set_physics_process(false)
 	await wait_physics(30)
 	game.hero.position = Vector3(0,0.05,2)
 	await wait_physics(15)

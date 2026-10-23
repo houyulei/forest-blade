@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+repo_dir=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+cd "$repo_dir"
+./tools/godot --headless --path . --script scripts/export_motion_lab.gd
+open tools/animation-lab.html

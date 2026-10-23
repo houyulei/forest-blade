@@ -1,0 +1,6 @@
+
+BLACKSMITH NPC
+Use case: stylized-concept. Asset type: transparent NPC character sprite for a hand-painted fixed-camera 2.5D action RPG.
+Create ONE full-body friendly adult village BLACKSMITH standing relaxed, seen in front three-quarter view from a modest elevated game camera. Match the attached forest game's crisp painted JRPG shading and line detail. Broad sturdy adult man, short dark-brown hair, short beard, warm calm expression, rolled cream linen sleeves, weathered chestnut leather apron over muted charcoal shirt, work trousers, thick leather boots, simple tool belt. Hammer rests down beside one thigh, tongs tucked into belt. Both feet planted, neutral conversational pose, human proportions, about 1.2 times the boy protagonist's height. No armor, no fantasy glowing weapon, no headgear.
+Only the blacksmith himself, no anvil, no forge, no stool, no scenery, no floor, no cast shadow. Full body and hammer entirely visible with generous transparent margin. TRUE transparent alpha background, no text or frame. Restrained rich hand painting, not low-poly, not pixel art, not photorealistic.
+

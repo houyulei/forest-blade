@@ -1,0 +1,9 @@
+村庄实际材质素材，2026-10-23。均使用内置 image_gen 工具生成，非外部游戏提取资源。
+plaster.png：墙面反照率，来源 exec-2f4d60e6-713b-4c76-8ed3-f9023109fdb2.png。
+完整提示词：Use case: stylized-concept. Asset type: seamless square albedo texture for real 3D rural cottage walls in a cel shaded anime adventure game, visual language of Breath of the Wild. Flat orthographic close-up of warm pale ochre lime plaster, subtle irregular worn patches and a few small exposed pale stones. Entire image is wall surface, even diffuse illumination, hand painted restrained broad color variation, no black outlines, no shadow, no ambient occlusion, no perspective, no borders, no text, no objects, no framing, no photoreal micro noise. Tileable all four edges. Square texture.
+
+foliage-card.png：透明枝叶卡片，来源 exec-e57976bb-123c-4094-918c-11562f2a0481.png。
+完整提示词：Use case: stylized-concept. Asset type: alpha cutout foliage card texture for real 3D tree canopies. A single airy branching spray of approximately 45 small natural oak leaves, branching twigs visible, arranged with many irregular transparent gaps. Fresh olive yellow-green spring foliage, 3 shades, simple hand painted cel game appearance inspired by Breath of the Wild. Top view flat orthographic, even lighting no cast shadow, restrained botanical detail, no photoreal surface. Complete isolated branch spray fits inside square canvas, no leaf touches canvas edge. Genuine transparent background, no white matte no border no text. Needs a crisp organic silhouette for alpha-scissor rendering.
+
+两张素材均保留生成原图并复制到当前目录；没有把目标概念图作为实机背景。
+评估过外部 CC0 自然模型下载，但供应方提示下载配额已用尽，未导入这些模型。

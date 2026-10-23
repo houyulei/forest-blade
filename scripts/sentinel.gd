@@ -1,15 +1,16 @@
 class_name Sentinel
 extends CharacterBody3D
 
-var hp: int = 9
-var max_hp: int = 9
+var hp: int = 90
+var max_hp: int = 90
 var alive: bool = true
 var arena: Node3D
 var hero: Hero
 var visual: Node3D
 var core: MeshInstance3D
 var warning: MeshInstance3D
-var hp_fill: MeshInstance3D
+var hp_fill: Sprite3D
+var health: Sprite3D
 var sprite: Sprite3D
 const SPRITES := preload("res://assets/sentinel/sentinel.png")
 var clock: float = 0
@@ -25,11 +26,7 @@ func _ready() -> void:
 	collision_layer = 4
 	collision_mask = 1
 	var c := CollisionShape3D.new()
-	var s := CapsuleShape3D.new()
-	s.radius = 0.46
-	s.height = 1.4
-	c.position.y = 0.7
-	c.shape = s
+	ActorSizes.configure_capsule(c,"sentinel")
 	add_child(c)
 	visual = Node3D.new()
 	add_child(visual)
@@ -38,7 +35,7 @@ func _ready() -> void:
 	sprite.texture = SPRITES
 	sprite.hframes = 4
 	sprite.vframes = 4
-	sprite.pixel_size = 0.009
+	sprite.pixel_size = ActorSizes.pixel_size("sentinel")
 	sprite.offset = Vector2(0,112)
 	sprite.billboard = BaseMaterial3D.BILLBOARD_ENABLED
 	sprite.shaded = false
@@ -47,13 +44,20 @@ func _ready() -> void:
 	sprite.texture_filter = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
 	sprite.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	visual.add_child(sprite)
-	var contact := Craft.cylinder(self,Vector3(0,0.015,0),0.40,0.40,0.006,Craft.material(Color(0.06,0.10,0.09,0.22)),32)
-	contact.scale.z = 0.7
+	var footprint := ActorSizes.shadow_size("sentinel")
+	var contact := Craft.cylinder(self,Vector3(0,0.015,0),footprint.x*0.5,footprint.x*0.5,0.006,Craft.material(Color(0.06,0.10,0.09,0.22)),32)
+	contact.scale.z = footprint.y/footprint.x
 	contact.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 	warning = Craft.ring(arena, Vector3(position.x, 0.04, position.z), 1.7, 0.07, Craft.material(Color(1, 0.38, 0.20, 0.7), 0.4, 0.8))
 	warning.visible = false
-	Craft.box(self, Vector3(0, 1.97, 0), Vector3(1.02, 0.06, 0.07), Craft.material(Color("263e41")))
-	hp_fill = Craft.box(self, Vector3(0, 1.98, 0.015), Vector3(0.96, 0.045, 0.07), Craft.material(Color("f0bc72"), 0.5, 0.4))
+	health = ActorSizes.make_health_bar(self,Color("263e41"),Vector2i(120,7))
+	hp_fill = ActorSizes.make_health_bar(self,Color("f0bc72"),Vector2i(114,3))
+	hp_fill.render_priority = 1
+	update_health_position()
+
+func update_health_position() -> void:
+	health.position = ActorSizes.health_position("sentinel",arena.camera)
+	hp_fill.position = health.position-arena.camera.global_basis.x*(1.0-float(hp)/max_hp)*0.456
 
 func _physics_process(delta: float) -> void:
 	clock += delta
@@ -81,7 +85,7 @@ func _physics_process(delta: float) -> void:
 				if distance > 1.65:
 					velocity.x += direction.x * 1.65
 					velocity.z += direction.z * 1.65
-				else:
+				elif arena.can_enemy_attack(self):
 					state = "windup"
 					timer = 0.85
 					attack_direction = direction
@@ -107,6 +111,10 @@ func _physics_process(delta: float) -> void:
 					state = "chase"
 	visual.position.y = sin(clock * 4) * 0.035
 	move_and_slide()
+	update_visual(direction)
+
+func update_visual(direction: Vector3) -> void:
+	update_health_position()
 	hp_fill.scale.x = float(hp) / max_hp
 	var camera: Camera3D = arena.camera
 	var screen_x := direction.dot(camera.global_basis.x)
@@ -119,6 +127,7 @@ func _physics_process(delta: float) -> void:
 		column = 1
 	elif state == "recover":
 		column = 2 if timer > 0.95 else 3
+	sprite.pixel_size = ActorSizes.pixel_size("sentinel",row)
 	sprite.frame_coords = Vector2i(column,row)
 	visual.rotation.y = 0
 
@@ -142,11 +151,11 @@ func take_hit(amount: int, direction: Vector3, heavy: bool = false) -> void:
 	if hp <= 0:
 		alive = false
 		warning.visible = false
-		hp_fill.get_parent().get_child(hp_fill.get_index() - 1).visible = false
+		health.visible = false
 		hp_fill.visible = false
 		disable_collider()
 		arena.burst(global_position + Vector3.UP * 0.7, Color("a2e1ca"), 24)
-		arena.victory()
+		arena.enemy_defeated(self)
 
 func disable_collider() -> void:
 	for child in get_children():

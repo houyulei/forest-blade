@@ -1,0 +1,91 @@
+历史版本记录：现已被 docs/three-swords.txt 中的三剑方案替代。旧火核存档会自动迁移。
+
+Forest Blade：剑、火能力与常驻成长首版
+更新：2026-10-21
+
+一、已确定的方向
+固定地图探索与战斗的 ARPG。怪物掉素材、玩家合成和强化装备，也可以出售材料换钱。
+不做肉鸽、不做波次挑战、不做战后三选一强化。
+武器类型先只做剑；用火、风、雷能力扩展玩法。当前只实现火能力，风与雷尚未实现。
+这是首个可玩闭环，不代表完整装备系统或最终战斗数值。
+
+二、本版实际完成
+1. 旅行剑三连击：基础伤害 10，三段附加伤害分别为 0、1、4，动作时长 0.34、0.37、0.52 秒。
+   每个目标每次挥剑最多受击一次，命中恢复 4 MP，加入短暂停顿。
+   动作打磨版已为回斩和重劈加入独立补绘图集，第二击不再倒序；时间轴与取消规则见 action-polish.txt。
+2. Q 爆炎斩：消耗 35 MP，冷却 3 秒，动作 0.90 秒，在动作进度 48% 时释放一次。
+   蓄力阶段可以被受伤打断，消耗不返还；释放后没有持续重复伤害。
+   四方向、四阶段独立人物图集，共 16 姿势。火焰、冲击环和火星由运行时绘制。
+   以角色前方 1.15 单位为爆心，初始半径 1.30、伤害 22；实体障碍会遮挡。
+   空中、冲刺中、普攻中、MP 不足、冷却中、未装备火核时无法施放。
+   MP 上限 100，每秒恢复 2。
+3. 固定遭遇：两只红色波克布林与一只石卫。普通敌人伤害仍为 1，主角仍为 5 HP。
+   波克布林 HP 40，石卫 HP 90；原有 4/9 HP 改为 40/90，以便强化提供细分变化。
+4. 怪物死亡掉金币与素材，靠近自动拾取。死亡奖励和同一拾取物均防重复领取。
+5. 铁匠 NPC 阿伦：位于东侧空地、石炉和铁砧旁，有名字标记；靠近按 E 对话。
+   锻造/强化/出售均是 NPC 对话选项，没有独立锻造界面。
+   邻近仍有活敌人时不能开始对话。选择“休息片刻后离开”可恢复 HP/MP；E 或 Esc 直接退出。
+6. I 打开独立装备界面：主角立绘、旅行剑强化级别、当前火核、攻击力、火伤、MP、材料与金币。
+   可装备初始火核、切换到已合成的精炼火核，或卸下火核；卸下后 Q 不可用。
+   当前只有一把常驻旅行剑，尚无防具、饰品和多把剑的物品库。装备界面不放强化/出售按钮。
+   装备与对话期间暂停主角和敌人的物理行为；关闭时恢复原有处理状态。
+7. 金币、材料、剑强化与火核装备自动存档。重新进地图或 R 重置地图会刷新敌人和角色状态，保留成长。
+   此版 R 是原型的回访/重置入口，尚无正式地图切换与传送系统。
+
+三、掉落与铁匠配方（首版调试值）
+波克布林：金币 8、铁矿 1、怪物牙 1。
+石卫：金币 30、铁矿 3、守卫碎片 1。
+一次清场合计：金币 46、铁矿 5、怪物牙 2、守卫碎片 1。
+
+剑 +1：铁矿 2、怪物牙 1、金币 12。
+剑 +2：铁矿 4、怪物牙 2、守卫碎片 1、金币 30。
+剑 +3：铁矿 6、怪物牙 3、守卫碎片 2、金币 60。
+当前强化上限 +3；基础剑伤害 = 10 + 强化级别 × 2。
+
+精炼火核：铁矿 2、怪物牙 1、守卫碎片 1、金币 25。只能合成一次，完成时自动装备。
+初始火核：火伤 = 22 + 剑强化级别 × 3，半径 1.30。
+精炼火核：再增加 8 点火伤，半径扩大为 1.60。
+第一场清场可以同时完成剑 +1 和精炼火核，剩余金币 9、铁矿 1。
+
+卖给铁匠的单价：铁矿 4 金，怪物牙 3 金，守卫碎片 10 金。每次对话选项出售一个。
+所有配方先检查资源；不足不会扣款。保存失败会回滚本次资源/装备变动。
+这些是虚构游戏经济的测试数值，后续根据实际游玩调整。
+
+四、存档与验证
+存档：Godot user://adventure-save-v1.json，采用临时文件写入后替换。
+macOS 本项目通常位于：
+~/Library/Application Support/Godot/app_userdata/Forest Blade — Painted Hero 2.5D/adventure-save-v1.json
+具体以 project.godot 的项目名和 Godot 的 user data 配置为准。
+存档保存成长；地图敌人、临时掉落物、当前 HP/MP 和坐标不写入存档。
+自动验证通过树元数据注入隔离进度，不读写玩家正常存档；磁盘读写用验证专属文件，完成后删除。
+
+流程验证：
+./tools/godot --headless --path . --script scripts/verify_adventure.gd
+实际画面与流程验证：
+./tools/godot --path . --script scripts/verify_adventure.gd -- --mute
+结果：artifacts/adventure-verification.json、adventure-visual-verification.log。
+截图：artifacts/adventure-equipment.png、adventure-upgraded-equipment.png、
+      adventure-blacksmith.png、adventure-blacksmith-dialogue.png、adventure-fire-skill.png、adventure-material-drops.png。
+原有玩法、波克布林、尺寸、侧跑检查继续保留。
+
+五、实现文件与素材
+scripts/adventure_progress.gd：物品、金币、配方、成长、装备和持久化事务。
+scripts/adventure_ui.gd：战斗 HUD、独立装备界面、铁匠对话树。
+scripts/forest_forge.gd：铁匠 NPC、石炉、铁砧及交互位置。
+scripts/loot_pickup.gd：可拾取掉落物。
+scripts/fire_burst.gd：火焰、冲击环与火星。
+scripts/hero.gd、hero_sprite.gd：火能力、伤害、MP 与四方向动作。
+scripts/verify_adventure.gd：真实节点、输入、命中、掉落、NPC、装备、资源扣除、存档与地图重进验证。
+
+本轮图像使用内置 image_gen。选用资产：
+assets/hero/fire-source.png → fire.png；切帧坐标 fire-regions.json。
+assets/forge/forge-source.png → forge.png。
+assets/forge/smith-source.png → smith.png。
+完整原始提示词：assets/forge/generation-prompts.txt（火技能和工作台）、smith-prompt.txt（铁匠）。
+切帧/透明主体提取：scripts/prepare_adventure_art.gd；仅技术整理，不重新绘制图像。
+
+六、后续顺序建议（尚未开发）
+先试玩打磨爆炎斩蓄力、范围、命中反馈和装备操作，随后实现风/雷各一项清楚的招式差异。
+风用于位移/挑空，雷用于穿透/短暂控制；避免只换颜色与伤害倍率。
+继续扩展固定区域与回访，加入蝙蝠等不同高度/节奏的敌人，随后再考虑更多剑、防具和饰品。
+完整背包排序、物品详情、任务、商店列表、地图存档与锻造动画均尚未实现。

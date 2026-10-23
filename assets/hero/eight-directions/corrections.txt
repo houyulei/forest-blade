@@ -1,0 +1,18 @@
+使用内置 image_gen，透明底；没有使用 API/CLI 备用生成。
+
+修正一：thunder-attack-1-diagonal-corrected-source.png
+仅修正第一排六个姿势：front-left three-quarter，朝 LOWER LEFT，鼻尖、视线、膝盖与枪尖朝左；
+前方枪头在左下，后方金色尾端在右臀旁。保持原角色、服装、比例、六阶段、四行六列，其余三排保留。
+生成后第四帧仍有单手握持、第四排两帧连在一起，运行图改用同向已检查的低刺双手姿势。
+
+修正二：thunder-run-diagonal-corrected-source.png
+只修改武器：single-headed spear，前方保留一个 silver leaf spearhead，后端改为 rounded golden pommel。
+第一排枪头左下／尾端右上；第二排枪头左上／尾端右下；第三排枪头右上／尾端左下；
+第四排枪头右下／尾端左上。保持 24 个角色的跑步动作、脚底位置、比例、服装与透明背景。
+
+修正三：thunder-attack-3-diagonal-corrected-source.png
+修正前两排朝向：第一排前左、朝左下突刺；第二排后左、朝左上突刺；下两排保留。
+单枪头、棕色枪杆、双手握持、六阶段前刺与收招，保持身份、比例、服装和四行六列透明图集。
+生成后第一排接触和随动仍错误朝右，运行图这两帧使用同向低刺中已检查的双手姿势。
+
+初始完整提示词及参考图片见 generation-plan.json；实际选帧与复用见 regions.json 和 locate_eight_frames.py。

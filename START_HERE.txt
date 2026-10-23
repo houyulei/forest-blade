@@ -1,80 +1,19 @@
-Forest Blade — Painted Hero 2.5D
-3D 场景 + 2D 主角 / 敌人，可玩比较版
+森之刃 · 第一章完整探索版
 
-启动：双击本目录 Play.command；也可用 Godot 导入 project.godot 后按 F5。
-本仓库为 3D 场景 + 2D 角色版本；不需要同级工作目录或 Pon 仓库。
-需要 Godot 4.x（本机验证版本 4.7.2），无其他运行依赖。
-命令行使用本仓库 tools/godot；Windows / Linux 可直接用 Godot 编辑器导入项目。
+双击 Play.command 开始。原 VillagePreview.command 现在也打开正式游戏。
+标题页点击“踏上旅途／继续旅程”，或按 Enter。
 
-操作：
-WASD / 方向键：按屏幕方向移动
-空格：跳跃，可跳过守卫的地面攻击
-J / 鼠标左键：挥剑，连续按可衔接三段连招
-Shift：向面朝方向冲刺，短暂无敌并带冷却
-R：重新开始
-M：开关音效
+WASD／方向键 移动　J／左键 普攻　K 武器技　Q 满槽魔法
+1／2／3 切换武器　空格 跳跃　Shift 冲刺　E 交互
+I 装备　B 背包　T 委托　Tab 地图　4 回复药　5 魔力药
+Esc 暂停／关闭界面　R 从当前营火或区域入口重新出发
 
-当前完成：
-主角为约 11–12 岁黑发少年，红围巾、轻甲、蓝色上衣。
-四方向主角图像共 72 帧：跑步 24 帧，挥剑 24 帧，待机及跳跃姿势 24 帧。
-图像由内置 image_gen 根据 concepts/hero-adol-inspired-v1.png 生成。
-原始透明图集、完整提示词和切帧区域保存在 assets/hero/。
-Godot 处理了切帧、透明碎片、统一画布和脚底对齐。
-主角和守卫在游戏中均使用 Sprite3D 精灵，碰撞仍为 CharacterBody3D。
-敌人现为 AI 绘制的苔藓石头守卫，四方向共 16 帧，与森林环境统一画风。
-场景使用绘制的地表、树木、植被和遗迹卡片；台地、台阶、地形碰撞和刀光为 3D。
-环境包含 4 种树木、6 组植被道具、6 种苔藓遗迹，以及林地和石材贴图。
-布局改为不规则林间空地：后方可跳上的遗迹台地、侧边断墙和石柱、前景树冠及路边植被群。
-新增林荫斑驳、轻微光束、浮游光点、树根接触阴影；遮住主角的树冠会逐渐淡化。
-固定镜头角度并平滑跟随，精灵保留深度遮挡；脚下影子独立追踪地面高度。
-已取消旧版 1/3 分辨率的像素化，保留绘制人物的细节。
+先与水井附近的村长榆伯交谈，再到北门找侦察员璃娜。
+探索村庄、森林与洞穴，收集素材、开宝箱、点亮营火；击败黄金波克布林后回村交付。
+三张地图共 19,200 地表面积，是原 VillagePreview 行走范围的 5 倍。
+8 位交互角色，7 项委托，32 采集点，9 宝箱，3 货箱，4 营火，六槽装备与药品背包。
+存档自动保存；回到标题或重新启动会从已保存的营火／区域入口继续。
 
-当前为四方向动作小样，AI 图像之间仍有细小造型差异；三段连招复用同一挥剑序列，第二击倒序播放，第三击附加环形刀光。
-受伤采用闪烁，倒地暂用姿势和压缩表现，尚未制作独立受伤 / 死亡图像。
-二维主角不会随场景灯光改变明暗；树木与遗迹卡片的光影主要来自绘制，未实现完整动态投影。
-
-主要文件：
-scripts/hero_sprite.gd：主角精灵、方向和动作切换、脚下影子
-scripts/hero.gd：移动、跳跃、攻击及伤害逻辑
-scripts/sentinel.gd：精灵守卫、预警和攻击逻辑
-scripts/main.gd：相机、界面、玩法检查
-scripts/forest_sanctuary.gd：新森林布局、地表材质、真实结构碰撞、前景遮挡淡化
-scripts/prepare_environment.gd：环境图集切分及脚底锚点
-scripts/prepare_guardian.gd：绘制守卫图集整理
-scripts/prepare_sprites.gd：由原始图片和 frame-regions.json 重新整理主角图集
-scripts/render_sentinel.gd：旧 3D 守卫预渲染参考，输出 sentinel-legacy.png，不覆盖新版守卫
-scripts/sentinel_model_source.gd：仅在离线预渲染时使用的原 3D 守卫
-scripts/boy.gd 与 model_sheet.gd：保留的旧版模型参考；游戏不使用该 3D 主角
-
-验证：
-./tools/godot --headless --path . --quit-after 1500 -- --verify
-运行结果：artifacts/verification.log
-实际运行截图：artifacts/first-light.png、attack.png、jump.png、occlusion.png、canopy-fade.png
-截图命令：
-./tools/godot --path . --quit-after 320 -- --capture --mute
-
-重新整理主角图集（开发工具，不属于游戏运行步骤）：
-./tools/godot --headless --path . --script res://scripts/prepare_sprites.gd
-./tools/godot --headless --path . --editor --import
-
-本轮环境生成：内置 image_gen。素材与完整提示词分别位于 assets/environment/ 和 assets/sentinel/。
-旧简模场景脚本、截图和守卫已备份到 artifacts/before-forest-art/。
-新关卡通过 22 项检查，包括前景树冠淡化、真实台阶落地及原有战斗、重开流程。
-
-运行性能记录：artifacts/performance.json；前景树冠位置预热 2 秒后静态采样 5 秒，1280×800 窗口、全分辨率世界、2x MSAA。
-该记录不是复杂战斗压力测试；截图存盘会阻塞帧，截图过程读数不作为正常运行帧率。
-性能测试命令：./tools/godot --path . --quit-after 1000 -- --benchmark --mute
-
-侧跑动作修复（2026-10-21）：
-侧跑改用 16 帧分层骨骼烘焙图集 run-side.png。近腿、远腿独立髋/膝关节，错开半个周期，双臂反向摆动。跑姿第二版增加约 9° 上身前倾、脚跟向后折叠回收、蹬地与腾空阶段，并收窄裤腿轮廓。
-动画相位由实际水平位移推进；停住或受阻不会继续原地跑。移动方向由当前相机计算，斜向切换加入容差。
-左右跑、停步、跳跃和挥剑图集切换通过 16 项专项检查，原有 22 项玩法检查通过。
-当前左右侧跑使用镜像共享图集，左右方向的武器配件也会镜像；前后方向保留原图集。
-分层原图和生成提示词：assets/hero/run-rig/parts-source.png、generation-prompt.txt。
-烘焙工具（需真实渲染器）：./tools/godot --path . --script scripts/bake_side_run.gd
-专项检查（需真实渲染器）：./tools/godot --path . --script scripts/verify_motion.gd -- --mute
-结果：artifacts/motion-verification.json；侧跑全循环：artifacts/side-run-contact.png。
-实际游戏截图：artifacts/motion-left-12.png、motion-right-28.png。
-修改前版本保留在 artifacts/before-motion-polish/；artifacts/.gdignore 防止备份脚本被注册为游戏类。
-
-跑姿第二版预览：artifacts/run-pose-v2-preview.gif；上一版备份：artifacts/before-run-pose-v2/。
+文档：docs/第一章完整探索版.txt；开发接续先读 AGENTS.md 和 docs/开发交接.txt。
+截图查看：tools/journey-review.html。
+旧 chapter_one.tscn、main.tscn 保留供回归；独立薄暮／伊苏比较仍可从各自入口查看。

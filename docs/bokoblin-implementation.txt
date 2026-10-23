@@ -1,0 +1,82 @@
+红色波克布林 实现与验收
+日期：2026-10-21
+状态：已接入当前森林关卡。基础阶，木棒近战。
+
+启动与操作
+双击 Play.command，或用 Godot 导入 project.godot 后按 F5。
+关卡中有两只基础波克布林与一只苔藓石卫。WASD 移动，J / 左键挥剑，空格跳跃，Shift 冲刺，R 重开。
+扇形橙色区域提示波克布林的攻击方向；抬棒后方向锁定，可侧移或冲刺躲开。圆形区域仍表示石卫的砸地。
+击败三只敌人才完成遭遇。界面显示当前剩余数量。
+
+实际参数
+生命 40；每次挥棒造成 1 点伤害。（成长闭环版由原型 HP 4 放大为 40，剑基础伤害同步由 1 调整为 10。）
+追踪速度 2.35 世界单位/秒，闲逛速度 0.85，返回速度 1.8。
+发现距离 5.8，需要可见直线；脱离追击距离 7.8，出生点领地半径 8.5。
+警觉停顿 0.42 秒；挥棒前摇 0.68 秒，生效 0.18 秒，收招 0.90 秒。
+近身发动距离 1.42，实际打击范围 1.85，扇形半角 0.70 弧度。
+普通受击硬直 0.28 秒，重击硬直 0.48 秒。受击立即取消未完成攻击。
+同次挥棒最多命中主角一次；主角的无敌时间、冲刺与目标高度继续参与判定。
+每次主角挥剑对同一敌人最多结算一次，并优先辅助瞄准前方最近的合格目标。
+最多同时有两个敌人处于蓄力/攻击阶段；屏幕外敌人不能发起攻击。
+
+行为
+闲置/小范围闲逛 → 发现并警觉 → 追踪 → 锁定方向并举棒 → 落棒 → 收招 → 再追踪。
+离开领地或失去追击距离后返回出生点。
+移动中有邻近敌人的软分离；地形碰撞限制移动。当前仍使用直接追踪，未实现完整导航绕障。
+死亡会取消预警与攻击，关闭碰撞，播放绘制的跌倒与倒地姿势并淡出。
+
+美术与图集
+内置 image_gen 生成透明图像；沿用当前主角的绘制细节，角色设计参考《旷野之息》红色波克布林与木棒。
+外观参考：https://www.nintendo.com/us/amiibo/detail/bokoblin-amiibo-the-legend-of-zelda-series/
+
+assets/bokoblin/walk-source.png：第一版行走原图，保留用于对照。
+assets/bokoblin/walk-source-v2.png：当前使用的行走原图，修正后半周期的前后腿辨识。
+assets/bokoblin/combat-source.png：警戒、蓄力、抬棒、命中、随挥与收招原图。
+assets/bokoblin/damage-source.png：受击、跌倒、倒地原图。
+assets/bokoblin/walk.png：6 列×3 行，18 个行走姿势。
+assets/bokoblin/combat.png：6 列×3 行，18 个战斗姿势。
+assets/bokoblin/damage.png：3 列×3 行，9 个受击与死亡姿势。
+三行分别为前、左侧、后；向右使用镜像，武器侧也随之镜像。
+共 45 个运行时姿势。每格 320×320，共用脚底与躯干锚点。
+每个方向采用固定缩放，避免因举高木棒导致整个身体被缩小；修正源图中个别反向姿势，并保留死亡时分离的木棒。
+不依据移动中的脚部质量重新居中，避免脚动而身体抖动。
+行走随实际移动距离推进，闲置使用警戒姿势；挥棒使用独立战斗关键帧。
+
+完整生成与修正提示词：
+assets/bokoblin/generation-prompts.txt
+切分区域和原图坐标：assets/bokoblin/frame-regions.json
+方向修正、根锚点及缩放：scripts/prepare_bokoblin.gd
+
+代码
+scripts/bokoblin.gd：新敌人的移动、状态、攻击、表现与受击。
+scripts/main.gd：两只新敌人出生、攻击名额、剩余计数、统一遭遇完成。
+scripts/sentinel.gd：石卫加入攻击名额，死亡由场景统一判断胜利。
+scripts/hero.gd：多目标时辅助瞄准最近的合格敌人。
+scripts/prepare_sprites.gd：透明连通区域切分函数改为静态，供新图集工具复用。
+scripts/verify_motion.gd：冻结新敌人，保持原角色动作测试的隔离性。
+
+验证与预览
+基础玩法：./tools/godot --headless --path . --quit-after 1500 -- --verify
+本轮 23 项基础玩法检查通过。
+结果：artifacts/verification.log
+
+波克布林专项：./tools/godot --path . --script scripts/verify_bokoblin.gd -- --mute
+可在 --headless 模式运行逻辑检查；实机模式会额外保存截图。
+本轮实机模式 26 项专项检查通过。
+结果：artifacts/bokoblin-verification.log、bokoblin-verification.json
+覆盖四方向、发现、追踪、抬棒前摇、命中时间、单次结算、侧移躲避、背后与高度排除、墙体阻挡、受击取消、主角命中、最近目标、重击硬直、返回领地、攻击名额、屏幕外限制、死亡、多怪胜利与重开。
+
+原角色动作：./tools/godot --path . --script scripts/verify_motion.gd -- --mute
+本轮 16 项角色动作检查通过。
+结果：artifacts/motion-verification.log、motion-verification.json
+
+重新切分：./tools/godot --headless --path . --script scripts/prepare_bokoblin.gd
+生成预览帧：./tools/godot --path . --script scripts/preview_bokoblin.gd
+实机截图：artifacts/bokoblin-encounter.png、bokoblin-windup.png、bokoblin-strike.png、bokoblin-hurt.png、bokoblin-defeated.png。
+
+范围
+本轮只完成红色基础阶、木棒近战。其他颜色阶位、盾/弓/长兵、召集营地、掉落与元素机制继续按设计文档后续推进。
+
+动图预览：artifacts/bokoblin-preview.gif（运行时姿势顺序演示，非实机战斗录像）。
+
+尺寸更新：波克布林可见身高调整为主角的 0.80 倍，碰撞、影子、血条间距和步态距离随统一配置联动。见 actor-sizes.txt 与 scripts/actor_sizes.gd。

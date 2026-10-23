@@ -1,0 +1,390 @@
+森之刃开发交接文档
+更新时间：2026-10-23
+用途：让新会话在不依赖旧聊天记录的情况下继续开发。
+
+一、先读这几条
+
+最新交付（2026-10-23）：用户选择 VillagePreview 路线，并要求完成地图扩大、采集宝箱、
+药品装备、更多 NPC／任务及完整游戏流程。原先“只做画风探索”的边界已被该指令取代。
+默认入口已改为 journey_chapter.tscn → scripts/journey_chapter.gd。
+双击 Play.command 或 VillagePreview.command 都打开扩展后的正式第一章；标题页 Enter 继续。
+旧 chapter_one.tscn 保留用于旧关卡回归，原 main.tscn 仍是旧圣所回归，不是正式入口。
+
+采用 VillagePreview 的真实 3D 地形、房屋、树荫、溪流与原 2D 精灵角色，没有恢复骨骼或换成全 3D 人物。
+三张区域各 80×80，总地表边界面积 19,200，相对所选旧预览行走范围 60×64 的 3,840 为 5 倍。
+新增 32 个一次性采集点、9 个宝箱、3 个委托货箱、4 处可点燃休整的营火。
+村庄 7 位新增村民＋铁匠，共 8 位交互角色，7 项委托（含首领主线），商人／药师有补给交易。
+六槽装备（武器、头、身体、鞋、两饰品）、药品背包、委托日志、区域地图、暂停／标题均接入。
+6 栋村舍、三处森林哨点 12 名敌人、洞穴 6 守卫与黄金首领，探索／回村交付形成闭环。
+装备真实影响生命、攻击、速度、物防与独立三抗；负抗性保留，防御只作用物理，不加元素相克或增伤。
+
+JourneyProgress 继承原进度，用可选 journey 字段保存探索标记、药品、装备、任务和检查点，仍兼容 version=1/2。
+AdventureProgress 现在会透传并深拷贝该字段，防止旧场景保存时丢弃新数据。
+领取、消耗、购买、装备、交付与首领奖励均在保存失败时回滚；所有验证／截图隔离真实存档。
+新增流程 86 项、旧成长 25 项、三武器 51 项、旧关卡 42 项检查通过。
+详细数量、操作、限制、测试与截图见 docs/第一章完整探索版.txt。
+用户明确说运行电脑性能更强，不要过度关注本机帧率；保留森林 48 树／每树 240 可见枝叶实例，
+只保留静态网格合批和基本阴影范围优化，不再以本机帧率为由降低画面密度。
+
+薄暮／伊苏对比仍保留为独立参考；此前否定的旧换图、几何卡通与重复局部试作已清理，不恢复。
+获准概念图 assets/style-volume-v2/target-concept-refined.png 保留；当前游戏尚不等于概念图的成品美术精度。
+
+1. 当前默认入口为第一大关「深林的金色獠牙」：青芽村 → 波克布林森林 → 幽根洞穴 → 黄金波克布林。
+   当前地图与新增系统见 docs/第一章完整探索版.txt；原森林圣所保留作为回归场景。
+   这是可运行的 Godot 固定镜头 ARPG，不是空项目，也不是 Pon 的直接续改。
+   不需要克隆 Pon 或依赖同级目录。已有战斗、怪物、成长、铁匠、装备和动作检查工具。
+2. 用户目前最看重动作质量：姿势、握法、腿部交替、重心、攻击方向和武器重量感。
+   不能用“自动测试通过”代替对动作是否自然、是否好看的判断。
+3. 用户已明确：本轮分层骨骼探索失败，删除相关代码和文档。清理已完成。
+   保持精灵图路线，不自行重建骨骼实验，不以简化色块或木偶动作作为成品。
+4. 所有玩家可见文字使用简体中文。
+5. 本地有大量未提交的功能代码和素材；GitHub 远端不是当前工作区的完整状态。
+   开工先看 git status，不要 reset、clean、覆盖未提交工作，或重新从旧提交搭建。
+
+二、项目位置与运行环境
+
+本机路径：/Users/houyulei/work/workspace/arpg-workbench/forest-blade-2d
+远端仓库：https://github.com/houyulei/forest-blade
+记录时 HEAD：bfc7c31，早期可玩原型提交；之后的许多功能仍在工作区。
+游戏名：森之刃；早期英文名称 Forest Blade — Painted Hero 2.5D。
+引擎：Godot，GDScript；本机已验证版本 4.7.2，GL Compatibility 渲染。
+默认运行入口：project.godot → journey_chapter.tscn → scripts/journey_chapter.gd。
+旧 chapter_one.tscn 保留为扩展前关卡回归。
+原森林圣所：main.tscn → scripts/main.gd，原动作、成长和三武器测试仍加载此场景。
+运行窗口 1280×800，设计视口 1440×900，canvas_items 拉伸，物理 60 tick。
+没有 npm、Node 构建或外部运行时服务依赖；Python 仅用于部分离线素材整理或检查。
+
+在项目根目录运行：
+  ./tools/godot --headless --editor --path . --quit
+  ./tools/godot --path .
+第一条用于首次导入或新增素材后刷新 Godot 缓存，第二条正常启动游戏。
+macOS 也可双击 Play.command；编辑器导入 project.godot 后按 F5。
+tools/godot 优先使用 GODOT_BIN，然后本机 Applications 下的 Godot，最后尝试 PATH。
+本机安装位置：/Users/houyulei/Applications/Godot.app/Contents/MacOS/Godot。
+换电脑需先安装 Godot；Windows/Linux 可直接使用编辑器或对应 Godot 可执行文件。
+
+三、用户确定的产品与美术方向
+
+固定镜头、3D 场景和碰撞、2D 手绘精灵角色，保留清晰的日式 ARPG 观感。
+主角是约 11—12 岁黑发人类少年，红围巾、蓝色上衣、轻甲、棕色靴子。
+初期参考伊苏的动作节奏；不以完整原神级 3D 角色或开放世界作为当前交付目标。
+场景已有绘制地表、树木、植被和遗迹卡片，以及真实 3D 台地、台阶和障碍碰撞。
+主角和怪物用 Sprite3D 面向镜头显示，物理实体仍是 CharacterBody3D。
+保持完整显示分辨率；main.gd 的 PIXEL_SCALE 当前为 1，不要恢复早期低分辨率像素化。
+
+这是常规 ARPG：固定地图战斗、拾取素材和金币、找铁匠合成与强化、出售材料、装备管理。
+不要增加肉鸽流程、波次组合或战后三选一。锻造通过铁匠对话完成，不另做独立锻造面板。
+装备界面已实现。三种武器目前均开放，方便试玩比较，不必额外设计解锁流程。
+怪物体系参考颜色等级、种族与元素变体；大清单只是设计草案，没有要求全量开发。
+
+四、当前可玩的内容与操作
+
+当前正式第一章：青芽村 → 波克布林森林 → 幽根洞穴 → 黄金波克布林 → 回村交付。
+三张地图各 80×80，八位交互角色、七项委托、采集宝箱、营火、六槽装备与药品。
+森林十二名哨兵、洞穴六名守卫；先清理哨点开放洞口，清理守卫再深入首领巢穴。
+靠近对象按 E 交谈／采集／开箱／营火／切换区域；靠近敌人或隔着实体障碍不能领取。
+R 从当前营火或区域入口重返，恢复并重建本区域敌人；永久成长和领取标记保留。
+原 main.tscn 圣所和 chapter_one.tscn 首版只用于回归，不代表当前地图大小和敌人数。
+
+  WASD / 方向键：相对屏幕移动
+  空格：跳跃；Shift：冲刺
+  J / 左键：三连，火大剑待机长按蓄力；K：武器技；Q：当前武器满槽魔法
+  1 / 2 / 3：风剑 / 火大剑 / 雷长枪
+  E：交互；I：六槽装备；B：背包与药品；T：委托；Tab：区域地图
+  4：回复药；5：魔力药；Esc：暂停／关闭；R：从检查点重返
+  M：音效开关；暂停页也可切换音效、保存和查看操作
+
+主角裸装生命 5，速度 4.8，装备可提高生命、攻击和速度。三武器魔法槽保持独立。
+完整界面和存档规则见 docs/第一章完整探索版.txt。
+
+五、武器与战斗当前规则
+
+身份、名称与基础攻击：scripts/sword_arsenal.gd。
+普攻时间轴、命中窗、进身、范围、伤害附加、取消点：scripts/sword_motion.gd。
+普攻实际判定与输入：scripts/hero.gd。
+武器技、魔法、电能、蓄力、切换：scripts/blade_combat.gd。
+
+未强化三段普攻：
+  苍岚剑 wind：伤害 10 / 11 / 14；时长 0.34 / 0.37 / 0.52 秒。
+  焰锋大剑 fire：伤害 18 / 22 / 30；时长 0.50 / 0.54 / 0.70 秒。
+  鸣雷长枪 thunder：伤害 8 / 8 / 11；时长 0.24 / 0.22 / 0.32 秒。
+时长不包含命中停顿；强化每级给该武器每段普攻加 2。
+大剑重而慢，长枪快而远；不要只换贴图而把节奏、伤害、范围改成相同。
+
+风剑：三连斩后继续点 J 可接旋舞，最多五段；K 可直接起舞。
+  每段旋舞 0.34 秒，使用独立 16 姿势图集；Q 是苍岚龙卷。
+大剑：肩上斜劈 → 反向横斩 → 过顶重劈，避免从脚下反常抬起作为主要重斩。
+  范围 2.15 / 2.30 / 2.50，第三击收窄为前方重劈。K 按住蓄力、松开释放。
+  待机按 J 不足 0.18 秒松开转普攻，已等待的时间计入前摇。
+  续段窗口内按 J 必须直接接下一击，不能重新进入蓄力导致三连重置。
+  满蓄力 1 秒，持续至 1.2 秒自动释放；蓄力姿势为双手过顶，释放后向前出火焰。
+  Q 是贯焰火球；旧“Q 脚下爆炎”不再参与当前战斗。
+长枪：平刺 → 低刺 → 踏步贯刺，三段都必须保留为基础动作。
+  范围 2.80 / 2.95 / 3.15，左右各宽 0.36 / 0.36 / 0.42，为前方窄直线。
+  每次普攻首次命中最多积一格电，最多三格；K 主动雷光贯突，满电强化。
+  连按 J 不自动变成突进。Q 是跃雷连锁，偏多目标，不应让孤立敌人无限回弹。
+
+共同约束：
+一次普攻对同一目标只结算一次；多目标仅首次接触触发本次角色命中停顿。
+攻击开始保存武器和伤害快照；受击打断动作并清除输入缓存。
+攻击前摇不允许随意取消，后摇过取消点可冲刺；出手可进身，收招不持续滑行。
+火与雷排除背后目标；高度和实体障碍影响判定，不能隔墙打击。
+雷贯突使用真实角色移动与碰撞，不能穿墙；只有生效段短暂无敌。
+动作、命中和刀光共用时间轴，不要各写一套互不一致的阈值。
+三武器各有 0—100 魔法槽：当前武器每秒恢复 2，普攻命中恢复 8，Q 消耗满槽。
+切换不凭空补槽；进入地图或铁匠休息会补满，临时槽与电能不写永久存档。
+
+六、角色精灵与素材：后续打磨最常用的部分
+
+scripts/hero_sprite.gd 是显示入口：
+  normal_atlas(weapon, combo)：每把武器每一段普攻所用的图集。
+  state_atlas(weapon)：受击、跳跃、落地等姿势图集。
+  display_frame(atlas, column, direction)：裁切格、朝向行、镜像、脚底基线。
+  run_parts(weapon, direction, phase)：火/雷跑步的上身和腿部两层。
+上述映射同时用于游戏和浏览器检查台；改朝向或图集时只在共用入口处理。
+主角现已接入八向；HeroDirections + HeroEightArt 为运行与检查台的共用入口。
+direction8：0 正面、1 左前、2 左侧、3 左后、4 背面、5 右后、6 右侧、7 右前。
+direction_row 仍是旧正交图集索引：0 正面、1 左侧、2 右侧、3 背面。不要将其直接改为八行。
+新增素材、复用帧和验证方法见 docs/主角八向动作.txt。敌人本轮保留原方向素材。
+
+当前主要素材：
+  assets/hero/：风剑基础跑步、姿势、三段攻击；run-side.png 是 16 帧侧跑。
+  assets/hero/three-swords/：风旋舞和元素特效等；部分火/雷早期身体图已被后续版本替代。
+  assets/hero/weapon-redesign/：大剑 cut / sweep / cleave 三连，持械跑步和其他历史武器来源。
+  assets/hero/motion-audit-v3/：当前长枪三连、火雷状态姿势、持械上身和跑步腿部。
+具体使用以 HeroSprite 顶部 preload、normal_atlas 和 run_parts 为准，不能见到文件名就认定仍在用。
+
+长枪当前使用 spear-guard-v3 / spear-low-v3 / spear-lunge-v3；不是旧 spear-attack。
+火/雷跑步是图片上下身分层，不是实时骨架：
+  spear-carry-upper / greatsword-carry-upper：干净完整的持械上身。
+  run-legs-side：16 帧侧向腿部；run-legs-front / back：各 6 帧。
+  下身沿用之前修好的精灵步态；上身固定握持，仅微幅起伏。
+  跑步相位由真实水平位移推进，撞墙停住不继续跑，瞬移不应突然推进大量步态。
+火雷状态图列索引：0 站姿、1 受击、2 上升、3 下降、4 落地、5 跪地。
+普攻等待续段时保留上一段第 5 列的收势；下一段起手与上一段收尾衔接。
+风剑第二击侧面最后一帧有重叠歧义，当前保持第 4 列；检查台也做相同处理。
+
+常见画布规格并存，不能统一写死：
+  基础图集多为每格 320；大剑部分图集每格 640；motion-audit-v3 三连/状态每格 768。
+  通用脚底基线为 cell × 0.875，Sprite3D 显示 offset.y 为 cell × 0.375。
+  特例由 display_frame 处理，例如 RUN_SIDE 的 16 列、SPIN 的 4×4 时间顺序。
+  上身图为 4 列单行、每格 768；腿部图为每格 320×150，使用独立位置锚点。
+不要把纹理留白、举高的武器或整帧包围盒当成人体高度来缩放。
+
+scripts/actor_sizes.gd 统一人体尺度、碰撞、影子和头顶 UI：
+  主角 1.60（基准 1.00 倍）、波克布林 1.28（0.80 倍）、石卫 2.56（1.60 倍）。
+  单位用于画面比例，不是少年真实米制身高。reference_pixels 按方向测站立本体。
+  不通过缩放 CharacterBody3D 根节点来调整角色大小；颜色等级不自动改变体型。
+
+重要材质陷阱：火雷分层跑步使用自定义 spatial shader。
+  material_override 会覆盖 Sprite3D 的默认材质行为；shader 顶点阶段必须显式面向镜头。
+  RUN_LAYER_SHADER 中 MODELVIEW_MATRIX 的 billboard 计算不能随意删去。
+  否则浏览器预览正常，实机仍可能把上身压扁；这类问题数值测试不一定能发现。
+  腰部以淡入和微小深度偏移处理，避免接缝与闪烁；不要叠入旧手或旧武器残片。
+
+七、素材生成与整理流程
+
+先确认要改的具体武器、方向、阶段与问题，不盲目整套重新生成。
+现有原画 *-source.png、提示词 *-prompt.txt、regions.json 都要保留，选用素材放进项目。
+AI 输出并不可靠遵守列数、行数、方向或动作顺序；必须看图核对实际布局与握持。
+透明图集需要检查 alpha 连通区域、邻格串入、脚底锚点、人体尺度、手与武器一致性。
+只改画面帧序时先复用现有素材；新增绘制使用可用的图像生成工具，遵循该会话的技能要求。
+不要用临时多边形人代替用户希望看到的手绘成品。
+
+motion-audit-v3 的重建命令（只在对应原画或元数据改动后运行）：
+  python3 scripts/locate_audit_frames.py
+  ./tools/godot --headless --path . --script scripts/prepare_weapon_art.gd -- --audit
+  python3 scripts/locate_run_upper.py
+  ./tools/godot --headless --path . --script scripts/prepare_carry_upper.gd
+  ./tools/godot --headless --path . --script scripts/prepare_run_parts.gd
+  ./tools/godot --headless --editor --path . --quit
+  ./tools/godot --headless --path . --script scripts/export_motion_lab.gd
+Python 检测脚本使用 Pillow / NumPy。编辑显式元数据后不要无意运行检测脚本将其覆盖。
+prepare_weapon_art.gd 不带 --audit 时处理旧 weapon-redesign 规格，不是当前长枪来源。
+不要为了验证启动而重跑所有素材脚本，以免覆盖已经核对过的图集。
+
+八、动作检查台与画面验收
+
+  ./tools/animation-lab
+会从 Godot 导出当前映射和时间轴，再在 macOS 浏览器打开 tools/animation-lab.html。
+也可直接打开 HTML 离线查看已随项目保存的 tools/animation-lab-data.js。
+修改脚本时间轴或图集后需要重新导出，不要把旧数据当作当前结果。
+检查台覆盖三武器、11 类动作、四方向、每段 121 个采样，共 15972 样本。
+支持：慢放、暂停、1/60 秒单步、关键姿势跳转、四向并排、叠影、脚底网格。
+握点标注为手工标注，存浏览器 localStorage，可导出 JSON；不是自动识别正确握法。
+按整段动作包围盒稳定取景；不要逐帧自动缩放，避免掩盖人体变大变小和脚底跳动。
+检查台播放真实图集关键帧，不用虚构补帧掩饰不完整动作。
+检查台不模拟完整战斗位移、相机遮挡、碰撞、敌人反应与特效，最后仍要回到实机。
+
+画面核对顺序：
+  静态握持和人体比例 → 双腿完整循环 → 三连起承转合 → 四向与镜像 → 实机命中和环境。
+  长枪双手在后段、前后手有间距，不能抓枪杆正中；持械跑步不能混成连续刺击。
+  大剑应有双手、蓄势、过顶下劈和收势，不能只把普通剑放大。
+  对同一阶段比较身体、脚底、武器长度与握点，不只选一张好看的截图。
+  测试通过报告与审美评价分开写，保留尚未解决的视觉问题。
+
+浏览器自检需要 HTTP 服务（资源检查会发 HEAD 请求）：
+  python3 -m http.server 8765 --bind 127.0.0.1
+  http://127.0.0.1:8765/tools/animation-lab.html?selftest=1
+脚本 tools/verify-animation-lab.js 仅在 selftest 参数下运行，页面末尾输出报告。
+它会操作本机标注数据，自动化时使用独立浏览器配置；不要把它当作视觉审美验收。
+可以使用本机 Chrome headless 截图和检查 DOM；Playwright/Puppeteer 不是项目依赖。
+
+九、成长、存档与铁匠
+
+scripts/adventure_progress.gd 是进度与事务入口。
+三武器各自强化至 +3。铁匠“强化武器”作用于当前装备的武器。
+  +1：铁矿 2、怪物牙 1、金币 12。
+  +2：铁矿 4、怪物牙 2、守卫碎片 1、金币 30。
+  +3：铁矿 6、怪物牙 3、守卫碎片 2、金币 60。
+精炼火结晶：铁矿 2、怪物牙 1、守卫碎片 1、金币 25，仅一次，永久增强火能力。
+材料卖价：铁矿 4、怪物牙 3、守卫碎片 10。
+一只波克布林掉金币 8、铁矿 1、怪物牙 1；石卫掉金币 30、铁矿 3、守卫碎片 1。
+一次原圣所完整收益为金币 46、铁矿 5、怪物牙 2、守卫碎片 1。
+扩展前第一大关八只普通敌人加首领的收益为金币 144、铁矿 13、怪物牙 11、守卫碎片 2（历史）。
+当前完整探索版十八只普通敌人加首领基础收益为金币 224、铁矿 23、怪物牙 21、守卫碎片 2；另有探索与委托奖励。
+掉落拾取只能入账一次；保存失败应回滚资源事务，而不是显示成功。
+
+文件名仍为 user://adventure-save-v1.json，内容 version 已为 2。
+本机目录：~/Library/Application Support/Godot/app_userdata/Forest Blade — Painted Hero 2.5D/。
+不要因中文游戏名更改 custom_user_dir_name，否则会误以为旧存档丢失。
+保存 equipped_sword、sword_levels、金币、材料及旧兼容字段；不保存当前动作、电能和魔法槽。
+第一大关新增可选 chapter_one_completed 标记，仍是 version=2；旧档默认 false，失败保存回滚。
+区域击杀记录不写长期存档；启动从村庄出发，当前区域 R 可重新挑战。
+旧版旅行剑强化迁移至 fire，旧火核状态保留；第一次保存迁移会创建 .v1.bak。
+先写 .tmp，再重命名替换正式文件。不要为了简化代码删除迁移、备份和失败回滚。
+测试加载主场景前设置 SceneTree 元数据 isolated_adventure=true，或使用临时 save_path。
+main.gd 的 --verify / --capture / --benchmark 也会隔离持久化。
+新建测试或截图脚本不能直接污染用户的真实成长存档。
+
+十、脚本职责地图
+
+  chapter_one.gd：第一大关主控制，继承 main.gd 复用战斗／铁匠基础，重写区域、UI 与镜头。
+  chapter_landscape.gd / chapter_map.gd：三张固定场景、碰撞与小地图。
+  golden_bokoblin.gd：首领变体、挥棒／震地／冲锋及半血阶段。
+
+  main.gd：场景装配、输入注册、相机与全分辨率子视口、HUD、菜单暂停、敌人协调、掉落、重开。
+  hero.gd：角色物理、输入、普攻、命中、连段与取消、受击和无敌。
+  hero_sprite.gd：朝向、图集映射、状态姿势、上下身分层跑步、脚底锚点和地面影子。
+  sword_motion.gd：三武器三段普攻的共用时间轴与范围参数。
+  sword_arsenal.gd：武器定义、名称、颜色、基础攻击和说明。
+  blade_combat.gd：武器技、魔法、电能、充能、切换及动作姿势选择。
+  sword_effect.gd：飞行效果、扫掠碰撞、贯穿、墙体阻挡、龙卷和雷连锁。
+  blade_fx.gd：元素动画、充能光效、雷弧和视觉淡出。
+  actor_sizes.gd：人体尺寸、碰撞胶囊、影子、步幅和头顶 UI 尺度。
+  bokoblin.gd：红色木棒敌人的巡游、警觉、追逐、攻击、受击、返回、死亡。
+  sentinel.gd：苔藓石卫及圆形砸地预警。
+  forest_sanctuary.gd：绘制森林、结构碰撞、前景树冠淡化与环境效果。
+  adventure_progress.gd：永久成长、存档、配方、出售、装备事务。
+  adventure_ui.gd：装备界面与铁匠对话；菜单打开时暂停角色和攻击效果。
+  forest_forge.gd：铁匠与工作台显示、碰撞和交互位置。
+  loot_pickup.gd：掉落实体、拾取和单次入账。
+  export_motion_lab.gd：读取实际显示规则和战斗参数，导出浏览器检查数据。
+  prepare_*.gd / locate_*.py：离线素材整理，不是日常游戏启动步骤。
+
+旧 boy.gd、model_sheet.gd、sentinel_model_source.gd 等不是当前主角显示入口。
+fire_burst.gd 是早期火能力遗留，不应拿它替代当前 SwordEffect 火球/火焰。
+run-rig/ 与 bake_side_run.gd 是更早的侧跑烘焙来源，现运行用其预制 PNG。
+它们不属于刚刚删除的动态骨骼实验；不要误删当前仍使用的 run-side.png 和腿部来源。
+
+十一、怪物现状与扩展边界
+
+红色波克布林已实现，不只是一张图：生命 40、木棒近战、警觉和锁定攻击方向。
+前摇 0.68 秒、生效 0.18 秒、收招 0.90 秒；可侧移、跳跃/冲刺避让，受击中断。
+有领地返回、邻近软分离、屏幕外不发起攻击和最多两个敌人同时准备/攻击的协调。
+当前直接追踪，没有完整导航绕障。三种图集 WALK/COMBAT/DAMAGE，不同列数不能混用。
+石卫生命 90，大体型、圆形地面攻击；与波克布林共用场景敌人计数和协调。
+第一大关已实现黄金波克布林首领，生命 300，带三招预警与半血阶段；不是全种族黄金阶系统。
+蝙蝠、蓝黑白银等等级、其他种族和其他 Boss 没有全部实现。
+docs/monster-design.txt 是种族/等级/元素变体计划，不能写成已完成内容或一次性全量开发任务。
+
+十二、验证命令与可信范围
+
+命令在项目根目录执行；第一次拉取先导入，日志和截图输出至 artifacts/。
+物理动作测试统一使用 --fixed-fps 60，避免变量帧时序导致不稳定。
+按修改范围选择，不需要文档小改也重跑全部战斗。涉及图集时仍必须看实际画面。
+
+2026-10-23 第一大关实际验证：关卡 42 项、原成长 25 项、三武器 51 项通过；
+默认启动、导入、三张实际渲染截图已复核，报告与边界见 docs/第一大关.txt。
+
+无窗口逻辑检查示例：
+  ./tools/godot --headless --fixed-fps 60 --path . --script scripts/verify_chapter_one.gd
+  ./tools/godot --headless --fixed-fps 60 --path . --script scripts/verify_elemental_normals.gd
+  ./tools/godot --headless --fixed-fps 60 --path . --script scripts/verify_three_swords.gd
+  ./tools/godot --headless --fixed-fps 60 --path . --script scripts/verify_action_polish.gd
+  ./tools/godot --headless --fixed-fps 60 --path . --script scripts/verify_adventure.gd
+  ./tools/godot --headless --fixed-fps 60 --path . --script scripts/verify_actor_sizes.gd
+  ./tools/godot --headless --fixed-fps 60 --path . --script scripts/verify_bokoblin.gd
+
+动作与分层材质的真实渲染复核：
+  ./tools/godot --fixed-fps 60 --path . --minimized --disable-render-loop --script scripts/verify_motion_audit.gd -- --mute
+该脚本显式 RenderingServer.force_draw()，生成 audit-game-*.png。
+原侧跑动作检查需要渲染器：
+  ./tools/godot --fixed-fps 60 --path . --script scripts/verify_motion.gd -- --mute
+全关卡基础检查：
+  ./tools/godot --headless --fixed-fps 60 --path . --quit-after 1500 -- --verify
+实际三武器动作录制：
+  ./tools/godot --fixed-fps 60 --path . --minimized --disable-render-loop --script scripts/record_weapon_combos.gd -- --mute
+
+交接时现存报告的历史通过记录（本次编写文档没有重新运行这些游戏测试）：
+  motion-audit-verification.json：22 项，火雷四向分层、空中/受击/落地/倒地。
+  elemental-normal-verification.json：78 项，普攻时序、伤害、范围、墙体、连段和输入。
+  three-swords-verification.json：51 项，武器技、魔法、资源、切换与存档兼容。
+  action-polish-verification.json：28 项，基础动作及取消/打断回归。
+  adventure-verification.json：25 项，掉落、铁匠、装备、进度与存档。
+  bokoblin-verification.json：26 项，怪物行为、战斗、协调、胜利与重开。
+  actor-sizes-verification.json：20 项，体型、胶囊、UI 和对照。
+  motion-verification.json：16 项，侧跑和动作切换。
+  浏览器动作检查台：历史 19 项通过；以 ?selftest=1 的当次结果为准。
+这些记录仅证明各自检查的规则；不能据此声称所有动作已被用户验收。
+
+artifacts/ 默认被 .gitignore 排除，仅 .gdignore 保留；新电脑没有旧报告和截图很正常。
+缺报告时按命令重建，不要把不存在的历史图片链接当作可交付成果。
+.godot/ 是本地导入缓存，不提交；实际使用的素材、元数据、提示词与 .gd.uid 应随代码保留。
+
+十三、已知视觉问题与已放弃方案
+
+目前仍为四方向关键帧，不是连续八方向；部分左右镜像会改变惯用手和配件方向。
+长枪背向第三刺释放部分复用已核对的干净平刺姿势；不是每个阶段都拥有全新独立绘图。
+火雷持械上身跑步主要是固定握姿加起伏；稳定性提高，但身体扭转和跑动灵活性仍有限。
+AI 整帧图集存在细节漂移、肢体/武器不一致、缺帧、错误朝向和列数不符等风险。
+火雷已有专用受击/空中/落地图，风剑部分表现仍较早期；不要照旧文档说三者都已完整重绘。
+风剑倒地仍有压缩表现，火雷用跪地姿势；全部死亡动作并未达到完整手绘规格。
+角色仍为不受光精灵；当前正式场景已经使用真实 3D 几何、灯光与投影，树叶使用透明贴图。
+当前完成第一章固定区域探索、任务和检查点；更多章节与最终经济平衡未制作。
+
+明确终止的本轮探索：
+  Skeleton2D/Bone2D 动态分层骨骼、简化色块原型、手绘骨骼分件版和骨骼浏览器对比。
+  用户评价观感不好，明确要求删除；相关实验脚本、场景、素材、工具、预览和专题文档均已清理。
+  不应从旧聊天描述或旧浏览器标签中尝试恢复这些文件，更不能宣称骨骼是已确定的后续路线。
+后续动作改进以当前精灵素材、专绘关键姿势、映射与时序打磨为基础；新方向以用户新指令为准。
+
+十四、专题文档优先级与新会话开工顺序
+
+当前事实优先顺序：用户最新指令 → 实际脚本与选用素材 → 本交接文档 → 专题资料 → 旧说明。
+  docs/第一章完整探索版.txt：当前默认第一章的地图、探索、药品装备、村民任务与验证。
+  docs/场景画风对比03.txt：历史薄暮／伊苏独立对比，现已选定 VillagePreview 路线。
+  docs/第一大关.txt：最新默认入口、三张场景、黄金首领、回访与实际验证。
+  docs/属性与装备系统设计.txt：2026-10-22 设计提案 v0.3：删除相克和分元素增伤，防御只影响物理，独立三抗及负值表达弱风／弱火／弱雷／弱物理；含六槽装备、配方、迁移与进一步简化建议，尚未实施。
+  docs/motion-audit.txt：最新精灵持械、上下身分层与检查台。
+  docs/weapon-polish.txt：三种武器形态、普攻参数；部分素材路径/跳跃描述为上一轮历史状态。
+  docs/three-swords.txt：武器技、魔法、成长与存档；部分身体动作图集描述早于最新素材。
+  docs/actor-sizes.txt：尺寸标准。
+  docs/bokoblin-implementation.txt：红色敌人的实现。
+  docs/monster-design.txt：未全部实施的怪物规划。
+  docs/action-polish.txt、arpg-first-slice.txt：更早阶段记录，不能用旧火核操作覆盖三武器现状。
+START_HERE.txt 提供简短当前入口；AGENTS.md 会引导新会话先读本文件。
+
+建议新会话按以下顺序继续：
+  1. 确认实际 cwd，阅读 AGENTS.md 和本文件，查看 git status。
+  2. 根据用户本次任务只读相关脚本；动作任务先看 HeroSprite、SwordMotion、BladeCombat。
+  3. 启动现有游戏和动作检查台，确认问题的武器、方向、动作阶段，留下修改前对照。
+  4. 小范围修改；保持映射、脚底、人体尺度、伤害和命中时间轴一致。
+  5. 导出检查台数据，慢放逐帧检查，再执行对应功能测试和实机复核。
+  6. 如实区分完成内容、测试证据与剩余视觉问题，更新本交接文档。
+除非用户本次要求，不主动推送 GitHub、改成长模式、重建整套人物或扩展所有怪物种类。
+
+可直接贴给新会话的任务开头：
+  请打开 /Users/houyulei/work/workspace/arpg-workbench/forest-blade-2d，先阅读 AGENTS.md 和
+  docs/开发交接.txt，检查工作区状态，在现有精灵图 ARPG 上继续开发。
+  不恢复已放弃的骨骼实验，保留现有未提交工作。本次任务是：〔填写要继续的具体内容〕。

@@ -1,0 +1,68 @@
+当前动作素材、分层跑步和检查工具已更新，详见 docs/motion-audit.txt；下文保留上一轮三连参数。
+
+武器造型与普攻打磨
+
+当前三种武器：苍岚剑（风）、焰锋大剑（火）、鸣雷长枪（雷）。
+按 1 / 2 / 3 切换。J / 左键普攻，K 武器技，Q 满槽元素魔法。
+火大剑仍支持从待机按住 J 蓄力（续段窗口内 J 直接接下一击，K 可在收招后蓄力）；短按累计的时间计入普通攻击前摇，避免重复等待。
+
+未强化普攻（三段分别列出）：
+火大剑：伤害 18 / 22 / 30；出招 0.50 / 0.54 / 0.70 秒。
+  正前宽扇面，半径 2.15 / 2.30 / 2.50；第三击收窄为约 77 度的前方重劈，换取高伤害。
+  两手握长柄：肩上斜劈 → 反向横斩 → 过顶重劈。第三击蓄势更长。
+  蓄力也改为双手举过头顶，松开后向前重劈并释放贯穿火焰。
+  命中停顿 0.045 / 0.050 / 0.075 秒，保持重量感。
+雷长枪：伤害 8 / 8 / 11；出招 0.24 / 0.22 / 0.32 秒。
+  正前窄直线，长度 2.80 / 2.95 / 3.15，左右各宽 0.36 / 0.36 / 0.42。
+  双手分开握枪杆：平刺 → 低刺 → 踏步贯刺；第三刺踏进更远。
+  每次普攻命中最多积一格电，最多三格；K 主动释放雷光贯突，满电时强化。
+  连按 J 不再自动转成突进，持续基础三连。
+  命中停顿 0.012 / 0.012 / 0.022 秒，避免快攻被卡顿拖慢。
+出招时间不含命中停顿；每级强化对该武器各段伤害均加 2。
+风剑原有三连斩、旋身连舞和龙卷保留。
+
+共同规则：
+- 命中与完全出剑/出枪关键姿势对齐，刀光/枪芒使用同一时间轴。
+- 一次普攻对每个目标只伤害一次；多人命中只在第一次接触时触发角色停顿。
+- 火与雷不攻击背后的贴身目标；场景实体遮挡伤害；长枪侧向不再随距离无限变宽。
+- 出手时小步进身，收招不滑行。后摇允许闪避取消，前摇不能直接取消。
+- 当前攻击保存伤害快照；受击会中断攻击并清除缓存输入。
+- 火大剑向左使用一致朝向的镜像侧身姿势，修正源图中途转向的问题。
+
+素材：使用内置 image_gen 生成；八张实际使用的图集各有四方向 × 六帧：
+assets/hero/weapon-redesign/greatsword-cut.png：肩上斜劈。
+assets/hero/weapon-redesign/greatsword-sweep.png：反向横斩。
+assets/hero/weapon-redesign/greatsword-cleave.png：过顶重劈/蓄力。
+assets/hero/weapon-redesign/greatsword-run.png：双手持大剑跑步。
+assets/hero/weapon-redesign/spear-attack.png：平刺。
+assets/hero/weapon-redesign/spear-low.png：低刺。
+assets/hero/weapon-redesign/spear-lunge.png：踏步长刺/强化贯突。
+assets/hero/weapon-redesign/spear-run.png：双手持枪跑步。
+同目录保存各图的 *-source.png 原画、*-prompt.txt 完整提示词和 regions.json 锚点记录。
+旧 greatsword-attack 图集仅保留历史来源，不再接入角色动作。
+整理只做透明区切帧、等比缩放、脚底定位和相邻连段关键帧衔接。
+下一击起手复用上一击最后一帧；等待续段输入时保留上一击收势，不跳回待机。
+大剑左向采用右向镜像，避免源图在释放时转向相反方向。
+测量深色头发至脚底的身体高度，抬高武器不再导致人物本体缩小。
+图集每格 640，脚底基线 560，显示偏移 240；本体尺度维持 ActorSizes，留白容纳长武器。
+移动使用各自持械跑步图集；跳跃、冲刺和受击保持装备武器，不再变回短剑。
+跳跃借用持械跑步中的屈膝姿势，尚非另绘完整空中动作；当前仍为四方向六关键帧表现。
+
+复现：
+python3 scripts/locate_weapon_frames.py
+./tools/godot --headless --path . --script scripts/prepare_weapon_art.gd
+./tools/godot --headless --editor --path . --quit
+
+验收：
+./tools/godot --headless --fixed-fps 60 --path . --script scripts/verify_elemental_normals.gd
+实机录制（最小化窗口，显式渲染，不影响实际动作）：
+./tools/godot --fixed-fps 60 --path . --minimized --disable-render-loop --script scripts/record_weapon_combos.gd -- --mute
+报告：artifacts/elemental-normal-verification.json。
+专项覆盖各段实际伤害/停顿、命中姿势、收招位移、扇面与长距、背后目标、墙体遮挡、
+多目标去重、受伤打断、实际按键连段、短按前摇、持械四向移动和跳跃。
+装备页显示三段伤害与出招时间，铁匠继续强化当前武器。
+沿用 fire / thunder 内部标识与原存档字段，旧强化等级、材料、金币、火结晶保留。
+
+最终验收：普攻专项 78 项、三武器系统 51 项、风剑动作回归 28 项、成长流程 25 项通过。
+实机预览：artifacts/weapon-combos-preview.webp（301 帧，四方向三连、大剑蓄力、长枪贯突）。
+装备截图：artifacts/weapon-combo-equipment.png。

@@ -1,0 +1,35 @@
+WALK ATLAS
+Use case: stylized-concept. Asset type: production transparent animation sprite sheet for a fixed-camera 2.5D action RPG.
+Create the RED BOKOBLIN from The Legend of Zelda Breath of the Wild, adapted into crisp hand-painted anime JRPG sprites matching the attached boy sprite's brushwork and detail. The attached image is STYLE ONLY, not the character. A squat lively red-orange goblin: very large batlike ears, piglike broad snout, small cream forehead horn, yellow eyes, scruffy pale hair, fang necklace, ragged dark-brown loincloth and leather belt, bare clawed feet, long skinny arms, chunky blunt wooden Boko club held in right hand. No helmet, no sword. Recognizable BotW proportions, mischievous aggressive, not photorealistic, not pixel art, not a 3D render.
+EXACT GRID 6 columns x 3 rows = 18 separate FULL BODY character drawings. Every figure and club completely contained in its own equal cell, with generous empty transparent gutters and a common ground baseline per row. Canvas landscape 1536x1024. TRUE TRANSPARENT BACKGROUND outside the drawings, no floor, no shadows, no colored panels, no labels or grid. Same character size, body proportions, clothing, horn and club in every frame. Camera slightly above to see tops of shoulders, suited for elevated fixed game view.
+ROW 1: front three-quarter view, moving toward viewer.
+ROW 2: left-facing SIDE three-quarter view, moving toward LEFT.
+ROW 3: rear three-quarter view, moving away from viewer.
+Each row is a COMPLETE SIX-POSE JOG CYCLE with visible alternation of BOTH feet. Pose 1 right foot reaches forward and left leg behind; pose 2 right foot supports, left knee passes; pose 3 left foot reaches forward, right leg recoils; pose 4 left foot contacts ground and right leg behind; pose 5 left foot supports, right knee passes; pose 6 right foot reaches forward, left leg recoils. Both legs must take a turn in front. Do not repeat identical standing poses or keep the same leg fixed. Low athletic forward lean, playful bounding goblin gait, relaxed asymmetrical arms balancing the wooden club at hip, readable feet and knees. Avoid high-stepping stiff march. Consistent torso mass and head registration across each row; subtle natural up/down bounce only. All 18 figures clearly separated.
+
+COMBAT ATLAS
+Use case: stylized-concept. Asset type: transparent game COMBAT animation atlas. The attached image defines the EXACT red Bokoblin character: red-orange skin, huge ears, pale scruffy hair, little cream forehead horn, pig snout, yellow eyes, fang necklace, brown rag loincloth, leather wrist wraps, white cloth wrap on one knee, heavy wooden club in the right hand. Keep identical proportions, character identity, brushwork, line weight, palette and club. Full-body, slightly elevated JRPG camera, detailed hand-painted game sprite.
+EXACT grid SIX columns by THREE rows = 18 full separate drawings. Each in equal cell, common ground baseline, consistent scale and body root, generous transparent gutters. True transparent outside characters. No colored backgrounds, no floor, no shadow, no text, no grid, no speed trails.
+ROW 1 faces front/down toward viewer, ROW 2 faces LEFT side three-quarter, ROW 3 faces back/up away from viewer.
+Within EACH row tell this same attack sequence left-to-right:
+1 GUARD IDLE: both feet planted apart, knees soft, club held down at hip, relaxed free arm, alert.
+2 ANTICIPATION: knees crouch, torso winds up, right arm begins lifting club behind shoulder.
+3 FULL WINDUP: club clearly held HIGH OVERHEAD and behind head, body weight on rear foot, free arm counterbalances, entire raised club remains in cell.
+4 IMPACT: powerful forward DOWNWARD club strike, torso pitches forward, club extended low in front in attack-facing direction, forward foot planted. Pose must differ DRAMATICALLY from frame3.
+5 FOLLOW THROUGH: club finishes low across opposite side, body weight on leading leg, knees compressed, shoulders rotated.
+6 RECOVERY: raise torso, bring club back toward hip, regain ready stance.
+Same exact club attached to the same hand; left profile forward means club strikes to LEFT; front row strike toward viewer; rear row strike away from viewer. Strong clear silhouettes and real joint articulation. Do not use six nearly identical standing poses. No extra limbs or weapons.
+
+DAMAGE ATLAS
+Use case: stylized-concept. Asset type: transparent game sprite sheet, hurt and defeat poses.
+Attached image is exact character identity and paint style reference. Draw the same red Bokoblin with huge ears, cream horn, pale scruffy hair, fang necklace, rag loincloth, one wrapped knee, leather wrists, wooden club. Identical face, proportions, clothing and hand-painted JRPG rendering.
+EXACT grid THREE columns x THREE rows, nine individual FULL BODY drawings, evenly spaced, all parts including club fully inside each cell. True transparent outside characters, no ground, no shadow, no labels, no panels. Modest elevated camera as reference.
+Row1 front/down three-quarter, Row2 LEFT-facing three-quarter side, Row3 back/up three-quarter.
+Column1 HURT: recoils back, shoulders pulled back and head flinches, knees buckle, eyes wince, club still held low. Non-graphic.
+Column2 FALL: falls backward toward ground, legs folding, one hand reaches ground and club drops alongside, full body.
+Column3 DEFEATED: lies on side on ground, eyes closed, limbs resting, wooden club on ground alongside, no blood or wounds. This is a knocked-out game monster.
+Maintain same absolute scale within each row: standing pose is tall, lying pose is naturally low and wide, NOT scaled up to fill cell. Clear major silhouette differences between hurt, falling, and lying. No repeated standing figures.
+
+WALK CORRECTION
+undefined
+

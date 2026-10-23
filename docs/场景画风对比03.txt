@@ -1,0 +1,68 @@
+后续决定：用户已选 VillagePreview 的立体场景路线，并扩展为正式第一章。
+本文件及两版入口保留为独立历史比较；当前游戏见 docs/第一章完整探索版.txt。
+
+两条日式场景路线：薄暮方向与伊苏方向
+日期：2026-10-23
+状态：两版均可运行并切换，已导出实际 Godot 截图；尚未得到用户的画风选定。
+
+一、范围与入口
+TalesVillage.command：默认打开 A 薄暮方向。
+YsVillage.command：默认打开 B 伊苏方向。
+JRPGCompare.command：打开 tools/jrpg-style-review.html。
+共用场景 jrpg_style_preview.tscn；scripts/jrpg_style_preview.gd 管理切换和相机，
+scripts/jrpg_village_world.gd 实现两个不同的场景物件管线。
+这是对参考风格的原创解释，不使用原作提取资源，也不是宣称复刻原作渲染器。
+
+操作：Tab 切换方案，F1 薄暮、F2 伊苏，F3 全村／近景；WASD、空格、Shift 沿用原操作；
+R 回入口，H 隐藏说明。相机朝向固定，平移跟随玩家。
+两版保持相同三栋房屋、水井、道路、溪流和木桥位置，以及 56 个物理结构。
+玩家使用原 Hero / HeroSprite，AdventureProgress.persistence_enabled=false。
+正式 project.godot 入口仍为第一大关，没有新增／替换玩法、任务和玩家存档。
+
+二、A 薄暮方向
+透视镜头，立体建筑和弯曲树干／分枝网格，枝叶实例化。
+新建陡屋顶、曲面檐部、窗框、拱形门框、石质基座、支撑木、遮阳布和灯具。
+使用生成的手绘板岩和石墙贴图，搭配现有 Craft.toon 分色光照及细描边。
+这是全立体场景路线的画风试作；建筑重复、植被与地貌仍需精修。
+
+三、B 伊苏方向
+固定正交俯视镜头；3D 地形、通路和实体碰撞，建筑／树木为原创绘制卡片。
+按透明范围计算图像尺寸和落地锚点，房屋底部沿镜头方向补偿至实体前缘。
+3 栋房屋＋7 棵树，共 10 个绘制物件。水井、石墙、木桥和围栏保留真实几何。
+该路线不能任意绕看绘制建筑，碰撞体只是近似轮廓，绘制阴影与实时阴影存在一致性限制。
+这不是对《伊苏·起源》底层实现的一比一复制。
+
+四、比较与目标图、成本判断
+获准目标仍为 assets/style-volume-v2/target-concept-refined.png。
+若以可走动的村庄接近该目标，A 的立体环境路线更适合树荫、地形和溪岸的空间关系；
+B 在受限机位下更容易发挥绘景细节，但透视、锚点和遮挡需要适配。
+A 当前蓝瓦与较高机位只用于风格比较；向获准目标靠近仍需遵从目标的暖瓦、自然造型和构图。
+不能声称任何当前试作已达到目标图的精细程度。
+
+复用现有 VillagePreview 做可运行村庄，短期投入最低；它也已使用墙面与叶片贴图。
+去掉手绘材质流程不等于省掉模型、地形、植物、布景和光照制作。
+这些路线底层都是 Godot 3D 场景＋原 2D 精灵角色，主要成本来自资产制作和质量要求。
+没有给出缺乏依据的人日、百分比或达到目标品质的保证。
+
+五、素材与清理
+assets/jrpg-style-study/：stone.png、slate.png、grass.png、ys-cottage.png、ys-oak.png。
+均由内置 image_gen 生成并复制到项目，完整提示词见同目录 prompts.json。
+A 的枝叶沿用 assets/style-volume-v2/foliage-card.png。
+已删除旧换图版、几何卡通版、重复自然局部试作及相关资源；共 140 文件。
+具体文件列表见 artifacts/jrpg-cleanup-manifest.json，保留基线及获准目标图。
+
+六、实际验证
+  ./tools/godot --headless --fixed-fps 60 --path . --script scripts/verify_jrpg_styles.gd
+32 项通过，覆盖两种实际场景管线、相机、行走跳跃、墙面／桥面、回入口、安全恢复、切换与隔离。
+  ./tools/godot --headless --fixed-fps 60 --path . --script scripts/verify_chapter_one.gd
+正式关卡 42 项回归通过；未把历史其他测试当成本轮重跑。
+
+截图：
+  ./tools/godot --fixed-fps 60 --path . res://jrpg_style_preview.tscn --quit-after 1500 -- --jrpg-capture --mute
+  artifacts/jrpg-vesperia-overview.png / jrpg-vesperia-street.png
+  artifacts/jrpg-ys-overview.png / jrpg-ys-street.png
+  artifacts/jrpg-comparison-report.json / jrpg-capture.log
+拼图：
+  ./tools/godot --fixed-fps 60 --path . --script scripts/render_jrpg_comparison.gd
+  artifacts/jrpg-style-comparison.png
+以上均为引擎实际渲染；图像生成仅提供材质／绘制物件素材，未用概念图冒充实机。

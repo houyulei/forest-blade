@@ -2,6 +2,7 @@ extends Node3D
 
 var hero: Hero
 var enemy: Sentinel
+var bokoblins: Array[Bokoblin] = []
 var camera: Camera3D
 var shake: float = 0
 var rng := RandomNumberGenerator.new()
@@ -10,6 +11,13 @@ var status_label: Label
 var objective_label: Label
 var dash_bar: ProgressBar
 var message: Label
+var progress: AdventureProgress
+var adventure_ui: AdventureUI
+var forge: ForestForge
+var menu_open := false
+var menu_mode := ""
+var paused_actors: Array = []
+var dropped_enemy_ids: Array[int] = []
 var won: bool = false
 var elapsed: float = 0
 var camera_home := Vector3(11, 14, 13)
@@ -34,12 +42,19 @@ var focus := Vector3.INF
 var forest: ForestSanctuary
 
 func _ready() -> void:
+	ThemeDB.fallback_font = preload("res://assets/fonts/ChineseMedium.tres")
 	rng.seed = 71824
 	var args := OS.get_cmdline_user_args()
 	capture_mode = "--capture" in args
 	benchmark_mode = "--benchmark" in args
 	verify_mode = "--verify" in args
 	muted = "--mute" in args or verify_mode
+	if not get_tree().has_meta("adventure_progress"):
+		var data := AdventureProgress.new()
+		data.persistence_enabled = not (verify_mode or capture_mode or benchmark_mode or get_tree().has_meta("isolated_adventure"))
+		data.load_save()
+		get_tree().set_meta("adventure_progress",data)
+	progress = get_tree().get_meta("adventure_progress")
 	setup_inputs()
 	build_environment()
 	build_level()
@@ -54,12 +69,30 @@ func _ready() -> void:
 	enemy.hero = hero
 	enemy.position = Vector3(2.1, 0.1, -1.5)
 	add_child(enemy)
+	for spawn in [Vector3(-4.0,0.1,3.6),Vector3(3.5,0.1,2.7)]:
+		var goblin := Bokoblin.new()
+		goblin.name = "RedBokoblin%d" % (bokoblins.size()+1)
+		goblin.arena = self
+		goblin.hero = hero
+		goblin.position = spawn
+		goblin.facing = (hero.position-spawn).normalized()
+		add_child(goblin)
+		bokoblins.append(goblin)
+	forge = ForestForge.new()
+	forge.position = Vector3(3.6,0.035,-0.35)
+	add_child(forge)
 	setup_ui()
+	adventure_ui = AdventureUI.new()
+	adventure_ui.arena = self
+	add_child(adventure_ui)
 	for i in range(6):
 		var player := AudioStreamPlayer.new()
 		player.volume_db = -12
 		add_child(player)
 		audio_players.append(player)
+	if capture_mode or benchmark_mode or verify_mode:
+		for goblin in bokoblins:
+			goblin.set_physics_process(false)
 	if capture_mode:
 		enemy.set_physics_process(false)
 		hero.facing = Vector3(1,0,1).normalized()
@@ -75,7 +108,7 @@ func _ready() -> void:
 			verify_game.call_deferred()
 
 func setup_inputs() -> void:
-	var keys := {"left": [KEY_A, KEY_LEFT], "right": [KEY_D, KEY_RIGHT], "up": [KEY_W, KEY_UP], "down": [KEY_S, KEY_DOWN], "jump": [KEY_SPACE], "attack": [KEY_J], "dash": [KEY_SHIFT], "restart": [KEY_R], "mute": [KEY_M]}
+	var keys := {"left": [KEY_A, KEY_LEFT], "right": [KEY_D, KEY_RIGHT], "up": [KEY_W, KEY_UP], "down": [KEY_S, KEY_DOWN], "jump": [KEY_SPACE], "attack": [KEY_J], "dash": [KEY_SHIFT], "restart": [KEY_R], "mute": [KEY_M], "fire_skill":[KEY_Q], "sword_skill":[KEY_K], "sword_1":[KEY_1], "sword_2":[KEY_2], "sword_3":[KEY_3], "forge":[KEY_E], "equipment":[KEY_I], "forge_close":[KEY_ESCAPE]}
 	for action in keys:
 		if not InputMap.has_action(action):
 			InputMap.add_action(action)
@@ -218,13 +251,13 @@ func setup_ui() -> void:
 	top.position = Vector2(42, 30)
 	top.add_theme_constant_override("separation", 2)
 	root.add_child(top)
-	text_label(top, "CHAPTER I  /  THE OVERGROWN SANCTUARY", 13, Color("e8cb89"))
-	text_label(top, "FOREST BLADE", 34, cream)
-	text_label(top, "Through the green, a forgotten light.", 16, pale)
+	text_label(top, "第一章 / 荒草中的圣所", 13, Color("e8cb89"))
+	text_label(top, "森之刃", 34, cream)
+	text_label(top, "穿过林荫，寻找遗忘的微光。", 16, pale)
 	var health := VBoxContainer.new()
 	health.position = Vector2(44, 143)
 	root.add_child(health)
-	text_label(health, "THE YOUNG TRAVELER", 12, pale)
+	text_label(health, "年少的旅人", 12, pale)
 	hp_label = text_label(health, "", 28, Color("f0b197"))
 	dash_bar = ProgressBar.new()
 	dash_bar.custom_minimum_size = Vector2(178, 5)
@@ -234,7 +267,7 @@ func setup_ui() -> void:
 	var bar := StyleBoxFlat.new()
 	bar.bg_color = Color("8cd5c2")
 	dash_bar.add_theme_stylebox_override("fill", bar)
-	text_label(health, "DASH", 10, pale)
+	text_label(health, "冲刺", 10, pale)
 	var objective := VBoxContainer.new()
 	objective.set_anchors_and_offsets_preset(Control.PRESET_TOP_RIGHT)
 	objective.offset_left = -365
@@ -242,9 +275,9 @@ func setup_ui() -> void:
 	objective.offset_top = 36
 	objective.offset_bottom = 145
 	root.add_child(objective)
-	text_label(objective, "THE OLD SANCTUARY", 13, Color("e8cb89"))
-	objective_label = text_label(objective, "Defeat the moss sentinel", 19, cream)
-	status_label = text_label(objective, "Watch its amber warning ring.", 14, pale)
+	text_label(objective, "古老圣所", 13, Color("e8cb89"))
+	objective_label = text_label(objective, "清理圣所 · 3 名敌人", 19, cream)
+	status_label = text_label(objective, "闪开挥棒，跳过震地。", 14, pale)
 	var footer := PanelContainer.new()
 	footer.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_WIDE)
 	footer.offset_left = 30
@@ -261,7 +294,7 @@ func setup_ui() -> void:
 	panel.content_margin_right = 24
 	footer.add_theme_stylebox_override("panel", panel)
 	root.add_child(footer)
-	var controls := text_label(footer, "W A S D   Move        SPACE   Jump        J / CLICK   Sword        SHIFT   Dash        R   Restart        M   Sound", 16, cream)
+	var controls := text_label(footer, "WASD 移动　空格 跳跃　J 攻击　K 武器技　Q 元素魔法　1/2/3 切换　Shift 冲刺　E 对话　I 装备　R 重返", 14, cream)
 	controls.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	controls.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	message = text_label(root, "", 34, cream)
@@ -289,7 +322,7 @@ func _process(delta: float) -> void:
 			file.store_string(JSON.stringify(report,"\t"))
 			print("PERFORMANCE: ",JSON.stringify(report))
 			get_tree().quit()
-	if Input.is_action_just_pressed("restart"):
+	if Input.is_action_just_pressed("restart") and not menu_open:
 		get_tree().reload_current_scene()
 	if Input.is_action_just_pressed("mute"):
 		muted = not muted
@@ -297,10 +330,14 @@ func _process(delta: float) -> void:
 		hp_label.text = "● ".repeat(hero.hp) + "○ ".repeat(hero.max_hp - hero.hp)
 		dash_bar.value = 0.85 - hero.dash_cooldown
 		if not hero.alive:
-			message.text = "A moment to catch your breath.\nR  ·  TRY AGAIN"
-			objective_label.text = "The forest will wait."
+			message.text = "暂歇片刻，再踏旅途。\nR · 重新出发"
+			objective_label.text = "森林静候你的归来。"
 		elif not won:
-			status_label.text = "Jump over the ground slam!" if enemy.state == "windup" else "Keep moving. Strike, then retreat."
+			objective_label.text = "清理圣所 · 剩余 %d 名" % living_enemy_count()
+			var club_ready := false
+			for goblin in bokoblins:
+				club_ready = club_ready or (goblin.alive and goblin.state == "windup")
+			status_label.text = "侧移闪开挥棒！" if club_ready else ("跳跃躲避震地！" if enemy.alive and enemy.state == "windup" else "保持移动，进攻后及时退开。")
 	shake = maxf(0, shake - delta)
 	update_pixel_camera(delta)
 	if capture_mode:
@@ -383,14 +420,80 @@ func damage_number(p: Vector3, amount: int) -> void:
 	tween.tween_property(label, "modulate:a", 0.0, 0.65)
 	tween.chain().tween_callback(label.queue_free)
 
+func living_enemy_count() -> int:
+	var count := 0
+	for target in get_tree().get_nodes_in_group("enemy"):
+		if target.alive:
+			count += 1
+	return count
+
+func can_enemy_attack(requester: Node3D) -> bool:
+	if not hero.alive or not camera.is_position_in_frustum(requester.global_position+Vector3.UP*0.8):
+		return false
+	var active := 0
+	for target in get_tree().get_nodes_in_group("enemy"):
+		if target!=requester and target.alive and target.state in ["windup","strike"]:
+			active += 1
+	return active<2
+
+func enemy_defeated(target: Node3D) -> void:
+	if not dropped_enemy_ids.has(target.get_instance_id()):
+		dropped_enemy_ids.append(target.get_instance_id())
+		var rewards := {"gold":30,"ore":3,"stone":1} if target is Sentinel else {"gold":8,"ore":1,"fang":1}
+		var index := 0
+		for item in rewards:
+			var pickup := LootPickup.new()
+			pickup.arena = self
+			pickup.item = item
+			pickup.amount = rewards[item]
+			pickup.position = target.global_position+Vector3(sin(index*2.4),0,cos(index*2.4))*0.26
+			var ray := PhysicsRayQueryParameters3D.create(pickup.position+Vector3.UP*2,pickup.position+Vector3.DOWN*4,1)
+			var hit := get_world_3d().direct_space_state.intersect_ray(ray)
+			if not hit.is_empty():
+				pickup.position.y = hit.position.y+0.015
+			add_child(pickup)
+			index += 1
+	if not won and living_enemy_count()==0:
+		victory()
+
 func victory() -> void:
 	won = true
-	objective_label.text = "Sanctuary restored"
-	status_label.text = "Explore the ruins. R to play again."
-	message.text = "A LITTLE BRAVER.\nThe sanctuary is quiet again."
+	objective_label.text = "圣所重归宁静"
+	status_label.text = "拾取素材，找铁匠阿伦强化装备。"
+	message.modulate.a = 1
+	message.text = "圣所重归宁静\n收好素材，磨砺锋刃。"
 	var tween := create_tween()
 	tween.tween_interval(3.2)
 	tween.tween_property(message, "modulate:a", 0.0, 1.0)
+
+func near_forge() -> bool:
+	return is_instance_valid(forge) and hero.alive and hero.global_position.distance_to(forge.smith_position())<1.9
+
+func set_menu(mode: String = "") -> void:
+	if mode=="smith" and not near_forge():
+		return
+	if mode!="" and not hero.alive:
+		return
+	if mode=="smith":
+		for target in get_tree().get_nodes_in_group("enemy"):
+			if target.alive and target.global_position.distance_to(hero.global_position)<3.0:
+				adventure_ui.notify("附近还有敌人，先脱离战斗再与阿伦交谈。")
+				return
+	if mode!="" and not menu_open:
+		paused_actors.clear()
+		var actors: Array = [hero]
+		actors.append_array(get_tree().get_nodes_in_group("enemy"))
+		for actor in actors:
+			paused_actors.append([actor,actor.is_physics_processing()])
+			actor.set_physics_process(false)
+	elif mode=="" and menu_open:
+		for pair in paused_actors:
+			if is_instance_valid(pair[0]):
+				pair[0].set_physics_process(pair[1])
+		paused_actors.clear()
+	menu_mode = mode
+	menu_open = mode!=""
+	adventure_ui.show_menu(mode)
 
 func play_tone(frequency: float, duration: float, volume: float) -> void:
 	if muted or audio_players.is_empty():
@@ -471,7 +574,7 @@ func verify_game() -> void:
 	if not require(hero.sprite_view.action_name == "attack", "attack switches to drawn sword frames"):
 		return
 	await wait_frames(30)
-	if not require(enemy.hp == before - 1, "sword connects once per swing"):
+	if not require(enemy.hp == before - progress.sword_damage(), "sword connects once per swing"):
 		return
 	before = hero.hp
 	hero.invulnerable = 0
@@ -479,6 +582,7 @@ func verify_game() -> void:
 	hero.take_hit(1, Vector3.RIGHT)
 	if not require(hero.hp == before - 1, "damage and invulnerability"):
 		return
+	await wait_frames(12) # Finish the new hit reaction before accepting a dash.
 	Input.action_press("dash")
 	await wait_frames(2)
 	Input.action_release("dash")
@@ -509,7 +613,11 @@ func verify_game() -> void:
 		return
 	enemy.take_hit(99, Vector3.FORWARD, true)
 	await wait_frames(3)
-	if not require(won and not enemy.alive, "enemy defeat and victory"):
+	if not require(not won and not enemy.alive and living_enemy_count()==2, "sentinel defeat does not end a multi-enemy encounter"):
+		return
+	for goblin in bokoblins:
+		goblin.take_hit(99,Vector3.FORWARD,true)
+	if not require(won and living_enemy_count()==0, "all enemies defeated triggers victory"):
 		return
 	var toward_camera := camera.global_basis.z
 	toward_camera.y = 0
@@ -532,7 +640,7 @@ func verify_game() -> void:
 
 func verify_restart() -> void:
 	await wait_frames(10)
-	if not require(hero.alive and hero.hp == hero.max_hp and enemy.alive and enemy.hp == enemy.max_hp and not won, "restart resets actors and victory"):
+	if not require(hero.alive and hero.hp == hero.max_hp and enemy.alive and enemy.hp == enemy.max_hp and living_enemy_count()==3 and not won, "restart resets actors and victory"):
 		return
 	print("GAMEPLAY_VERIFICATION_OK")
 	get_tree().quit(0)

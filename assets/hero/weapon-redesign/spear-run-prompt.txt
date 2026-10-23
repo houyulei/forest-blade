@@ -1,0 +1,2 @@
+历史记录缺失：此旧版图集的原始生成提示词未成功保存。该素材已停用。
+新版素材及完整提示词位于 assets/hero/motion-audit-v3/spear-run-v3-*。

@@ -1,0 +1,94 @@
+{
+  "greatsword-carry-upper": [
+    {
+      "rect": [
+        210,
+        12,
+        507,
+        501
+      ],
+      "hem": 369,
+      "anchor": 81.0,
+      "body_height": 360
+    },
+    {
+      "rect": [
+        775,
+        11,
+        712,
+        489
+      ],
+      "hem": 366,
+      "anchor": 385.0,
+      "body_height": 357
+    },
+    {
+      "rect": [
+        51,
+        495,
+        709,
+        505
+      ],
+      "hem": 371,
+      "anchor": 315.0,
+      "body_height": 363
+    },
+    {
+      "rect": [
+        778,
+        499,
+        715,
+        497
+      ],
+      "hem": 372,
+      "anchor": 366.0,
+      "body_height": 361
+    }
+  ],
+  "spear-carry-upper": [
+    {
+      "rect": [
+        48,
+        82,
+        793,
+        357
+      ],
+      "hem": 342,
+      "anchor": 213.0,
+      "body_height": 327
+    },
+    {
+      "rect": [
+        720,
+        82,
+        810,
+        361
+      ],
+      "hem": 341,
+      "anchor": 261.0,
+      "body_height": 325
+    },
+    {
+      "rect": [
+        27,
+        552,
+        802,
+        360
+      ],
+      "hem": 341,
+      "anchor": 246.0,
+      "body_height": 331
+    },
+    {
+      "rect": [
+        734,
+        551,
+        794,
+        355
+      ],
+      "hem": 340,
+      "anchor": 239.0,
+      "body_height": 330
+    }
+  ]
+}

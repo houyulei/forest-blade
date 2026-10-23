@@ -40,7 +40,7 @@ func _initialize() -> void:
 		print("ATLAS_READY: ", action, " / ", index, " frames")
 	quit()
 
-func isolate_sprite(image: Image) -> Image:
+static func isolate_sprite(image: Image) -> Image:
 	# Cropping rectangles can overlap a neighbor's sword tip. Keep only the main
 	# connected alpha island, retaining its antialiased edge pixels.
 	var width := image.get_width()

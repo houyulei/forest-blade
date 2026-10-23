@@ -1,0 +1,17 @@
+FIRE HEAVY SLASH
+Use case: stylized-concept. Asset type: production TRANSPARENT game animation atlas.
+Attached image defines the EXACT existing hero. Same black-haired 11-12-year-old boy, human ears, red scarf, silver shoulder plates, blue tunic, ivory trousers, brown boots, wrist guards, small round back shield. Keep face, proportions, clothes, line weight, restrained hand-painted JRPG shading exactly consistent. He holds his existing slender silver sword in right hand. No new outfit or oversized weapon.
+EXACT grid FOUR columns by FOUR rows = 16 separate full-body poses, generous transparent gutters, same character scale and common foot baseline within each row. Slightly elevated fixed-camera game view. Each figure including sword stays wholly inside its cell. True transparent alpha outside character. No backgrounds, shadows, labels, panels or text. NO FLAME effects baked into the sprite; fire is added by the game.
+Row1 FRONT/DOWN three-quarter facing toward viewer. Row2 LEFT side profile facing left. Row3 RIGHT side facing right. Row4 BACK/UP facing away.
+Within EVERY row four genuinely distinct poses for a powerful FIRE HEAVY SLASH:
+Column1 GATHER: knees bend, body lowers, grip sword near waist with arms preparing, focused expression.
+Column2 WINDUP: sword held high overhead behind shoulder, torso coils, rear leg carries weight, free hand balances.
+Column3 RELEASE: forceful downward-forward sword strike in facing direction, strong forward lean, sword finishes low in front, weight shifts to front planted foot. Big silhouette change from windup, keep anatomy natural.
+Column4 RECOVERY: sword low beside body after follow-through, shoulders settle, rise back toward ready stance.
+Feet/root placement steady. Real articulated arm and torso movement, not rotated copies of one pose. Do not change apparent body scale because sword is raised. No extra swords, limbs, effects or orange recoloring of the boy.
+
+FOREST FORGE
+Use case: stylized-concept. Asset type: one transparent environmental cutout for a hand-painted 2.5D fantasy action RPG.
+Create a compact inviting ANCIENT FOREST FORGE workstation, unoccupied, matching the attached forest game's painted detail, warm stone, wood and moss. View from elevated front three-quarter angle, about 35 degrees down, suitable for fixed orthographic game camera. A heavy dark iron anvil with bright worn edge on a broad cut tree stump in the foreground LEFT, a waist-high weathered stone charcoal furnace to the RIGHT with a small warm glowing ember fire, leather bellows and tongs, hammer resting on stump, a few iron ingots and wood logs. Moss grows around the stone base, restrained red-orange embers. The workstation is ONE connected compact composition, no person or monster.
+Full object including all tools visible, generous transparent margin. True transparent alpha outside the objects, no rectangular background, no horizon, no floor plane, no broad cast shadow, no label, no text, no watermark. Detailed crisp illustrated JRPG prop, not a low-poly render, not pixel art, not photorealistic. Object roughly as tall as the young boy's chest and about one-and-a-half boys wide. Keep fire small so procedural sparks can be added later.
+

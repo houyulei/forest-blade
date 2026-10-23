@@ -1,0 +1,48 @@
+后续更新：三剑方案和最新按键见 docs/three-swords.txt。本文保留上一轮动作打磨记录。
+
+简体中文与动作打磨（2026-10-21）
+
+本轮重点
+1. 游戏窗口名改为“森之刃”；战斗 HUD、按键说明、胜负提示、装备、铁匠对话、素材、配方、拾取和错误消息均为简体中文。
+2. 随项目加入 Noto Sans SC，使用 500 字重。字体源文件、许可证与来源位于 assets/fonts/。
+3. 窗口改名后显式保留原用户数据目录，旧存档继续可读。
+4. 第二击加入独立回斩图集，第三击加入独立重劈图集，各四方向 × 六姿势；第二击不再倒播第一击。
+5. SwordMotion 将前摇、判定、脚步推进、动画帧和取消时机放在同一条时间轴上。
+   第一击 0.34 秒、第二击 0.37 秒、第三击 0.52 秒。
+   判定只在挥剑释放阶段有效，每挥最多命中同一目标一次；重劈也只打前方，不再隔着背身打满一圈。
+6. 攻击前踏只出现在发力阶段，收招时停止脚步；不再允许按移动键拖着挥剑姿势四处滑行。
+   自动朝向辅助只做轻微修正，不会突然大角度扭身。
+7. 收招后段可以冲刺/跳跃取消；前摇不能免费取消。第三击的取消时机更晚，保留重攻击代价。
+8. 普攻输入缓存 0.22 秒，过早的旧输入会过期；收招时按下一击仍可顺畅衔接。
+9. 受击会取消普攻/技能与旧的连击输入，并有 0.16 秒短硬直；硬直后恢复控制。
+10. 刀光收窄、降低亮度，只在释放阶段显示；重劈与爆炎斩改为竖向刀光。
+11. 保留独立双腿的 16 帧侧跑，阻挡和停步不继续推进步态；增加冲刺与落地短姿势切换。
+
+重要文件
+scripts/sword_motion.gd：统一普攻时间轴。
+scripts/hero.gd：动作优先级、前踏、输入缓存、取消、受击和命中。
+scripts/hero_sprite.gd：三套普通攻击与技能图集切换。
+scripts/prepare_combo_art.gd：透明主体提取、双脚锚点、方向内固定尺度与切帧。
+assets/hero/combo-regions.json：原图区域、双脚根部与缩放记录。
+
+补绘使用内置 image_gen；原图与游戏图集均保存在仓库：
+assets/hero/attack-return-source.png、attack-return.png、attack-return-prompt.txt。
+assets/hero/attack-cleave-source.png、attack-cleave.png、attack-cleave-prompt.txt。
+未覆盖原来的第一击和火技能图集，改动前脚本在 artifacts/before-action-polish/。
+其中回斩侧面原图末帧刀刃重叠不清晰，运行时保持上一张干净的收势帧；不使用问题帧。
+
+验证
+./tools/godot --headless --path . --script scripts/verify_action_polish.gd
+./tools/godot --path . --script scripts/verify_action_polish.gd -- --record --mute
+验证用真实物理帧驱动主角，覆盖三击伤害与时机、背后不误伤、前踏与收招、冲刺取消、硬直、输入过期与衔接、中文与旧存档路径。
+结果：artifacts/action-polish-verification.json、action-polish-visual.log。
+画面：artifacts/action-combo-1.png、action-combo-2.png、action-combo-3.png、action-equipment-zh.png、action-smith-zh.png。
+
+边界
+本轮是动作表现与控制手感的打磨。四方向、每击六个关键姿势仍会有 AI 绘制细小造型差异，不等同于逐帧手绘动画或高帧率 3D 骨骼动画。
+现有前后跑步图集维持六帧，侧跑维持十六帧。受伤仍用姿势和闪烁，未新增完整受伤/倒地帧序列。
+未增加武器种类、装备槽、怪物种类或其他成长系统。
+
+本轮实际验收：动作专项 28 项、成长流程 36 项、原玩法 23 项、波克布林 26 项、尺寸 20 项、侧跑 16 项均通过。
+三连斩半速录制预览：artifacts/combo-polish-preview.webp。
+预览由真实游戏截图序列编码；没有重新绘制或补帧。为便于观察，按约半速播放。

@@ -1,0 +1,7972 @@
+{
+  "fire-attack-1-diagonal": [
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        23,
+        11,
+        221,
+        242
+      ],
+      "pivot": [
+        164.0,
+        240
+      ],
+      "hair_top": 40,
+      "body_height": 200,
+      "used": [
+        2,
+        2,
+        219,
+        240
+      ],
+      "scale": 1.0714285714285714
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        281,
+        17,
+        199,
+        233
+      ],
+      "pivot": [
+        155.0,
+        231
+      ],
+      "hair_top": 34,
+      "body_height": 197,
+      "used": [
+        2,
+        2,
+        197,
+        231
+      ],
+      "scale": 1.0714285714285714
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        514,
+        48,
+        252,
+        202
+      ],
+      "pivot": [
+        81.0,
+        200
+      ],
+      "hair_top": 5,
+      "body_height": 195,
+      "used": [
+        2,
+        2,
+        250,
+        200
+      ],
+      "scale": 1.0714285714285714
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        779,
+        50,
+        240,
+        213
+      ],
+      "pivot": [
+        31.0,
+        199
+      ],
+      "hair_top": 4,
+      "body_height": 195,
+      "used": [
+        2,
+        2,
+        238,
+        211
+      ],
+      "scale": 1.0714285714285714
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        1017,
+        49,
+        287,
+        201
+      ],
+      "pivot": [
+        154.0,
+        198
+      ],
+      "hair_top": 3,
+      "body_height": 195,
+      "used": [
+        2,
+        2,
+        285,
+        199
+      ],
+      "scale": 1.0714285714285714
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        1312,
+        11,
+        210,
+        243
+      ],
+      "pivot": [
+        153.0,
+        241
+      ],
+      "hair_top": 42,
+      "body_height": 199,
+      "used": [
+        2,
+        2,
+        208,
+        241
+      ],
+      "scale": 1.0714285714285714
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        46,
+        263,
+        211,
+        234
+      ],
+      "pivot": [
+        41.0,
+        232
+      ],
+      "hair_top": 2,
+      "body_height": 230,
+      "used": [
+        2,
+        2,
+        209,
+        232
+      ],
+      "scale": 1.0473815461346634
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        292,
+        268,
+        209,
+        231
+      ],
+      "pivot": [
+        43.0,
+        229
+      ],
+      "hair_top": 29,
+      "body_height": 200,
+      "used": [
+        2,
+        2,
+        207,
+        229
+      ],
+      "scale": 1.0473815461346634
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        532,
+        282,
+        232,
+        217
+      ],
+      "pivot": [
+        178.0,
+        215
+      ],
+      "hair_top": 14,
+      "body_height": 201,
+      "used": [
+        2,
+        2,
+        230,
+        215
+      ],
+      "scale": 1.0473815461346634
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        775,
+        291,
+        249,
+        210
+      ],
+      "pivot": [
+        33.0,
+        203
+      ],
+      "hair_top": 5,
+      "body_height": 198,
+      "used": [
+        2,
+        2,
+        249,
+        208
+      ],
+      "scale": 1.0473815461346634
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        1019,
+        290,
+        249,
+        209
+      ],
+      "pivot": [
+        99.0,
+        207
+      ],
+      "hair_top": 6,
+      "body_height": 201,
+      "used": [
+        0,
+        2,
+        247,
+        209
+      ],
+      "scale": 1.0473815461346634
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        1323,
+        260,
+        209,
+        237
+      ],
+      "pivot": [
+        41.0,
+        235
+      ],
+      "hair_top": 35,
+      "body_height": 200,
+      "used": [
+        2,
+        2,
+        207,
+        235
+      ],
+      "scale": 1.0473815461346634
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        22,
+        517,
+        204,
+        231
+      ],
+      "pivot": [
+        156.0,
+        229
+      ],
+      "hair_top": 22,
+      "body_height": 207,
+      "used": [
+        2,
+        2,
+        202,
+        229
+      ],
+      "scale": 1.037037037037037
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        290,
+        509,
+        232,
+        239
+      ],
+      "pivot": [
+        156.0,
+        237
+      ],
+      "hair_top": 34,
+      "body_height": 203,
+      "used": [
+        2,
+        2,
+        230,
+        237
+      ],
+      "scale": 1.037037037037037
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        522,
+        527,
+        237,
+        222
+      ],
+      "pivot": [
+        159.0,
+        220
+      ],
+      "hair_top": 18,
+      "body_height": 202,
+      "used": [
+        2,
+        2,
+        235,
+        220
+      ],
+      "scale": 1.037037037037037
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        772,
+        541,
+        279,
+        208
+      ],
+      "pivot": [
+        39.0,
+        206
+      ],
+      "hair_top": 4,
+      "body_height": 202,
+      "used": [
+        2,
+        2,
+        279,
+        206
+      ],
+      "scale": 1.037037037037037
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        1048,
+        544,
+        275,
+        209
+      ],
+      "pivot": [
+        43.0,
+        206
+      ],
+      "hair_top": 2,
+      "body_height": 204,
+      "used": [
+        0,
+        2,
+        275,
+        207
+      ],
+      "scale": 1.037037037037037
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        1299,
+        511,
+        210,
+        238
+      ],
+      "pivot": [
+        162.0,
+        238
+      ],
+      "hair_top": 37,
+      "body_height": 201,
+      "used": [
+        0,
+        2,
+        208,
+        238
+      ],
+      "scale": 1.037037037037037
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        19,
+        760,
+        206,
+        241
+      ],
+      "pivot": [
+        176.0,
+        239
+      ],
+      "hair_top": 34,
+      "body_height": 205,
+      "used": [
+        2,
+        2,
+        204,
+        239
+      ],
+      "scale": 1.0194174757281553
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        272,
+        765,
+        223,
+        236
+      ],
+      "pivot": [
+        69.0,
+        234
+      ],
+      "hair_top": 26,
+      "body_height": 208,
+      "used": [
+        2,
+        2,
+        221,
+        234
+      ],
+      "scale": 1.0194174757281553
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        538,
+        768,
+        220,
+        234
+      ],
+      "pivot": [
+        164.0,
+        232
+      ],
+      "hair_top": 25,
+      "body_height": 207,
+      "used": [
+        2,
+        2,
+        218,
+        232
+      ],
+      "scale": 1.0194174757281553
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        778,
+        790,
+        273,
+        216
+      ],
+      "pivot": [
+        154.0,
+        203
+      ],
+      "hair_top": 3,
+      "body_height": 200,
+      "used": [
+        2,
+        2,
+        273,
+        214
+      ],
+      "scale": 1.0194174757281553
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        1024,
+        789,
+        298,
+        210
+      ],
+      "pivot": [
+        60.5,
+        206
+      ],
+      "hair_top": 4,
+      "body_height": 202,
+      "used": [
+        0,
+        2,
+        298,
+        210
+      ],
+      "scale": 1.0194174757281553
+    },
+    {
+      "source_file": "fire-attack-1-diagonal-source.png",
+      "rect": [
+        1314,
+        767,
+        201,
+        238
+      ],
+      "pivot": [
+        173.0,
+        236
+      ],
+      "hair_top": 28,
+      "body_height": 208,
+      "used": [
+        0,
+        2,
+        199,
+        236
+      ],
+      "scale": 1.0194174757281553
+    }
+  ],
+  "fire-attack-2-diagonal": [
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        6,
+        46,
+        246,
+        218
+      ],
+      "pivot": [
+        76.0,
+        216
+      ],
+      "hair_top": 6,
+      "body_height": 210,
+      "used": [
+        2,
+        2,
+        244,
+        216
+      ],
+      "scale": 1.0473815461346634
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        292,
+        6,
+        208,
+        256
+      ],
+      "pivot": [
+        43.0,
+        254
+      ],
+      "hair_top": 58,
+      "body_height": 196,
+      "used": [
+        2,
+        2,
+        206,
+        254
+      ],
+      "scale": 1.0473815461346634
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        530,
+        24,
+        194,
+        241
+      ],
+      "pivot": [
+        28.0,
+        239
+      ],
+      "hair_top": 36,
+      "body_height": 203,
+      "used": [
+        2,
+        2,
+        192,
+        239
+      ],
+      "scale": 1.0473815461346634
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        751,
+        66,
+        324,
+        199
+      ],
+      "pivot": [
+        188.0,
+        198
+      ],
+      "hair_top": 7,
+      "body_height": 191,
+      "used": [
+        2,
+        2,
+        324,
+        198
+      ],
+      "scale": 1.0473815461346634
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        1034,
+        61,
+        281,
+        205
+      ],
+      "pivot": [
+        36.0,
+        203
+      ],
+      "hair_top": 5,
+      "body_height": 198,
+      "used": [
+        0,
+        2,
+        279,
+        203
+      ],
+      "scale": 1.0473815461346634
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        1315,
+        61,
+        214,
+        210
+      ],
+      "pivot": [
+        26.0,
+        208
+      ],
+      "hair_top": 4,
+      "body_height": 204,
+      "used": [
+        2,
+        2,
+        212,
+        208
+      ],
+      "scale": 1.0473815461346634
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        1,
+        310,
+        244,
+        205
+      ],
+      "pivot": [
+        99.0,
+        203
+      ],
+      "hair_top": 7,
+      "body_height": 196,
+      "used": [
+        2,
+        2,
+        242,
+        203
+      ],
+      "scale": 1.0741687979539642
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        303,
+        263,
+        187,
+        256
+      ],
+      "pivot": [
+        146.0,
+        254
+      ],
+      "hair_top": 59,
+      "body_height": 195,
+      "used": [
+        2,
+        2,
+        185,
+        254
+      ],
+      "scale": 1.0741687979539642
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        540,
+        293,
+        203,
+        226
+      ],
+      "pivot": [
+        159.0,
+        224
+      ],
+      "hair_top": 27,
+      "body_height": 197,
+      "used": [
+        2,
+        2,
+        201,
+        224
+      ],
+      "scale": 1.0741687979539642
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        775,
+        319,
+        256,
+        199
+      ],
+      "pivot": [
+        42.0,
+        197
+      ],
+      "hair_top": 4,
+      "body_height": 193,
+      "used": [
+        2,
+        2,
+        256,
+        197
+      ],
+      "scale": 1.0741687979539642
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        1020,
+        323,
+        231,
+        195
+      ],
+      "pivot": [
+        89.0,
+        193
+      ],
+      "hair_top": 4,
+      "body_height": 189,
+      "used": [
+        0,
+        2,
+        229,
+        193
+      ],
+      "scale": 1.0741687979539642
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        1264,
+        317,
+        246,
+        203
+      ],
+      "pivot": [
+        106.0,
+        201
+      ],
+      "hair_top": 5,
+      "body_height": 196,
+      "used": [
+        2,
+        2,
+        244,
+        201
+      ],
+      "scale": 1.0741687979539642
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        22,
+        551,
+        257,
+        213
+      ],
+      "pivot": [
+        154.0,
+        211
+      ],
+      "hair_top": 6,
+      "body_height": 205,
+      "used": [
+        2,
+        2,
+        255,
+        211
+      ],
+      "scale": 1.037037037037037
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        274,
+        532,
+        210,
+        232
+      ],
+      "pivot": [
+        70.0,
+        229
+      ],
+      "hair_top": 29,
+      "body_height": 200,
+      "used": [
+        0,
+        2,
+        208,
+        230
+      ],
+      "scale": 1.037037037037037
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        529,
+        543,
+        216,
+        221
+      ],
+      "pivot": [
+        43.0,
+        219
+      ],
+      "hair_top": 14,
+      "body_height": 205,
+      "used": [
+        2,
+        2,
+        214,
+        219
+      ],
+      "scale": 1.037037037037037
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        756,
+        563,
+        285,
+        203
+      ],
+      "pivot": [
+        139.5,
+        201
+      ],
+      "hair_top": 5,
+      "body_height": 196,
+      "used": [
+        2,
+        2,
+        285,
+        201
+      ],
+      "scale": 1.037037037037037
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        1029,
+        557,
+        279,
+        209
+      ],
+      "pivot": [
+        37.0,
+        207
+      ],
+      "hair_top": 5,
+      "body_height": 202,
+      "used": [
+        0,
+        2,
+        279,
+        207
+      ],
+      "scale": 1.037037037037037
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        1288,
+        555,
+        248,
+        210
+      ],
+      "pivot": [
+        150.0,
+        208
+      ],
+      "hair_top": 5,
+      "body_height": 203,
+      "used": [
+        0,
+        2,
+        246,
+        208
+      ],
+      "scale": 1.037037037037037
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        26,
+        791,
+        233,
+        205
+      ],
+      "pivot": [
+        147.0,
+        203
+      ],
+      "hair_top": 4,
+      "body_height": 199,
+      "used": [
+        2,
+        2,
+        231,
+        203
+      ],
+      "scale": 1.0606060606060606
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        296,
+        763,
+        199,
+        230
+      ],
+      "pivot": [
+        156.0,
+        228
+      ],
+      "hair_top": 26,
+      "body_height": 202,
+      "used": [
+        2,
+        2,
+        197,
+        228
+      ],
+      "scale": 1.0606060606060606
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        547,
+        764,
+        206,
+        231
+      ],
+      "pivot": [
+        153.0,
+        229
+      ],
+      "hair_top": 23,
+      "body_height": 206,
+      "used": [
+        2,
+        2,
+        204,
+        229
+      ],
+      "scale": 1.0606060606060606
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        770,
+        792,
+        323,
+        200
+      ],
+      "pivot": [
+        178.0,
+        199
+      ],
+      "hair_top": 5,
+      "body_height": 194,
+      "used": [
+        2,
+        2,
+        323,
+        199
+      ],
+      "scale": 1.0606060606060606
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        1046,
+        793,
+        267,
+        200
+      ],
+      "pivot": [
+        30.0,
+        198
+      ],
+      "hair_top": 5,
+      "body_height": 193,
+      "used": [
+        0,
+        2,
+        267,
+        198
+      ],
+      "scale": 1.0606060606060606
+    },
+    {
+      "source_file": "fire-attack-2-diagonal-source.png",
+      "rect": [
+        1305,
+        790,
+        225,
+        204
+      ],
+      "pivot": [
+        126.0,
+        202
+      ],
+      "hair_top": 5,
+      "body_height": 197,
+      "used": [
+        0,
+        2,
+        223,
+        202
+      ],
+      "scale": 1.0606060606060606
+    }
+  ],
+  "fire-attack-3-diagonal": [
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        32,
+        16,
+        226,
+        256
+      ],
+      "pivot": [
+        170.0,
+        256
+      ],
+      "hair_top": 55,
+      "body_height": 201,
+      "used": [
+        2,
+        2,
+        224,
+        256
+      ],
+      "scale": 1.1475409836065573
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        341,
+        12,
+        209,
+        260
+      ],
+      "pivot": [
+        141.0,
+        258
+      ],
+      "hair_top": 61,
+      "body_height": 197,
+      "used": [
+        2,
+        2,
+        207,
+        258
+      ],
+      "scale": 1.1475409836065573
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        574,
+        15,
+        213,
+        252
+      ],
+      "pivot": [
+        32.0,
+        250
+      ],
+      "hair_top": 76,
+      "body_height": 174,
+      "used": [
+        2,
+        2,
+        213,
+        252
+      ],
+      "scale": 1.1475409836065573
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        774,
+        83,
+        261,
+        192
+      ],
+      "pivot": [
+        110.0,
+        189
+      ],
+      "hair_top": 6,
+      "body_height": 183,
+      "used": [
+        0,
+        2,
+        261,
+        190
+      ],
+      "scale": 1.1475409836065573
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        1009,
+        88,
+        267,
+        184
+      ],
+      "pivot": [
+        235.5,
+        182
+      ],
+      "hair_top": 5,
+      "body_height": 177,
+      "used": [
+        0,
+        2,
+        265,
+        182
+      ],
+      "scale": 1.1475409836065573
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        1326,
+        58,
+        187,
+        213
+      ],
+      "pivot": [
+        129.0,
+        211
+      ],
+      "hair_top": 28,
+      "body_height": 183,
+      "used": [
+        2,
+        2,
+        185,
+        211
+      ],
+      "scale": 1.1475409836065573
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        36,
+        264,
+        211,
+        256
+      ],
+      "pivot": [
+        144.0,
+        255
+      ],
+      "hair_top": 53,
+      "body_height": 202,
+      "used": [
+        2,
+        0,
+        209,
+        256
+      ],
+      "scale": 1.0659898477157361
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        323,
+        272,
+        204,
+        248
+      ],
+      "pivot": [
+        39.0,
+        246
+      ],
+      "hair_top": 54,
+      "body_height": 192,
+      "used": [
+        2,
+        2,
+        202,
+        246
+      ],
+      "scale": 1.0659898477157361
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        590,
+        282,
+        185,
+        235
+      ],
+      "pivot": [
+        40.0,
+        233
+      ],
+      "hair_top": 2,
+      "body_height": 231,
+      "used": [
+        2,
+        2,
+        183,
+        233
+      ],
+      "scale": 1.0659898477157361
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        778,
+        340,
+        250,
+        193
+      ],
+      "pivot": [
+        99.0,
+        191
+      ],
+      "hair_top": 6,
+      "body_height": 185,
+      "used": [
+        2,
+        2,
+        250,
+        191
+      ],
+      "scale": 1.0659898477157361
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        1010,
+        348,
+        277,
+        181
+      ],
+      "pivot": [
+        134.0,
+        179
+      ],
+      "hair_top": 6,
+      "body_height": 173,
+      "used": [
+        0,
+        2,
+        275,
+        179
+      ],
+      "scale": 1.0659898477157361
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        1323,
+        299,
+        192,
+        238
+      ],
+      "pivot": [
+        150.0,
+        236
+      ],
+      "hair_top": 34,
+      "body_height": 202,
+      "used": [
+        2,
+        2,
+        190,
+        236
+      ],
+      "scale": 1.0659898477157361
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        26,
+        515,
+        206,
+        248
+      ],
+      "pivot": [
+        170.0,
+        246
+      ],
+      "hair_top": 1,
+      "body_height": 245,
+      "used": [
+        2,
+        0,
+        204,
+        246
+      ],
+      "scale": 1.1229946524064172
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        312,
+        524,
+        200,
+        247
+      ],
+      "pivot": [
+        164.0,
+        245
+      ],
+      "hair_top": 52,
+      "body_height": 193,
+      "used": [
+        2,
+        2,
+        198,
+        247
+      ],
+      "scale": 1.1229946524064172
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        550,
+        524,
+        193,
+        239
+      ],
+      "pivot": [
+        152.0,
+        237
+      ],
+      "hair_top": 56,
+      "body_height": 181,
+      "used": [
+        2,
+        2,
+        191,
+        239
+      ],
+      "scale": 1.1229946524064172
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        787,
+        589,
+        263,
+        186
+      ],
+      "pivot": [
+        144.0,
+        184
+      ],
+      "hair_top": 6,
+      "body_height": 178,
+      "used": [
+        2,
+        2,
+        261,
+        184
+      ],
+      "scale": 1.1229946524064172
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        1060,
+        600,
+        271,
+        173
+      ],
+      "pivot": [
+        133.0,
+        171
+      ],
+      "hair_top": 5,
+      "body_height": 166,
+      "used": [
+        2,
+        2,
+        269,
+        171
+      ],
+      "scale": 1.1229946524064172
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        1329,
+        551,
+        179,
+        221
+      ],
+      "pivot": [
+        140.0,
+        219
+      ],
+      "hair_top": 2,
+      "body_height": 217,
+      "used": [
+        2,
+        2,
+        177,
+        219
+      ],
+      "scale": 1.1229946524064172
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        38,
+        762,
+        206,
+        249
+      ],
+      "pivot": [
+        60.0,
+        247
+      ],
+      "hair_top": 51,
+      "body_height": 196,
+      "used": [
+        2,
+        2,
+        204,
+        247
+      ],
+      "scale": 1.1170212765957446
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        308,
+        764,
+        207,
+        245
+      ],
+      "pivot": [
+        56.0,
+        243
+      ],
+      "hair_top": 2,
+      "body_height": 241,
+      "used": [
+        2,
+        0,
+        205,
+        243
+      ],
+      "scale": 1.1170212765957446
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        555,
+        752,
+        196,
+        262
+      ],
+      "pivot": [
+        167.0,
+        260
+      ],
+      "hair_top": 2,
+      "body_height": 258,
+      "used": [
+        0,
+        0,
+        194,
+        260
+      ],
+      "scale": 1.1170212765957446
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        787,
+        819,
+        254,
+        185
+      ],
+      "pivot": [
+        51.0,
+        183
+      ],
+      "hair_top": 6,
+      "body_height": 177,
+      "used": [
+        2,
+        2,
+        252,
+        183
+      ],
+      "scale": 1.1170212765957446
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        1046,
+        827,
+        274,
+        176
+      ],
+      "pivot": [
+        34.0,
+        174
+      ],
+      "hair_top": 6,
+      "body_height": 168,
+      "used": [
+        2,
+        2,
+        274,
+        174
+      ],
+      "scale": 1.1170212765957446
+    },
+    {
+      "source_file": "fire-attack-3-diagonal-source.png",
+      "rect": [
+        1307,
+        797,
+        189,
+        209
+      ],
+      "pivot": [
+        152.5,
+        207
+      ],
+      "hair_top": 27,
+      "body_height": 180,
+      "used": [
+        0,
+        2,
+        187,
+        207
+      ],
+      "scale": 1.1170212765957446
+    }
+  ],
+  "fire-run-diagonal": [
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        48,
+        11,
+        225,
+        260
+      ],
+      "pivot": [
+        58.0,
+        258
+      ],
+      "hair_top": 46,
+      "body_height": 212,
+      "used": [
+        2,
+        2,
+        223,
+        258
+      ],
+      "scale": 1.0144927536231885
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        295,
+        9,
+        226,
+        256
+      ],
+      "pivot": [
+        96.0,
+        254
+      ],
+      "hair_top": 47,
+      "body_height": 207,
+      "used": [
+        2,
+        2,
+        224,
+        254
+      ],
+      "scale": 1.0144927536231885
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        541,
+        10,
+        217,
+        261
+      ],
+      "pivot": [
+        79.0,
+        259
+      ],
+      "hair_top": 52,
+      "body_height": 207,
+      "used": [
+        2,
+        2,
+        215,
+        259
+      ],
+      "scale": 1.0144927536231885
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        787,
+        11,
+        226,
+        262
+      ],
+      "pivot": [
+        79.0,
+        260
+      ],
+      "hair_top": 50,
+      "body_height": 210,
+      "used": [
+        2,
+        2,
+        224,
+        260
+      ],
+      "scale": 1.0144927536231885
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        1037,
+        12,
+        240,
+        243
+      ],
+      "pivot": [
+        154.0,
+        241
+      ],
+      "hair_top": 49,
+      "body_height": 192,
+      "used": [
+        2,
+        2,
+        238,
+        241
+      ],
+      "scale": 1.0144927536231885
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        1303,
+        11,
+        217,
+        249
+      ],
+      "pivot": [
+        163.0,
+        247
+      ],
+      "hair_top": 51,
+      "body_height": 196,
+      "used": [
+        2,
+        2,
+        215,
+        247
+      ],
+      "scale": 1.0144927536231885
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        70,
+        270,
+        209,
+        237
+      ],
+      "pivot": [
+        147.0,
+        235
+      ],
+      "hair_top": 24,
+      "body_height": 211,
+      "used": [
+        2,
+        2,
+        207,
+        235
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        314,
+        278,
+        195,
+        230
+      ],
+      "pivot": [
+        154.5,
+        228
+      ],
+      "hair_top": 14,
+      "body_height": 214,
+      "used": [
+        2,
+        2,
+        193,
+        228
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        557,
+        270,
+        201,
+        232
+      ],
+      "pivot": [
+        154.0,
+        230
+      ],
+      "hair_top": 19,
+      "body_height": 211,
+      "used": [
+        2,
+        2,
+        199,
+        230
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        816,
+        280,
+        204,
+        230
+      ],
+      "pivot": [
+        151.0,
+        228
+      ],
+      "hair_top": 15,
+      "body_height": 213,
+      "used": [
+        2,
+        2,
+        202,
+        228
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        1066,
+        272,
+        206,
+        237
+      ],
+      "pivot": [
+        140.0,
+        235
+      ],
+      "hair_top": 17,
+      "body_height": 218,
+      "used": [
+        2,
+        2,
+        204,
+        235
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        1312,
+        278,
+        210,
+        229
+      ],
+      "pivot": [
+        96.0,
+        227
+      ],
+      "hair_top": 8,
+      "body_height": 219,
+      "used": [
+        2,
+        2,
+        208,
+        227
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        55,
+        506,
+        212,
+        239
+      ],
+      "pivot": [
+        67.0,
+        237
+      ],
+      "hair_top": 22,
+      "body_height": 215,
+      "used": [
+        2,
+        2,
+        210,
+        237
+      ],
+      "scale": 0.9813084112149533
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        304,
+        507,
+        210,
+        245
+      ],
+      "pivot": [
+        63.0,
+        243
+      ],
+      "hair_top": 21,
+      "body_height": 222,
+      "used": [
+        2,
+        2,
+        208,
+        243
+      ],
+      "scale": 0.9813084112149533
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        554,
+        506,
+        205,
+        233
+      ],
+      "pivot": [
+        150.0,
+        231
+      ],
+      "hair_top": 26,
+      "body_height": 205,
+      "used": [
+        2,
+        2,
+        203,
+        231
+      ],
+      "scale": 0.9813084112149533
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        800,
+        511,
+        216,
+        236
+      ],
+      "pivot": [
+        148.0,
+        234
+      ],
+      "hair_top": 22,
+      "body_height": 212,
+      "used": [
+        2,
+        2,
+        214,
+        234
+      ],
+      "scale": 0.9813084112149533
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        1054,
+        507,
+        207,
+        247
+      ],
+      "pivot": [
+        72.0,
+        245
+      ],
+      "hair_top": 24,
+      "body_height": 221,
+      "used": [
+        2,
+        2,
+        205,
+        245
+      ],
+      "scale": 0.9813084112149533
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        1289,
+        507,
+        209,
+        237
+      ],
+      "pivot": [
+        112.0,
+        235
+      ],
+      "hair_top": 22,
+      "body_height": 213,
+      "used": [
+        2,
+        2,
+        207,
+        235
+      ],
+      "scale": 0.9813084112149533
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        34,
+        755,
+        239,
+        245
+      ],
+      "pivot": [
+        161.0,
+        243
+      ],
+      "hair_top": 24,
+      "body_height": 219,
+      "used": [
+        2,
+        2,
+        237,
+        243
+      ],
+      "scale": 0.9655172413793104
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        297,
+        755,
+        224,
+        244
+      ],
+      "pivot": [
+        140.0,
+        242
+      ],
+      "hair_top": 26,
+      "body_height": 216,
+      "used": [
+        2,
+        2,
+        222,
+        242
+      ],
+      "scale": 0.9655172413793104
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        539,
+        750,
+        221,
+        251
+      ],
+      "pivot": [
+        141.0,
+        249
+      ],
+      "hair_top": 32,
+      "body_height": 217,
+      "used": [
+        2,
+        2,
+        219,
+        249
+      ],
+      "scale": 0.9655172413793104
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        789,
+        750,
+        221,
+        254
+      ],
+      "pivot": [
+        146.0,
+        252
+      ],
+      "hair_top": 34,
+      "body_height": 218,
+      "used": [
+        2,
+        2,
+        219,
+        252
+      ],
+      "scale": 0.9655172413793104
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        1044,
+        752,
+        226,
+        254
+      ],
+      "pivot": [
+        134.0,
+        252
+      ],
+      "hair_top": 30,
+      "body_height": 222,
+      "used": [
+        2,
+        2,
+        224,
+        252
+      ],
+      "scale": 0.9655172413793104
+    },
+    {
+      "source_file": "fire-run-diagonal-source.png",
+      "rect": [
+        1292,
+        750,
+        230,
+        245
+      ],
+      "pivot": [
+        153.0,
+        243
+      ],
+      "hair_top": 31,
+      "body_height": 212,
+      "used": [
+        2,
+        2,
+        228,
+        243
+      ],
+      "scale": 0.9655172413793104
+    }
+  ],
+  "fire-states-diagonal": [
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        45,
+        8,
+        205,
+        263
+      ],
+      "pivot": [
+        137.0,
+        261
+      ],
+      "hair_top": 49,
+      "body_height": 212,
+      "used": [
+        2,
+        2,
+        203,
+        261
+      ],
+      "scale": 0.9905660377358491
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        305,
+        44,
+        202,
+        228
+      ],
+      "pivot": [
+        115.0,
+        226
+      ],
+      "hair_top": 4,
+      "body_height": 222,
+      "used": [
+        2,
+        2,
+        200,
+        226
+      ],
+      "scale": 0.9905660377358491
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        548,
+        6,
+        194,
+        264
+      ],
+      "pivot": [
+        120.0,
+        262
+      ],
+      "hair_top": 3,
+      "body_height": 259,
+      "used": [
+        2,
+        2,
+        192,
+        262
+      ],
+      "scale": 0.9905660377358491
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        775,
+        9,
+        212,
+        263
+      ],
+      "pivot": [
+        166.0,
+        261
+      ],
+      "hair_top": 68,
+      "body_height": 193,
+      "used": [
+        2,
+        2,
+        210,
+        261
+      ],
+      "scale": 0.9905660377358491
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        1032,
+        102,
+        226,
+        175
+      ],
+      "pivot": [
+        121.0,
+        173
+      ],
+      "hair_top": 3,
+      "body_height": 170,
+      "used": [
+        2,
+        2,
+        224,
+        173
+      ],
+      "scale": 0.9905660377358491
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        1309,
+        129,
+        213,
+        150
+      ],
+      "pivot": [
+        76.0,
+        142
+      ],
+      "hair_top": 5,
+      "body_height": 137,
+      "used": [
+        2,
+        2,
+        211,
+        148
+      ],
+      "scale": 0.9905660377358491
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        28,
+        285,
+        231,
+        232
+      ],
+      "pivot": [
+        75.0,
+        230
+      ],
+      "hair_top": 28,
+      "body_height": 202,
+      "used": [
+        2,
+        2,
+        229,
+        230
+      ],
+      "scale": 1.0396039603960396
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        279,
+        285,
+        221,
+        236
+      ],
+      "pivot": [
+        154.0,
+        234
+      ],
+      "hair_top": 43,
+      "body_height": 191,
+      "used": [
+        2,
+        2,
+        219,
+        234
+      ],
+      "scale": 1.0396039603960396
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        542,
+        271,
+        210,
+        246
+      ],
+      "pivot": [
+        58.0,
+        243
+      ],
+      "hair_top": 34,
+      "body_height": 209,
+      "used": [
+        2,
+        2,
+        208,
+        246
+      ],
+      "scale": 1.0396039603960396
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        781,
+        278,
+        204,
+        240
+      ],
+      "pivot": [
+        51.0,
+        238
+      ],
+      "hair_top": 3,
+      "body_height": 235,
+      "used": [
+        2,
+        2,
+        202,
+        238
+      ],
+      "scale": 1.0396039603960396
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        1036,
+        358,
+        201,
+        157
+      ],
+      "pivot": [
+        109.0,
+        155
+      ],
+      "hair_top": 19,
+      "body_height": 136,
+      "used": [
+        2,
+        2,
+        199,
+        155
+      ],
+      "scale": 1.0396039603960396
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        1291,
+        365,
+        206,
+        151
+      ],
+      "pivot": [
+        136.0,
+        149
+      ],
+      "hair_top": 4,
+      "body_height": 145,
+      "used": [
+        2,
+        2,
+        204,
+        149
+      ],
+      "scale": 1.0396039603960396
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        45,
+        528,
+        215,
+        236
+      ],
+      "pivot": [
+        137.0,
+        234
+      ],
+      "hair_top": 26,
+      "body_height": 208,
+      "used": [
+        2,
+        2,
+        213,
+        234
+      ],
+      "scale": 1.0096153846153846
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        295,
+        564,
+        226,
+        202
+      ],
+      "pivot": [
+        158.0,
+        200
+      ],
+      "hair_top": 13,
+      "body_height": 187,
+      "used": [
+        2,
+        2,
+        224,
+        200
+      ],
+      "scale": 1.0096153846153846
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        556,
+        507,
+        197,
+        258
+      ],
+      "pivot": [
+        128.0,
+        258
+      ],
+      "hair_top": 2,
+      "body_height": 256,
+      "used": [
+        2,
+        0,
+        195,
+        258
+      ],
+      "scale": 1.0096153846153846
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        786,
+        520,
+        208,
+        255
+      ],
+      "pivot": [
+        142.0,
+        253
+      ],
+      "hair_top": 3,
+      "body_height": 250,
+      "used": [
+        2,
+        2,
+        206,
+        255
+      ],
+      "scale": 1.0096153846153846
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        1046,
+        605,
+        211,
+        167
+      ],
+      "pivot": [
+        119.0,
+        165
+      ],
+      "hair_top": 27,
+      "body_height": 138,
+      "used": [
+        2,
+        2,
+        209,
+        165
+      ],
+      "scale": 1.0096153846153846
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        1299,
+        610,
+        221,
+        159
+      ],
+      "pivot": [
+        65.0,
+        156
+      ],
+      "hair_top": 4,
+      "body_height": 152,
+      "used": [
+        2,
+        2,
+        219,
+        157
+      ],
+      "scale": 1.0096153846153846
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        33,
+        781,
+        214,
+        224
+      ],
+      "pivot": [
+        165.0,
+        222
+      ],
+      "hair_top": 13,
+      "body_height": 209,
+      "used": [
+        2,
+        2,
+        212,
+        222
+      ],
+      "scale": 1.0047846889952152
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        300,
+        794,
+        215,
+        212
+      ],
+      "pivot": [
+        73.0,
+        210
+      ],
+      "hair_top": 5,
+      "body_height": 205,
+      "used": [
+        2,
+        2,
+        213,
+        210
+      ],
+      "scale": 1.0047846889952152
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        542,
+        751,
+        211,
+        251
+      ],
+      "pivot": [
+        58.0,
+        249
+      ],
+      "hair_top": 10,
+      "body_height": 239,
+      "used": [
+        2,
+        0,
+        209,
+        249
+      ],
+      "scale": 1.0047846889952152
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        777,
+        769,
+        219,
+        234
+      ],
+      "pivot": [
+        50.0,
+        232
+      ],
+      "hair_top": 3,
+      "body_height": 229,
+      "used": [
+        2,
+        0,
+        217,
+        232
+      ],
+      "scale": 1.0047846889952152
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        1014,
+        843,
+        236,
+        165
+      ],
+      "pivot": [
+        119.0,
+        163
+      ],
+      "hair_top": 5,
+      "body_height": 158,
+      "used": [
+        2,
+        2,
+        234,
+        163
+      ],
+      "scale": 1.0047846889952152
+    },
+    {
+      "source_file": "fire-states-diagonal-source.png",
+      "rect": [
+        1304,
+        852,
+        219,
+        150
+      ],
+      "pivot": [
+        84.0,
+        148
+      ],
+      "hair_top": 3,
+      "body_height": 145,
+      "used": [
+        2,
+        2,
+        217,
+        148
+      ],
+      "scale": 1.0047846889952152
+    }
+  ],
+  "thunder-attack-1-diagonal": [
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        14,
+        43,
+        239,
+        217
+      ],
+      "pivot": [
+        89.0,
+        215
+      ],
+      "hair_top": 4,
+      "body_height": 211,
+      "used": [
+        2,
+        2,
+        237,
+        215
+      ],
+      "scale": 1.0047846889952152
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        263,
+        44,
+        244,
+        214
+      ],
+      "pivot": [
+        97.0,
+        212
+      ],
+      "hair_top": 3,
+      "body_height": 209,
+      "used": [
+        2,
+        2,
+        244,
+        212
+      ],
+      "scale": 1.0047846889952152
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        497,
+        45,
+        270,
+        214
+      ],
+      "pivot": [
+        108.0,
+        212
+      ],
+      "hair_top": 3,
+      "body_height": 209,
+      "used": [
+        0,
+        2,
+        270,
+        212
+      ],
+      "scale": 1.0047846889952152
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        730,
+        53,
+        293,
+        204
+      ],
+      "pivot": [
+        118.0,
+        202
+      ],
+      "hair_top": 4,
+      "body_height": 198,
+      "used": [
+        0,
+        2,
+        293,
+        202
+      ],
+      "scale": 1.0047846889952152,
+      "reuse": [
+        "thunder-attack-2-diagonal",
+        3
+      ]
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        1012,
+        46,
+        259,
+        212
+      ],
+      "pivot": [
+        116.0,
+        210
+      ],
+      "hair_top": 4,
+      "body_height": 206,
+      "used": [
+        0,
+        2,
+        257,
+        210
+      ],
+      "scale": 1.0047846889952152
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        1274,
+        44,
+        239,
+        215
+      ],
+      "pivot": [
+        99.0,
+        213
+      ],
+      "hair_top": 3,
+      "body_height": 210,
+      "used": [
+        2,
+        2,
+        237,
+        213
+      ],
+      "scale": 1.0047846889952152
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        14,
+        301,
+        206,
+        216
+      ],
+      "pivot": [
+        170.0,
+        214
+      ],
+      "hair_top": 3,
+      "body_height": 211,
+      "used": [
+        2,
+        2,
+        204,
+        214
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        260,
+        301,
+        224,
+        216
+      ],
+      "pivot": [
+        193.0,
+        214
+      ],
+      "hair_top": 3,
+      "body_height": 211,
+      "used": [
+        2,
+        2,
+        224,
+        214
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        480,
+        304,
+        263,
+        214
+      ],
+      "pivot": [
+        231.0,
+        212
+      ],
+      "hair_top": 3,
+      "body_height": 209,
+      "used": [
+        0,
+        2,
+        263,
+        212
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        722,
+        305,
+        288,
+        208
+      ],
+      "pivot": [
+        141.0,
+        208
+      ],
+      "hair_top": 3,
+      "body_height": 205,
+      "used": [
+        0,
+        2,
+        288,
+        208
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        980,
+        303,
+        289,
+        212
+      ],
+      "pivot": [
+        154.0,
+        210
+      ],
+      "hair_top": 3,
+      "body_height": 207,
+      "used": [
+        0,
+        2,
+        287,
+        210
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        1296,
+        303,
+        213,
+        214
+      ],
+      "pivot": [
+        185.0,
+        212
+      ],
+      "hair_top": 4,
+      "body_height": 208,
+      "used": [
+        2,
+        2,
+        211,
+        212
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        28,
+        550,
+        232,
+        216
+      ],
+      "pivot": [
+        129.0,
+        214
+      ],
+      "hair_top": 3,
+      "body_height": 211,
+      "used": [
+        2,
+        2,
+        230,
+        214
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        282,
+        552,
+        249,
+        214
+      ],
+      "pivot": [
+        30.0,
+        212
+      ],
+      "hair_top": 3,
+      "body_height": 209,
+      "used": [
+        2,
+        2,
+        247,
+        212
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        530,
+        555,
+        272,
+        212
+      ],
+      "pivot": [
+        122.0,
+        210
+      ],
+      "hair_top": 3,
+      "body_height": 207,
+      "used": [
+        2,
+        2,
+        272,
+        210
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        786,
+        556,
+        292,
+        211
+      ],
+      "pivot": [
+        139.0,
+        209
+      ],
+      "hair_top": 3,
+      "body_height": 206,
+      "used": [
+        0,
+        2,
+        292,
+        209
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        1047,
+        553,
+        259,
+        213
+      ],
+      "pivot": [
+        29.0,
+        211
+      ],
+      "hair_top": 3,
+      "body_height": 208,
+      "used": [
+        0,
+        2,
+        257,
+        211
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        1309,
+        551,
+        218,
+        217
+      ],
+      "pivot": [
+        47.0,
+        215
+      ],
+      "hair_top": 4,
+      "body_height": 211,
+      "used": [
+        2,
+        2,
+        216,
+        215
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        20,
+        786,
+        245,
+        212
+      ],
+      "pivot": [
+        141.0,
+        210
+      ],
+      "hair_top": 4,
+      "body_height": 206,
+      "used": [
+        2,
+        2,
+        243,
+        210
+      ],
+      "scale": 1.0268948655256724
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        289,
+        789,
+        264,
+        207
+      ],
+      "pivot": [
+        145.0,
+        205
+      ],
+      "hair_top": 4,
+      "body_height": 201,
+      "used": [
+        2,
+        2,
+        264,
+        205
+      ],
+      "scale": 1.0268948655256724
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        20,
+        786,
+        245,
+        212
+      ],
+      "pivot": [
+        141.0,
+        210
+      ],
+      "hair_top": 4,
+      "body_height": 206,
+      "used": [
+        2,
+        2,
+        243,
+        210
+      ],
+      "scale": 1.0268948655256724,
+      "reuse": [
+        "thunder-attack-2-diagonal",
+        20
+      ]
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        20,
+        786,
+        245,
+        212
+      ],
+      "pivot": [
+        141.0,
+        210
+      ],
+      "hair_top": 4,
+      "body_height": 206,
+      "used": [
+        2,
+        2,
+        243,
+        210
+      ],
+      "scale": 1.0268948655256724,
+      "reuse": [
+        "thunder-attack-2-diagonal",
+        21
+      ]
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        1076,
+        788,
+        247,
+        208
+      ],
+      "pivot": [
+        135.0,
+        206
+      ],
+      "hair_top": 3,
+      "body_height": 203,
+      "used": [
+        0,
+        2,
+        247,
+        206
+      ],
+      "scale": 1.0268948655256724
+    },
+    {
+      "source_file": "thunder-attack-1-diagonal-corrected-source.png",
+      "rect": [
+        1305,
+        793,
+        225,
+        208
+      ],
+      "pivot": [
+        158.0,
+        206
+      ],
+      "hair_top": 3,
+      "body_height": 203,
+      "used": [
+        0,
+        2,
+        223,
+        206
+      ],
+      "scale": 1.0268948655256724
+    }
+  ],
+  "thunder-attack-2-diagonal": [
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        14,
+        35,
+        215,
+        208
+      ],
+      "pivot": [
+        54.0,
+        206
+      ],
+      "hair_top": 5,
+      "body_height": 201,
+      "used": [
+        2,
+        2,
+        213,
+        206
+      ],
+      "scale": 1.1229946524064172
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        260,
+        55,
+        211,
+        194
+      ],
+      "pivot": [
+        175.0,
+        192
+      ],
+      "hair_top": 3,
+      "body_height": 189,
+      "used": [
+        2,
+        2,
+        209,
+        192
+      ],
+      "scale": 1.1229946524064172
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        497,
+        62,
+        224,
+        188
+      ],
+      "pivot": [
+        65.5,
+        186
+      ],
+      "hair_top": 3,
+      "body_height": 183,
+      "used": [
+        2,
+        2,
+        224,
+        186
+      ],
+      "scale": 1.1229946524064172
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        693,
+        67,
+        322,
+        184
+      ],
+      "pivot": [
+        165.0,
+        182
+      ],
+      "hair_top": 7,
+      "body_height": 175,
+      "used": [
+        0,
+        2,
+        322,
+        182
+      ],
+      "scale": 1.1229946524064172
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        1000,
+        57,
+        283,
+        194
+      ],
+      "pivot": [
+        224.0,
+        192
+      ],
+      "hair_top": 7,
+      "body_height": 185,
+      "used": [
+        0,
+        2,
+        281,
+        192
+      ],
+      "scale": 1.1229946524064172
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        1284,
+        47,
+        232,
+        205
+      ],
+      "pivot": [
+        183.0,
+        203
+      ],
+      "hair_top": 4,
+      "body_height": 199,
+      "used": [
+        2,
+        2,
+        230,
+        203
+      ],
+      "scale": 1.1229946524064172
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        8,
+        272,
+        217,
+        215
+      ],
+      "pivot": [
+        168.0,
+        213
+      ],
+      "hair_top": 2,
+      "body_height": 211,
+      "used": [
+        2,
+        2,
+        215,
+        213
+      ],
+      "scale": 1.0769230769230769
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        238,
+        280,
+        264,
+        209
+      ],
+      "pivot": [
+        210.0,
+        207
+      ],
+      "hair_top": 8,
+      "body_height": 199,
+      "used": [
+        2,
+        2,
+        264,
+        207
+      ],
+      "scale": 1.0769230769230769
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        493,
+        290,
+        274,
+        201
+      ],
+      "pivot": [
+        227.0,
+        199
+      ],
+      "hair_top": 8,
+      "body_height": 191,
+      "used": [
+        0,
+        2,
+        274,
+        199
+      ],
+      "scale": 1.0769230769230769
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        733,
+        294,
+        303,
+        199
+      ],
+      "pivot": [
+        258.0,
+        197
+      ],
+      "hair_top": 8,
+      "body_height": 189,
+      "used": [
+        0,
+        2,
+        303,
+        197
+      ],
+      "scale": 1.0769230769230769
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        1011,
+        291,
+        284,
+        200
+      ],
+      "pivot": [
+        251.0,
+        198
+      ],
+      "hair_top": 7,
+      "body_height": 191,
+      "used": [
+        0,
+        2,
+        284,
+        198
+      ],
+      "scale": 1.0769230769230769
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        1285,
+        277,
+        226,
+        221
+      ],
+      "pivot": [
+        193.0,
+        219
+      ],
+      "hair_top": 3,
+      "body_height": 216,
+      "used": [
+        0,
+        2,
+        224,
+        219
+      ],
+      "scale": 1.0769230769230769
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        21,
+        527,
+        237,
+        226
+      ],
+      "pivot": [
+        135.0,
+        224
+      ],
+      "hair_top": 4,
+      "body_height": 220,
+      "used": [
+        2,
+        2,
+        235,
+        224
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        273,
+        534,
+        244,
+        216
+      ],
+      "pivot": [
+        139.0,
+        214
+      ],
+      "hair_top": 5,
+      "body_height": 209,
+      "used": [
+        2,
+        2,
+        244,
+        214
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        512,
+        544,
+        262,
+        208
+      ],
+      "pivot": [
+        28.0,
+        206
+      ],
+      "hair_top": 7,
+      "body_height": 199,
+      "used": [
+        0,
+        2,
+        262,
+        206
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        767,
+        538,
+        289,
+        214
+      ],
+      "pivot": [
+        31.0,
+        212
+      ],
+      "hair_top": 4,
+      "body_height": 208,
+      "used": [
+        0,
+        2,
+        289,
+        212
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        1043,
+        535,
+        263,
+        217
+      ],
+      "pivot": [
+        31.0,
+        215
+      ],
+      "hair_top": 7,
+      "body_height": 208,
+      "used": [
+        0,
+        2,
+        261,
+        215
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        1309,
+        528,
+        223,
+        226
+      ],
+      "pivot": [
+        135.0,
+        224
+      ],
+      "hair_top": 2,
+      "body_height": 222,
+      "used": [
+        2,
+        2,
+        221,
+        224
+      ],
+      "scale": 1.0071942446043165
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        14,
+        765,
+        236,
+        215
+      ],
+      "pivot": [
+        147.0,
+        213
+      ],
+      "hair_top": 3,
+      "body_height": 210,
+      "used": [
+        2,
+        2,
+        234,
+        213
+      ],
+      "scale": 1.0687022900763359
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        252,
+        777,
+        223,
+        200
+      ],
+      "pivot": [
+        42.0,
+        198
+      ],
+      "hair_top": 2,
+      "body_height": 196,
+      "used": [
+        2,
+        2,
+        221,
+        198
+      ],
+      "scale": 1.0687022900763359
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        504,
+        780,
+        265,
+        197
+      ],
+      "pivot": [
+        133.0,
+        195
+      ],
+      "hair_top": 7,
+      "body_height": 188,
+      "used": [
+        2,
+        2,
+        265,
+        195
+      ],
+      "scale": 1.0687022900763359
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        746,
+        785,
+        302,
+        192
+      ],
+      "pivot": [
+        145.0,
+        190
+      ],
+      "hair_top": 8,
+      "body_height": 182,
+      "used": [
+        0,
+        2,
+        302,
+        190
+      ],
+      "scale": 1.0687022900763359
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        1026,
+        779,
+        270,
+        203
+      ],
+      "pivot": [
+        47.5,
+        201
+      ],
+      "hair_top": 4,
+      "body_height": 197,
+      "used": [
+        0,
+        2,
+        268,
+        201
+      ],
+      "scale": 1.0687022900763359
+    },
+    {
+      "source_file": "thunder-attack-2-diagonal-source.png",
+      "rect": [
+        1304,
+        773,
+        223,
+        210
+      ],
+      "pivot": [
+        155.0,
+        208
+      ],
+      "hair_top": 3,
+      "body_height": 205,
+      "used": [
+        2,
+        2,
+        221,
+        208
+      ],
+      "scale": 1.0687022900763359
+    }
+  ],
+  "thunder-attack-3-diagonal": [
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        19,
+        65,
+        207,
+        219
+      ],
+      "pivot": [
+        64.0,
+        217
+      ],
+      "hair_top": 5,
+      "body_height": 212,
+      "used": [
+        2,
+        2,
+        205,
+        217
+      ],
+      "scale": 1.0
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        252,
+        66,
+        236,
+        227
+      ],
+      "pivot": [
+        214.0,
+        225
+      ],
+      "hair_top": 6,
+      "body_height": 219,
+      "used": [
+        2,
+        2,
+        236,
+        225
+      ],
+      "scale": 1.0
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        474,
+        73,
+        252,
+        213
+      ],
+      "pivot": [
+        224.0,
+        213
+      ],
+      "hair_top": 5,
+      "body_height": 208,
+      "used": [
+        0,
+        2,
+        250,
+        213
+      ],
+      "scale": 1.0
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        738,
+        76,
+        351,
+        205
+      ],
+      "pivot": [
+        226.5,
+        205
+      ],
+      "hair_top": 5,
+      "body_height": 200,
+      "used": [
+        2,
+        2,
+        351,
+        205
+      ],
+      "scale": 1.0,
+      "reuse": [
+        "thunder-attack-2-diagonal",
+        3
+      ]
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        1053,
+        73,
+        279,
+        211
+      ],
+      "pivot": [
+        162.0,
+        209
+      ],
+      "hair_top": 4,
+      "body_height": 205,
+      "used": [
+        0,
+        2,
+        279,
+        209
+      ],
+      "scale": 1.0,
+      "reuse": [
+        "thunder-attack-2-diagonal",
+        4
+      ]
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        1284,
+        65,
+        219,
+        224
+      ],
+      "pivot": [
+        196.0,
+        222
+      ],
+      "hair_top": 4,
+      "body_height": 218,
+      "used": [
+        0,
+        2,
+        217,
+        222
+      ],
+      "scale": 1.0
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        12,
+        296,
+        252,
+        226
+      ],
+      "pivot": [
+        103.0,
+        224
+      ],
+      "hair_top": 6,
+      "body_height": 218,
+      "used": [
+        2,
+        2,
+        250,
+        224
+      ],
+      "scale": 0.9417040358744395
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        266,
+        299,
+        260,
+        235
+      ],
+      "pivot": [
+        224.0,
+        233
+      ],
+      "hair_top": 5,
+      "body_height": 228,
+      "used": [
+        2,
+        2,
+        260,
+        233
+      ],
+      "scale": 0.9417040358744395
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        515,
+        301,
+        256,
+        230
+      ],
+      "pivot": [
+        231.0,
+        229
+      ],
+      "hair_top": 4,
+      "body_height": 225,
+      "used": [
+        0,
+        2,
+        256,
+        229
+      ],
+      "scale": 0.9417040358744395
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        725,
+        302,
+        331,
+        222
+      ],
+      "pivot": [
+        121.0,
+        222
+      ],
+      "hair_top": 6,
+      "body_height": 216,
+      "used": [
+        0,
+        2,
+        331,
+        222
+      ],
+      "scale": 0.9417040358744395
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        1027,
+        303,
+        283,
+        231
+      ],
+      "pivot": [
+        251.0,
+        229
+      ],
+      "hair_top": 4,
+      "body_height": 225,
+      "used": [
+        0,
+        2,
+        283,
+        229
+      ],
+      "scale": 0.9417040358744395
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        1287,
+        297,
+        241,
+        226
+      ],
+      "pivot": [
+        91.0,
+        226
+      ],
+      "hair_top": 5,
+      "body_height": 221,
+      "used": [
+        0,
+        2,
+        239,
+        226
+      ],
+      "scale": 0.9417040358744395
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        14,
+        533,
+        243,
+        221
+      ],
+      "pivot": [
+        145.0,
+        219
+      ],
+      "hair_top": 4,
+      "body_height": 215,
+      "used": [
+        2,
+        2,
+        241,
+        219
+      ],
+      "scale": 0.9859154929577465
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        263,
+        533,
+        245,
+        222
+      ],
+      "pivot": [
+        37.0,
+        220
+      ],
+      "hair_top": 5,
+      "body_height": 215,
+      "used": [
+        2,
+        2,
+        243,
+        220
+      ],
+      "scale": 0.9859154929577465
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        518,
+        538,
+        261,
+        218
+      ],
+      "pivot": [
+        33.0,
+        216
+      ],
+      "hair_top": 4,
+      "body_height": 212,
+      "used": [
+        2,
+        2,
+        261,
+        216
+      ],
+      "scale": 0.9859154929577465
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        770,
+        542,
+        295,
+        206
+      ],
+      "pivot": [
+        33.0,
+        205
+      ],
+      "hair_top": 5,
+      "body_height": 200,
+      "used": [
+        0,
+        2,
+        295,
+        206
+      ],
+      "scale": 0.9859154929577465
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        1045,
+        542,
+        254,
+        212
+      ],
+      "pivot": [
+        140.0,
+        210
+      ],
+      "hair_top": 4,
+      "body_height": 206,
+      "used": [
+        0,
+        2,
+        254,
+        210
+      ],
+      "scale": 0.9859154929577465
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        1291,
+        536,
+        236,
+        220
+      ],
+      "pivot": [
+        144.0,
+        218
+      ],
+      "hair_top": 4,
+      "body_height": 214,
+      "used": [
+        0,
+        2,
+        234,
+        218
+      ],
+      "scale": 0.9859154929577465
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        11,
+        768,
+        261,
+        228
+      ],
+      "pivot": [
+        166.0,
+        226
+      ],
+      "hair_top": 4,
+      "body_height": 222,
+      "used": [
+        2,
+        2,
+        261,
+        226
+      ],
+      "scale": 0.9699769053117783
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        255,
+        769,
+        269,
+        225
+      ],
+      "pivot": [
+        182.0,
+        223
+      ],
+      "hair_top": 5,
+      "body_height": 218,
+      "used": [
+        0,
+        2,
+        269,
+        223
+      ],
+      "scale": 0.9699769053117783
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        501,
+        774,
+        275,
+        222
+      ],
+      "pivot": [
+        188.0,
+        220
+      ],
+      "hair_top": 5,
+      "body_height": 215,
+      "used": [
+        0,
+        2,
+        275,
+        220
+      ],
+      "scale": 0.9699769053117783
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        742,
+        779,
+        335,
+        208
+      ],
+      "pivot": [
+        170.0,
+        206
+      ],
+      "hair_top": 5,
+      "body_height": 201,
+      "used": [
+        0,
+        2,
+        335,
+        206
+      ],
+      "scale": 0.9699769053117783
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        1051,
+        778,
+        273,
+        207
+      ],
+      "pivot": [
+        169.0,
+        205
+      ],
+      "hair_top": 5,
+      "body_height": 200,
+      "used": [
+        0,
+        2,
+        273,
+        205
+      ],
+      "scale": 0.9699769053117783
+    },
+    {
+      "source_file": "thunder-attack-3-diagonal-corrected-source.png",
+      "rect": [
+        1299,
+        769,
+        236,
+        227
+      ],
+      "pivot": [
+        160.0,
+        225
+      ],
+      "hair_top": 5,
+      "body_height": 220,
+      "used": [
+        0,
+        2,
+        234,
+        225
+      ],
+      "scale": 0.9699769053117783
+    }
+  ],
+  "thunder-run-diagonal": [
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        23,
+        38,
+        260,
+        222
+      ],
+      "pivot": [
+        125.0,
+        220
+      ],
+      "hair_top": 6,
+      "body_height": 214,
+      "used": [
+        2,
+        2,
+        260,
+        220
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        270,
+        38,
+        246,
+        223
+      ],
+      "pivot": [
+        122.0,
+        221
+      ],
+      "hair_top": 2,
+      "body_height": 219,
+      "used": [
+        0,
+        2,
+        244,
+        221
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        518,
+        40,
+        239,
+        222
+      ],
+      "pivot": [
+        119.0,
+        220
+      ],
+      "hair_top": 4,
+      "body_height": 216,
+      "used": [
+        2,
+        2,
+        237,
+        220
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        772,
+        37,
+        264,
+        224
+      ],
+      "pivot": [
+        150.0,
+        222
+      ],
+      "hair_top": 5,
+      "body_height": 217,
+      "used": [
+        2,
+        2,
+        264,
+        222
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        1024,
+        39,
+        240,
+        219
+      ],
+      "pivot": [
+        160.0,
+        217
+      ],
+      "hair_top": 6,
+      "body_height": 211,
+      "used": [
+        0,
+        2,
+        238,
+        217
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        1275,
+        43,
+        239,
+        217
+      ],
+      "pivot": [
+        172.0,
+        215
+      ],
+      "hair_top": 3,
+      "body_height": 212,
+      "used": [
+        2,
+        2,
+        237,
+        215
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        8,
+        279,
+        267,
+        231
+      ],
+      "pivot": [
+        207.0,
+        229
+      ],
+      "hair_top": 5,
+      "body_height": 224,
+      "used": [
+        2,
+        2,
+        267,
+        229
+      ],
+      "scale": 0.9375
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        262,
+        281,
+        260,
+        230
+      ],
+      "pivot": [
+        212.0,
+        228
+      ],
+      "hair_top": 4,
+      "body_height": 224,
+      "used": [
+        0,
+        2,
+        260,
+        228
+      ],
+      "scale": 0.9375
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        513,
+        280,
+        260,
+        229
+      ],
+      "pivot": [
+        226.0,
+        227
+      ],
+      "hair_top": 6,
+      "body_height": 221,
+      "used": [
+        0,
+        2,
+        258,
+        227
+      ],
+      "scale": 0.9375
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        780,
+        280,
+        249,
+        220
+      ],
+      "pivot": [
+        120.0,
+        218
+      ],
+      "hair_top": 6,
+      "body_height": 212,
+      "used": [
+        2,
+        2,
+        247,
+        218
+      ],
+      "scale": 0.9375
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        1031,
+        277,
+        258,
+        237
+      ],
+      "pivot": [
+        203.0,
+        235
+      ],
+      "hair_top": 5,
+      "body_height": 230,
+      "used": [
+        2,
+        2,
+        256,
+        235
+      ],
+      "scale": 0.9375
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        1290,
+        277,
+        242,
+        232
+      ],
+      "pivot": [
+        159.0,
+        230
+      ],
+      "hair_top": 5,
+      "body_height": 225,
+      "used": [
+        2,
+        2,
+        240,
+        230
+      ],
+      "scale": 0.9375
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        35,
+        523,
+        255,
+        231
+      ],
+      "pivot": [
+        45.0,
+        229
+      ],
+      "hair_top": 6,
+      "body_height": 223,
+      "used": [
+        2,
+        2,
+        255,
+        229
+      ],
+      "scale": 0.9459459459459459
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        283,
+        523,
+        256,
+        231
+      ],
+      "pivot": [
+        30.0,
+        228
+      ],
+      "hair_top": 7,
+      "body_height": 221,
+      "used": [
+        0,
+        2,
+        256,
+        229
+      ],
+      "scale": 0.9459459459459459
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        529,
+        522,
+        265,
+        218
+      ],
+      "pivot": [
+        155.0,
+        216
+      ],
+      "hair_top": 7,
+      "body_height": 209,
+      "used": [
+        0,
+        2,
+        265,
+        216
+      ],
+      "scale": 0.9459459459459459
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        788,
+        522,
+        272,
+        246
+      ],
+      "pivot": [
+        46.0,
+        244
+      ],
+      "hair_top": 8,
+      "body_height": 236,
+      "used": [
+        0,
+        2,
+        272,
+        246
+      ],
+      "scale": 0.9459459459459459
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        1056,
+        522,
+        261,
+        221
+      ],
+      "pivot": [
+        117.0,
+        219
+      ],
+      "hair_top": 6,
+      "body_height": 213,
+      "used": [
+        0,
+        2,
+        261,
+        219
+      ],
+      "scale": 0.9459459459459459
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        1301,
+        523,
+        235,
+        242
+      ],
+      "pivot": [
+        44.0,
+        240
+      ],
+      "hair_top": 4,
+      "body_height": 236,
+      "used": [
+        0,
+        2,
+        234,
+        240
+      ],
+      "scale": 0.9459459459459459
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        25,
+        755,
+        267,
+        230
+      ],
+      "pivot": [
+        134.0,
+        228
+      ],
+      "hair_top": 3,
+      "body_height": 225,
+      "used": [
+        2,
+        2,
+        267,
+        228
+      ],
+      "scale": 0.9480812641083521
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        276,
+        753,
+        259,
+        222
+      ],
+      "pivot": [
+        76.0,
+        220
+      ],
+      "hair_top": 5,
+      "body_height": 215,
+      "used": [
+        0,
+        2,
+        259,
+        220
+      ],
+      "scale": 0.9480812641083521
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        521,
+        753,
+        264,
+        230
+      ],
+      "pivot": [
+        133.0,
+        228
+      ],
+      "hair_top": 6,
+      "body_height": 222,
+      "used": [
+        0,
+        2,
+        264,
+        228
+      ],
+      "scale": 0.9480812641083521
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        779,
+        760,
+        260,
+        231
+      ],
+      "pivot": [
+        136.0,
+        229
+      ],
+      "hair_top": 3,
+      "body_height": 226,
+      "used": [
+        0,
+        0,
+        258,
+        229
+      ],
+      "scale": 0.9480812641083521
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        1039,
+        761,
+        253,
+        229
+      ],
+      "pivot": [
+        121.5,
+        227
+      ],
+      "hair_top": 6,
+      "body_height": 221,
+      "used": [
+        2,
+        2,
+        253,
+        227
+      ],
+      "scale": 0.9480812641083521
+    },
+    {
+      "source_file": "thunder-run-diagonal-corrected-source.png",
+      "rect": [
+        1279,
+        766,
+        254,
+        226
+      ],
+      "pivot": [
+        129.0,
+        224
+      ],
+      "hair_top": 5,
+      "body_height": 219,
+      "used": [
+        0,
+        2,
+        252,
+        224
+      ],
+      "scale": 0.9480812641083521
+    }
+  ],
+  "thunder-states-diagonal": [
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        8,
+        30,
+        279,
+        222
+      ],
+      "pivot": [
+        183.0,
+        220
+      ],
+      "hair_top": 5,
+      "body_height": 215,
+      "used": [
+        2,
+        2,
+        279,
+        220
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        283,
+        45,
+        273,
+        212
+      ],
+      "pivot": [
+        127.0,
+        210
+      ],
+      "hair_top": 3,
+      "body_height": 207,
+      "used": [
+        0,
+        0,
+        273,
+        210
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        537,
+        16,
+        242,
+        227
+      ],
+      "pivot": [
+        183.0,
+        225
+      ],
+      "hair_top": 5,
+      "body_height": 220,
+      "used": [
+        0,
+        2,
+        240,
+        225
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        795,
+        36,
+        216,
+        213
+      ],
+      "pivot": [
+        162.0,
+        211
+      ],
+      "hair_top": 4,
+      "body_height": 207,
+      "used": [
+        2,
+        2,
+        214,
+        211
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        1043,
+        87,
+        238,
+        164
+      ],
+      "pivot": [
+        171.0,
+        162
+      ],
+      "hair_top": 4,
+      "body_height": 158,
+      "used": [
+        2,
+        2,
+        236,
+        162
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        1293,
+        116,
+        224,
+        136
+      ],
+      "pivot": [
+        133.0,
+        134
+      ],
+      "hair_top": 2,
+      "body_height": 132,
+      "used": [
+        2,
+        2,
+        222,
+        134
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        8,
+        279,
+        252,
+        226
+      ],
+      "pivot": [
+        98.0,
+        224
+      ],
+      "hair_top": 5,
+      "body_height": 219,
+      "used": [
+        2,
+        2,
+        250,
+        224
+      ],
+      "scale": 0.958904109589041
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        269,
+        294,
+        264,
+        210
+      ],
+      "pivot": [
+        78.0,
+        208
+      ],
+      "hair_top": 5,
+      "body_height": 203,
+      "used": [
+        2,
+        2,
+        262,
+        208
+      ],
+      "scale": 0.958904109589041
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        542,
+        261,
+        242,
+        232
+      ],
+      "pivot": [
+        201.0,
+        230
+      ],
+      "hair_top": 3,
+      "body_height": 227,
+      "used": [
+        2,
+        2,
+        240,
+        230
+      ],
+      "scale": 0.958904109589041
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        794,
+        275,
+        247,
+        230
+      ],
+      "pivot": [
+        201.5,
+        228
+      ],
+      "hair_top": 3,
+      "body_height": 225,
+      "used": [
+        2,
+        2,
+        245,
+        228
+      ],
+      "scale": 0.958904109589041
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        1043,
+        333,
+        264,
+        172
+      ],
+      "pivot": [
+        156.0,
+        170
+      ],
+      "hair_top": 7,
+      "body_height": 163,
+      "used": [
+        2,
+        2,
+        264,
+        170
+      ],
+      "scale": 0.958904109589041
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        1300,
+        360,
+        221,
+        143
+      ],
+      "pivot": [
+        147.0,
+        141
+      ],
+      "hair_top": 5,
+      "body_height": 136,
+      "used": [
+        0,
+        2,
+        219,
+        141
+      ],
+      "scale": 0.958904109589041
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        22,
+        529,
+        266,
+        221
+      ],
+      "pivot": [
+        137.0,
+        219
+      ],
+      "hair_top": 4,
+      "body_height": 215,
+      "used": [
+        2,
+        2,
+        264,
+        219
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        300,
+        538,
+        248,
+        210
+      ],
+      "pivot": [
+        97.0,
+        208
+      ],
+      "hair_top": 5,
+      "body_height": 203,
+      "used": [
+        2,
+        2,
+        246,
+        208
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        552,
+        515,
+        250,
+        230
+      ],
+      "pivot": [
+        45.0,
+        228
+      ],
+      "hair_top": 6,
+      "body_height": 222,
+      "used": [
+        2,
+        2,
+        248,
+        228
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        801,
+        535,
+        260,
+        226
+      ],
+      "pivot": [
+        36.0,
+        224
+      ],
+      "hair_top": 7,
+      "body_height": 217,
+      "used": [
+        2,
+        2,
+        258,
+        224
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        1060,
+        575,
+        265,
+        173
+      ],
+      "pivot": [
+        86.0,
+        171
+      ],
+      "hair_top": 11,
+      "body_height": 160,
+      "used": [
+        2,
+        2,
+        263,
+        171
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        1331,
+        614,
+        203,
+        142
+      ],
+      "pivot": [
+        56.0,
+        140
+      ],
+      "hair_top": 7,
+      "body_height": 133,
+      "used": [
+        2,
+        2,
+        201,
+        140
+      ],
+      "scale": 0.9767441860465116
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        30,
+        770,
+        261,
+        222
+      ],
+      "pivot": [
+        155.0,
+        220
+      ],
+      "hair_top": 4,
+      "body_height": 216,
+      "used": [
+        2,
+        2,
+        259,
+        220
+      ],
+      "scale": 0.9722222222222222
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        302,
+        779,
+        249,
+        212
+      ],
+      "pivot": [
+        91.0,
+        210
+      ],
+      "hair_top": 2,
+      "body_height": 208,
+      "used": [
+        2,
+        2,
+        249,
+        210
+      ],
+      "scale": 0.9722222222222222
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        547,
+        758,
+        246,
+        221
+      ],
+      "pivot": [
+        55.0,
+        219
+      ],
+      "hair_top": 4,
+      "body_height": 215,
+      "used": [
+        0,
+        2,
+        244,
+        219
+      ],
+      "scale": 0.9722222222222222
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        802,
+        769,
+        231,
+        221
+      ],
+      "pivot": [
+        71.0,
+        219
+      ],
+      "hair_top": 3,
+      "body_height": 216,
+      "used": [
+        2,
+        2,
+        229,
+        219
+      ],
+      "scale": 0.9722222222222222
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        1052,
+        813,
+        257,
+        174
+      ],
+      "pivot": [
+        53.0,
+        172
+      ],
+      "hair_top": 12,
+      "body_height": 160,
+      "used": [
+        2,
+        2,
+        257,
+        172
+      ],
+      "scale": 0.9722222222222222
+    },
+    {
+      "source_file": "thunder-states-diagonal-source.png",
+      "rect": [
+        1303,
+        844,
+        229,
+        148
+      ],
+      "pivot": [
+        94.0,
+        146
+      ],
+      "hair_top": 5,
+      "body_height": 141,
+      "used": [
+        0,
+        2,
+        227,
+        146
+      ],
+      "scale": 0.9722222222222222
+    }
+  ],
+  "wind-attack-1-diagonal": [
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        71,
+        25,
+        185,
+        243
+      ],
+      "pivot": [
+        113.0,
+        241
+      ],
+      "hair_top": 5,
+      "body_height": 236,
+      "used": [
+        2,
+        2,
+        183,
+        241
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        308,
+        15,
+        176,
+        253
+      ],
+      "pivot": [
+        129.0,
+        251
+      ],
+      "hair_top": 2,
+      "body_height": 249,
+      "used": [
+        2,
+        2,
+        174,
+        253
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        535,
+        35,
+        214,
+        239
+      ],
+      "pivot": [
+        143.0,
+        237
+      ],
+      "hair_top": 28,
+      "body_height": 209,
+      "used": [
+        2,
+        2,
+        212,
+        237
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        751,
+        68,
+        239,
+        225
+      ],
+      "pivot": [
+        209.0,
+        190
+      ],
+      "hair_top": 12,
+      "body_height": 178,
+      "used": [
+        2,
+        2,
+        237,
+        223
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        1068,
+        74,
+        196,
+        194
+      ],
+      "pivot": [
+        19.0,
+        192
+      ],
+      "hair_top": 5,
+      "body_height": 187,
+      "used": [
+        2,
+        2,
+        194,
+        192
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        1332,
+        45,
+        186,
+        223
+      ],
+      "pivot": [
+        36.0,
+        221
+      ],
+      "hair_top": 3,
+      "body_height": 218,
+      "used": [
+        2,
+        2,
+        184,
+        221
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        66,
+        278,
+        176,
+        237
+      ],
+      "pivot": [
+        40.0,
+        235
+      ],
+      "hair_top": 5,
+      "body_height": 230,
+      "used": [
+        2,
+        2,
+        174,
+        235
+      ],
+      "scale": 1.0268948655256724
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        302,
+        261,
+        169,
+        259
+      ],
+      "pivot": [
+        45.0,
+        257
+      ],
+      "hair_top": 2,
+      "body_height": 255,
+      "used": [
+        2,
+        0,
+        167,
+        257
+      ],
+      "scale": 1.0268948655256724
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        552,
+        298,
+        222,
+        223
+      ],
+      "pivot": [
+        119.0,
+        221
+      ],
+      "hair_top": 29,
+      "body_height": 192,
+      "used": [
+        2,
+        2,
+        220,
+        221
+      ],
+      "scale": 1.0268948655256724
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        786,
+        319,
+        272,
+        207
+      ],
+      "pivot": [
+        166.0,
+        205
+      ],
+      "hair_top": 6,
+      "body_height": 199,
+      "used": [
+        2,
+        2,
+        270,
+        205
+      ],
+      "scale": 1.0268948655256724
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        1065,
+        320,
+        251,
+        208
+      ],
+      "pivot": [
+        126.0,
+        206
+      ],
+      "hair_top": 6,
+      "body_height": 200,
+      "used": [
+        2,
+        2,
+        249,
+        206
+      ],
+      "scale": 1.0268948655256724
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        1358,
+        302,
+        161,
+        216
+      ],
+      "pivot": [
+        53.0,
+        214
+      ],
+      "hair_top": 5,
+      "body_height": 209,
+      "used": [
+        2,
+        2,
+        159,
+        214
+      ],
+      "scale": 1.0268948655256724
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        41,
+        536,
+        170,
+        229
+      ],
+      "pivot": [
+        124.0,
+        227
+      ],
+      "hair_top": 3,
+      "body_height": 224,
+      "used": [
+        2,
+        2,
+        168,
+        227
+      ],
+      "scale": 0.963302752293578
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        307,
+        519,
+        161,
+        251
+      ],
+      "pivot": [
+        124.0,
+        249
+      ],
+      "hair_top": 26,
+      "body_height": 223,
+      "used": [
+        2,
+        2,
+        159,
+        249
+      ],
+      "scale": 0.963302752293578
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        539,
+        543,
+        252,
+        222
+      ],
+      "pivot": [
+        146.0,
+        220
+      ],
+      "hair_top": 5,
+      "body_height": 215,
+      "used": [
+        2,
+        2,
+        250,
+        220
+      ],
+      "scale": 0.963302752293578
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        795,
+        557,
+        279,
+        212
+      ],
+      "pivot": [
+        169.0,
+        210
+      ],
+      "hair_top": 4,
+      "body_height": 206,
+      "used": [
+        2,
+        2,
+        279,
+        210
+      ],
+      "scale": 0.963302752293578
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        1066,
+        549,
+        240,
+        219
+      ],
+      "pivot": [
+        138.0,
+        217
+      ],
+      "hair_top": 8,
+      "body_height": 209,
+      "used": [
+        0,
+        2,
+        238,
+        217
+      ],
+      "scale": 0.963302752293578
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        1304,
+        542,
+        217,
+        230
+      ],
+      "pivot": [
+        133.0,
+        228
+      ],
+      "hair_top": 7,
+      "body_height": 221,
+      "used": [
+        2,
+        2,
+        215,
+        228
+      ],
+      "scale": 0.963302752293578
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        32,
+        770,
+        178,
+        240
+      ],
+      "pivot": [
+        70.0,
+        238
+      ],
+      "hair_top": 2,
+      "body_height": 236,
+      "used": [
+        2,
+        2,
+        176,
+        238
+      ],
+      "scale": 0.9929078014184397
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        275,
+        768,
+        179,
+        240
+      ],
+      "pivot": [
+        53.0,
+        238
+      ],
+      "hair_top": 2,
+      "body_height": 236,
+      "used": [
+        2,
+        2,
+        177,
+        238
+      ],
+      "scale": 0.9929078014184397
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        530,
+        772,
+        240,
+        233
+      ],
+      "pivot": [
+        31.0,
+        231
+      ],
+      "hair_top": 24,
+      "body_height": 207,
+      "used": [
+        2,
+        2,
+        238,
+        231
+      ],
+      "scale": 0.9929078014184397
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        787,
+        803,
+        266,
+        208
+      ],
+      "pivot": [
+        30.0,
+        206
+      ],
+      "hair_top": 2,
+      "body_height": 204,
+      "used": [
+        2,
+        2,
+        266,
+        206
+      ],
+      "scale": 0.9929078014184397
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        1048,
+        804,
+        243,
+        198
+      ],
+      "pivot": [
+        44.0,
+        196
+      ],
+      "hair_top": 3,
+      "body_height": 193,
+      "used": [
+        2,
+        2,
+        243,
+        196
+      ],
+      "scale": 0.9929078014184397
+    },
+    {
+      "source_file": "wind-attack-1-diagonal-source.png",
+      "rect": [
+        1288,
+        785,
+        191,
+        221
+      ],
+      "pivot": [
+        66.0,
+        219
+      ],
+      "hair_top": 3,
+      "body_height": 216,
+      "used": [
+        0,
+        2,
+        189,
+        219
+      ],
+      "scale": 0.9929078014184397
+    }
+  ],
+  "wind-attack-2-diagonal": [
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        66,
+        25,
+        172,
+        249
+      ],
+      "pivot": [
+        111.0,
+        247
+      ],
+      "hair_top": 3,
+      "body_height": 244,
+      "used": [
+        2,
+        2,
+        170,
+        247
+      ],
+      "scale": 0.9480812641083521
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        289,
+        14,
+        207,
+        257
+      ],
+      "pivot": [
+        147.0,
+        257
+      ],
+      "hair_top": 2,
+      "body_height": 255,
+      "used": [
+        2,
+        2,
+        205,
+        257
+      ],
+      "scale": 0.9480812641083521
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        555,
+        50,
+        206,
+        225
+      ],
+      "pivot": [
+        40.0,
+        223
+      ],
+      "hair_top": 10,
+      "body_height": 213,
+      "used": [
+        2,
+        2,
+        206,
+        223
+      ],
+      "scale": 0.9480812641083521
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        736,
+        54,
+        301,
+        227
+      ],
+      "pivot": [
+        146.0,
+        225
+      ],
+      "hair_top": 5,
+      "body_height": 220,
+      "used": [
+        0,
+        2,
+        299,
+        225
+      ],
+      "scale": 0.9480812641083521
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        1038,
+        52,
+        273,
+        230
+      ],
+      "pivot": [
+        44.0,
+        228
+      ],
+      "hair_top": 5,
+      "body_height": 223,
+      "used": [
+        2,
+        2,
+        273,
+        228
+      ],
+      "scale": 0.9480812641083521
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        1304,
+        58,
+        218,
+        215
+      ],
+      "pivot": [
+        39.0,
+        213
+      ],
+      "hair_top": 2,
+      "body_height": 211,
+      "used": [
+        0,
+        2,
+        216,
+        213
+      ],
+      "scale": 0.9480812641083521
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        71,
+        291,
+        165,
+        231
+      ],
+      "pivot": [
+        36.0,
+        229
+      ],
+      "hair_top": 4,
+      "body_height": 225,
+      "used": [
+        2,
+        2,
+        163,
+        229
+      ],
+      "scale": 0.9459459459459459
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        307,
+        264,
+        177,
+        262
+      ],
+      "pivot": [
+        47.0,
+        260
+      ],
+      "hair_top": 0,
+      "body_height": 260,
+      "used": [
+        2,
+        0,
+        175,
+        260
+      ],
+      "scale": 0.9459459459459459
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        510,
+        297,
+        197,
+        237
+      ],
+      "pivot": [
+        60.0,
+        235
+      ],
+      "hair_top": 3,
+      "body_height": 232,
+      "used": [
+        2,
+        2,
+        195,
+        235
+      ],
+      "scale": 0.9459459459459459
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        741,
+        301,
+        279,
+        222
+      ],
+      "pivot": [
+        152.0,
+        220
+      ],
+      "hair_top": 3,
+      "body_height": 217,
+      "used": [
+        2,
+        2,
+        277,
+        220
+      ],
+      "scale": 0.9459459459459459
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        1024,
+        300,
+        282,
+        224
+      ],
+      "pivot": [
+        122.0,
+        222
+      ],
+      "hair_top": 6,
+      "body_height": 216,
+      "used": [
+        2,
+        2,
+        280,
+        222
+      ],
+      "scale": 0.9459459459459459
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        1310,
+        303,
+        208,
+        224
+      ],
+      "pivot": [
+        90.0,
+        222
+      ],
+      "hair_top": 3,
+      "body_height": 219,
+      "used": [
+        2,
+        2,
+        206,
+        222
+      ],
+      "scale": 0.9459459459459459
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        22,
+        539,
+        175,
+        235
+      ],
+      "pivot": [
+        132.0,
+        233
+      ],
+      "hair_top": 2,
+      "body_height": 231,
+      "used": [
+        2,
+        2,
+        173,
+        233
+      ],
+      "scale": 0.958904109589041
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        279,
+        534,
+        176,
+        240
+      ],
+      "pivot": [
+        74.0,
+        238
+      ],
+      "hair_top": 2,
+      "body_height": 236,
+      "used": [
+        2,
+        2,
+        174,
+        238
+      ],
+      "scale": 0.958904109589041
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        524,
+        551,
+        253,
+        225
+      ],
+      "pivot": [
+        43.0,
+        223
+      ],
+      "hair_top": 3,
+      "body_height": 220,
+      "used": [
+        2,
+        2,
+        251,
+        223
+      ],
+      "scale": 0.958904109589041
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        788,
+        554,
+        269,
+        224
+      ],
+      "pivot": [
+        28.0,
+        222
+      ],
+      "hair_top": 4,
+      "body_height": 218,
+      "used": [
+        2,
+        2,
+        269,
+        222
+      ],
+      "scale": 0.958904109589041
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        1052,
+        554,
+        276,
+        219
+      ],
+      "pivot": [
+        34.0,
+        217
+      ],
+      "hair_top": 4,
+      "body_height": 213,
+      "used": [
+        0,
+        2,
+        276,
+        217
+      ],
+      "scale": 0.958904109589041
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        1308,
+        554,
+        215,
+        221
+      ],
+      "pivot": [
+        131.0,
+        219
+      ],
+      "hair_top": 3,
+      "body_height": 216,
+      "used": [
+        0,
+        2,
+        213,
+        219
+      ],
+      "scale": 0.958904109589041
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        37,
+        784,
+        168,
+        227
+      ],
+      "pivot": [
+        131.0,
+        225
+      ],
+      "hair_top": 5,
+      "body_height": 220,
+      "used": [
+        2,
+        2,
+        166,
+        225
+      ],
+      "scale": 0.9905660377358491
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        295,
+        777,
+        209,
+        231
+      ],
+      "pivot": [
+        148.0,
+        229
+      ],
+      "hair_top": 2,
+      "body_height": 227,
+      "used": [
+        2,
+        2,
+        207,
+        229
+      ],
+      "scale": 0.9905660377358491
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        545,
+        790,
+        188,
+        213
+      ],
+      "pivot": [
+        40.0,
+        211
+      ],
+      "hair_top": 3,
+      "body_height": 208,
+      "used": [
+        2,
+        2,
+        186,
+        211
+      ],
+      "scale": 0.9905660377358491
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        765,
+        793,
+        290,
+        219
+      ],
+      "pivot": [
+        133.0,
+        217
+      ],
+      "hair_top": 3,
+      "body_height": 214,
+      "used": [
+        2,
+        2,
+        290,
+        217
+      ],
+      "scale": 0.9905660377358491
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        1042,
+        790,
+        267,
+        218
+      ],
+      "pivot": [
+        29.0,
+        216
+      ],
+      "hair_top": 6,
+      "body_height": 210,
+      "used": [
+        0,
+        2,
+        267,
+        216
+      ],
+      "scale": 0.9905660377358491
+    },
+    {
+      "source_file": "wind-attack-2-diagonal-source.png",
+      "rect": [
+        1302,
+        798,
+        205,
+        209
+      ],
+      "pivot": [
+        34.0,
+        207
+      ],
+      "hair_top": 2,
+      "body_height": 205,
+      "used": [
+        0,
+        2,
+        203,
+        207
+      ],
+      "scale": 0.9905660377358491
+    }
+  ],
+  "wind-attack-3-diagonal": [
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        77,
+        35,
+        185,
+        232
+      ],
+      "pivot": [
+        108.0,
+        230
+      ],
+      "hair_top": 2,
+      "body_height": 228,
+      "used": [
+        2,
+        2,
+        183,
+        230
+      ],
+      "scale": 0.9567198177676538
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        317,
+        37,
+        196,
+        229
+      ],
+      "pivot": [
+        116.0,
+        227
+      ],
+      "hair_top": 3,
+      "body_height": 224,
+      "used": [
+        2,
+        2,
+        194,
+        227
+      ],
+      "scale": 0.9567198177676538
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        551,
+        7,
+        192,
+        255
+      ],
+      "pivot": [
+        44.0,
+        253
+      ],
+      "hair_top": 2,
+      "body_height": 251,
+      "used": [
+        2,
+        2,
+        190,
+        253
+      ],
+      "scale": 0.9567198177676538
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        760,
+        66,
+        251,
+        207
+      ],
+      "pivot": [
+        106.0,
+        201
+      ],
+      "hair_top": 4,
+      "body_height": 197,
+      "used": [
+        2,
+        2,
+        249,
+        205
+      ],
+      "scale": 0.9567198177676538
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        1018,
+        81,
+        267,
+        185
+      ],
+      "pivot": [
+        115.0,
+        183
+      ],
+      "hair_top": 6,
+      "body_height": 177,
+      "used": [
+        2,
+        2,
+        265,
+        183
+      ],
+      "scale": 0.9567198177676538
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        1296,
+        40,
+        225,
+        223
+      ],
+      "pivot": [
+        93.0,
+        221
+      ],
+      "hair_top": 6,
+      "body_height": 215,
+      "used": [
+        2,
+        2,
+        223,
+        221
+      ],
+      "scale": 0.9567198177676538
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        78,
+        287,
+        176,
+        227
+      ],
+      "pivot": [
+        39.0,
+        225
+      ],
+      "hair_top": 3,
+      "body_height": 222,
+      "used": [
+        2,
+        2,
+        174,
+        225
+      ],
+      "scale": 0.9813084112149533
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        329,
+        285,
+        197,
+        231
+      ],
+      "pivot": [
+        36.0,
+        229
+      ],
+      "hair_top": 5,
+      "body_height": 224,
+      "used": [
+        2,
+        2,
+        195,
+        229
+      ],
+      "scale": 0.9813084112149533
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        563,
+        267,
+        194,
+        244
+      ],
+      "pivot": [
+        43.0,
+        242
+      ],
+      "hair_top": 2,
+      "body_height": 240,
+      "used": [
+        2,
+        2,
+        192,
+        242
+      ],
+      "scale": 0.9813084112149533
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        761,
+        278,
+        262,
+        243
+      ],
+      "pivot": [
+        114.0,
+        241
+      ],
+      "hair_top": 38,
+      "body_height": 203,
+      "used": [
+        2,
+        2,
+        260,
+        241
+      ],
+      "scale": 0.9813084112149533
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        1022,
+        328,
+        284,
+        191
+      ],
+      "pivot": [
+        137.5,
+        189
+      ],
+      "hair_top": 5,
+      "body_height": 184,
+      "used": [
+        2,
+        2,
+        282,
+        189
+      ],
+      "scale": 0.9813084112149533
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        1304,
+        307,
+        222,
+        213
+      ],
+      "pivot": [
+        99.0,
+        211
+      ],
+      "hair_top": 5,
+      "body_height": 206,
+      "used": [
+        2,
+        2,
+        220,
+        211
+      ],
+      "scale": 0.9813084112149533
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        52,
+        532,
+        174,
+        238
+      ],
+      "pivot": [
+        125.0,
+        236
+      ],
+      "hair_top": 5,
+      "body_height": 231,
+      "used": [
+        2,
+        2,
+        172,
+        236
+      ],
+      "scale": 0.9655172413793104
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        285,
+        532,
+        190,
+        235
+      ],
+      "pivot": [
+        151.0,
+        233
+      ],
+      "hair_top": 5,
+      "body_height": 228,
+      "used": [
+        2,
+        2,
+        188,
+        233
+      ],
+      "scale": 0.9655172413793104
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        528,
+        513,
+        207,
+        253
+      ],
+      "pivot": [
+        57.0,
+        251
+      ],
+      "hair_top": 2,
+      "body_height": 249,
+      "used": [
+        2,
+        2,
+        205,
+        253
+      ],
+      "scale": 0.9655172413793104
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        785,
+        529,
+        284,
+        239
+      ],
+      "pivot": [
+        138.0,
+        237
+      ],
+      "hair_top": 32,
+      "body_height": 205,
+      "used": [
+        2,
+        2,
+        284,
+        237
+      ],
+      "scale": 0.9655172413793104
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        1051,
+        573,
+        266,
+        196
+      ],
+      "pivot": [
+        142.0,
+        194
+      ],
+      "hair_top": 4,
+      "body_height": 190,
+      "used": [
+        2,
+        2,
+        264,
+        194
+      ],
+      "scale": 0.9655172413793104
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        1323,
+        558,
+        212,
+        211
+      ],
+      "pivot": [
+        126.0,
+        209
+      ],
+      "hair_top": 2,
+      "body_height": 207,
+      "used": [
+        2,
+        2,
+        210,
+        209
+      ],
+      "scale": 0.9655172413793104
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        37,
+        782,
+        167,
+        220
+      ],
+      "pivot": [
+        120.0,
+        218
+      ],
+      "hair_top": 5,
+      "body_height": 213,
+      "used": [
+        2,
+        2,
+        165,
+        218
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        268,
+        781,
+        186,
+        220
+      ],
+      "pivot": [
+        141.0,
+        218
+      ],
+      "hair_top": 4,
+      "body_height": 214,
+      "used": [
+        2,
+        2,
+        184,
+        218
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        525,
+        752,
+        202,
+        247
+      ],
+      "pivot": [
+        160.0,
+        245
+      ],
+      "hair_top": 0,
+      "body_height": 245,
+      "used": [
+        2,
+        0,
+        200,
+        245
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        774,
+        798,
+        250,
+        218
+      ],
+      "pivot": [
+        40.0,
+        215
+      ],
+      "hair_top": 4,
+      "body_height": 211,
+      "used": [
+        2,
+        2,
+        248,
+        216
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        1039,
+        816,
+        251,
+        193
+      ],
+      "pivot": [
+        133.0,
+        181
+      ],
+      "hair_top": 6,
+      "body_height": 175,
+      "used": [
+        2,
+        2,
+        249,
+        191
+      ],
+      "scale": 0.9836065573770492
+    },
+    {
+      "source_file": "wind-attack-3-diagonal-source.png",
+      "rect": [
+        1293,
+        780,
+        228,
+        223
+      ],
+      "pivot": [
+        135.0,
+        221
+      ],
+      "hair_top": 7,
+      "body_height": 214,
+      "used": [
+        2,
+        2,
+        226,
+        221
+      ],
+      "scale": 0.9836065573770492
+    }
+  ],
+  "wind-run-diagonal": [
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        67,
+        26,
+        192,
+        230
+      ],
+      "pivot": [
+        137.0,
+        228
+      ],
+      "hair_top": 3,
+      "body_height": 225,
+      "used": [
+        2,
+        2,
+        190,
+        228
+      ],
+      "scale": 0.9292035398230089
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        333,
+        21,
+        175,
+        235
+      ],
+      "pivot": [
+        117.0,
+        233
+      ],
+      "hair_top": 6,
+      "body_height": 227,
+      "used": [
+        2,
+        2,
+        173,
+        233
+      ],
+      "scale": 0.9292035398230089
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        571,
+        28,
+        190,
+        227
+      ],
+      "pivot": [
+        139.0,
+        225
+      ],
+      "hair_top": 4,
+      "body_height": 221,
+      "used": [
+        2,
+        2,
+        188,
+        225
+      ],
+      "scale": 0.9292035398230089
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        803,
+        26,
+        203,
+        232
+      ],
+      "pivot": [
+        136.0,
+        230
+      ],
+      "hair_top": 2,
+      "body_height": 228,
+      "used": [
+        2,
+        2,
+        201,
+        230
+      ],
+      "scale": 0.9292035398230089
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        1039,
+        21,
+        220,
+        239
+      ],
+      "pivot": [
+        83.0,
+        237
+      ],
+      "hair_top": 3,
+      "body_height": 234,
+      "used": [
+        2,
+        2,
+        218,
+        237
+      ],
+      "scale": 0.9292035398230089
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        1313,
+        45,
+        194,
+        214
+      ],
+      "pivot": [
+        93.0,
+        212
+      ],
+      "hair_top": 2,
+      "body_height": 210,
+      "used": [
+        2,
+        2,
+        192,
+        212
+      ],
+      "scale": 0.9292035398230089
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        68,
+        264,
+        201,
+        247
+      ],
+      "pivot": [
+        133.0,
+        245
+      ],
+      "hair_top": 5,
+      "body_height": 240,
+      "used": [
+        2,
+        2,
+        199,
+        245
+      ],
+      "scale": 0.8993576017130621
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        322,
+        269,
+        188,
+        245
+      ],
+      "pivot": [
+        134.0,
+        243
+      ],
+      "hair_top": 3,
+      "body_height": 240,
+      "used": [
+        2,
+        2,
+        186,
+        243
+      ],
+      "scale": 0.8993576017130621
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        565,
+        274,
+        197,
+        238
+      ],
+      "pivot": [
+        154.0,
+        236
+      ],
+      "hair_top": 4,
+      "body_height": 232,
+      "used": [
+        2,
+        2,
+        195,
+        236
+      ],
+      "scale": 0.8993576017130621
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        815,
+        275,
+        199,
+        238
+      ],
+      "pivot": [
+        145.0,
+        236
+      ],
+      "hair_top": 6,
+      "body_height": 230,
+      "used": [
+        2,
+        2,
+        197,
+        236
+      ],
+      "scale": 0.8993576017130621
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        1053,
+        273,
+        204,
+        241
+      ],
+      "pivot": [
+        147.0,
+        239
+      ],
+      "hair_top": 4,
+      "body_height": 235,
+      "used": [
+        2,
+        2,
+        202,
+        239
+      ],
+      "scale": 0.8993576017130621
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        1318,
+        278,
+        179,
+        219
+      ],
+      "pivot": [
+        132.0,
+        217
+      ],
+      "hair_top": 3,
+      "body_height": 214,
+      "used": [
+        2,
+        2,
+        177,
+        217
+      ],
+      "scale": 0.8993576017130621
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        51,
+        522,
+        202,
+        248
+      ],
+      "pivot": [
+        53.0,
+        246
+      ],
+      "hair_top": 4,
+      "body_height": 242,
+      "used": [
+        2,
+        2,
+        200,
+        246
+      ],
+      "scale": 0.8786610878661087
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        305,
+        523,
+        198,
+        231
+      ],
+      "pivot": [
+        136.0,
+        229
+      ],
+      "hair_top": 3,
+      "body_height": 226,
+      "used": [
+        2,
+        2,
+        196,
+        229
+      ],
+      "scale": 0.8786610878661087
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        546,
+        525,
+        211,
+        245
+      ],
+      "pivot": [
+        60.0,
+        243
+      ],
+      "hair_top": 5,
+      "body_height": 238,
+      "used": [
+        2,
+        2,
+        209,
+        243
+      ],
+      "scale": 0.8786610878661087
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        804,
+        521,
+        195,
+        250
+      ],
+      "pivot": [
+        43.0,
+        248
+      ],
+      "hair_top": 4,
+      "body_height": 244,
+      "used": [
+        2,
+        2,
+        193,
+        248
+      ],
+      "scale": 0.8786610878661087
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        1045,
+        523,
+        211,
+        247
+      ],
+      "pivot": [
+        53.0,
+        245
+      ],
+      "hair_top": 5,
+      "body_height": 240,
+      "used": [
+        2,
+        2,
+        209,
+        245
+      ],
+      "scale": 0.8786610878661087
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        1308,
+        533,
+        194,
+        212
+      ],
+      "pivot": [
+        92.0,
+        210
+      ],
+      "hair_top": 5,
+      "body_height": 205,
+      "used": [
+        2,
+        2,
+        192,
+        210
+      ],
+      "scale": 0.8786610878661087
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        45,
+        773,
+        189,
+        232
+      ],
+      "pivot": [
+        130.0,
+        230
+      ],
+      "hair_top": 5,
+      "body_height": 225,
+      "used": [
+        2,
+        2,
+        187,
+        230
+      ],
+      "scale": 0.9375
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        293,
+        770,
+        195,
+        230
+      ],
+      "pivot": [
+        64.0,
+        228
+      ],
+      "hair_top": 6,
+      "body_height": 222,
+      "used": [
+        2,
+        2,
+        193,
+        228
+      ],
+      "scale": 0.9375
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        539,
+        776,
+        197,
+        228
+      ],
+      "pivot": [
+        89.0,
+        226
+      ],
+      "hair_top": 3,
+      "body_height": 223,
+      "used": [
+        2,
+        2,
+        195,
+        226
+      ],
+      "scale": 0.9375
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        791,
+        775,
+        206,
+        231
+      ],
+      "pivot": [
+        77.0,
+        229
+      ],
+      "hair_top": 4,
+      "body_height": 225,
+      "used": [
+        2,
+        2,
+        204,
+        229
+      ],
+      "scale": 0.9375
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        1041,
+        778,
+        199,
+        223
+      ],
+      "pivot": [
+        111.0,
+        221
+      ],
+      "hair_top": 5,
+      "body_height": 216,
+      "used": [
+        2,
+        2,
+        197,
+        221
+      ],
+      "scale": 0.9375
+    },
+    {
+      "source_file": "wind-run-diagonal-source.png",
+      "rect": [
+        1290,
+        771,
+        198,
+        232
+      ],
+      "pivot": [
+        67.0,
+        230
+      ],
+      "hair_top": 4,
+      "body_height": 226,
+      "used": [
+        2,
+        2,
+        196,
+        230
+      ],
+      "scale": 0.9375
+    }
+  ],
+  "wind-states-diagonal": [
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        78,
+        15,
+        169,
+        258
+      ],
+      "pivot": [
+        99.0,
+        256
+      ],
+      "hair_top": 2,
+      "body_height": 254,
+      "used": [
+        2,
+        2,
+        167,
+        256
+      ],
+      "scale": 0.8267716535433071
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        333,
+        32,
+        180,
+        236
+      ],
+      "pivot": [
+        46.0,
+        234
+      ],
+      "hair_top": 7,
+      "body_height": 227,
+      "used": [
+        2,
+        2,
+        178,
+        234
+      ],
+      "scale": 0.8267716535433071
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        567,
+        10,
+        183,
+        251
+      ],
+      "pivot": [
+        117.0,
+        249
+      ],
+      "hair_top": 3,
+      "body_height": 246,
+      "used": [
+        2,
+        2,
+        181,
+        249
+      ],
+      "scale": 0.8267716535433071
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        779,
+        22,
+        221,
+        248
+      ],
+      "pivot": [
+        133.0,
+        246
+      ],
+      "hair_top": 4,
+      "body_height": 242,
+      "used": [
+        2,
+        2,
+        219,
+        246
+      ],
+      "scale": 0.8267716535433071
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        1037,
+        80,
+        226,
+        202
+      ],
+      "pivot": [
+        75.0,
+        200
+      ],
+      "hair_top": 8,
+      "body_height": 192,
+      "used": [
+        2,
+        2,
+        224,
+        200
+      ],
+      "scale": 0.8267716535433071
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        1308,
+        119,
+        173,
+        157
+      ],
+      "pivot": [
+        97.0,
+        155
+      ],
+      "hair_top": 6,
+      "body_height": 149,
+      "used": [
+        2,
+        2,
+        171,
+        155
+      ],
+      "scale": 0.8267716535433071
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        91,
+        274,
+        155,
+        250
+      ],
+      "pivot": [
+        38.0,
+        248
+      ],
+      "hair_top": 5,
+      "body_height": 243,
+      "used": [
+        2,
+        2,
+        153,
+        248
+      ],
+      "scale": 0.8641975308641975
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        305,
+        282,
+        198,
+        238
+      ],
+      "pivot": [
+        70.0,
+        236
+      ],
+      "hair_top": 8,
+      "body_height": 228,
+      "used": [
+        2,
+        2,
+        196,
+        236
+      ],
+      "scale": 0.8641975308641975
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        571,
+        266,
+        195,
+        249
+      ],
+      "pivot": [
+        134.0,
+        247
+      ],
+      "hair_top": 6,
+      "body_height": 241,
+      "used": [
+        2,
+        2,
+        193,
+        247
+      ],
+      "scale": 0.8641975308641975
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        794,
+        280,
+        202,
+        243
+      ],
+      "pivot": [
+        133.0,
+        241
+      ],
+      "hair_top": 4,
+      "body_height": 237,
+      "used": [
+        2,
+        2,
+        200,
+        241
+      ],
+      "scale": 0.8641975308641975
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        1061,
+        335,
+        204,
+        185
+      ],
+      "pivot": [
+        120.0,
+        183
+      ],
+      "hair_top": 4,
+      "body_height": 179,
+      "used": [
+        2,
+        2,
+        202,
+        183
+      ],
+      "scale": 0.8641975308641975
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        1318,
+        376,
+        187,
+        149
+      ],
+      "pivot": [
+        94.0,
+        147
+      ],
+      "hair_top": 5,
+      "body_height": 142,
+      "used": [
+        2,
+        2,
+        185,
+        147
+      ],
+      "scale": 0.8641975308641975
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        41,
+        528,
+        166,
+        239
+      ],
+      "pivot": [
+        116.0,
+        237
+      ],
+      "hair_top": 4,
+      "body_height": 233,
+      "used": [
+        2,
+        2,
+        164,
+        237
+      ],
+      "scale": 0.9012875536480687
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        319,
+        527,
+        193,
+        243
+      ],
+      "pivot": [
+        114.0,
+        241
+      ],
+      "hair_top": 6,
+      "body_height": 235,
+      "used": [
+        2,
+        2,
+        191,
+        241
+      ],
+      "scale": 0.9012875536480687
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        554,
+        521,
+        198,
+        236
+      ],
+      "pivot": [
+        57.0,
+        234
+      ],
+      "hair_top": 3,
+      "body_height": 231,
+      "used": [
+        2,
+        2,
+        196,
+        234
+      ],
+      "scale": 0.9012875536480687
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        807,
+        527,
+        205,
+        240
+      ],
+      "pivot": [
+        57.0,
+        238
+      ],
+      "hair_top": 5,
+      "body_height": 233,
+      "used": [
+        2,
+        2,
+        203,
+        238
+      ],
+      "scale": 0.9012875536480687
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        1054,
+        568,
+        201,
+        199
+      ],
+      "pivot": [
+        141.0,
+        197
+      ],
+      "hair_top": 4,
+      "body_height": 193,
+      "used": [
+        2,
+        2,
+        200,
+        197
+      ],
+      "scale": 0.9012875536480687
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        1309,
+        610,
+        198,
+        160
+      ],
+      "pivot": [
+        96.0,
+        158
+      ],
+      "hair_top": 4,
+      "body_height": 154,
+      "used": [
+        2,
+        2,
+        196,
+        158
+      ],
+      "scale": 0.9012875536480687
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        36,
+        769,
+        169,
+        243
+      ],
+      "pivot": [
+        71.0,
+        241
+      ],
+      "hair_top": 2,
+      "body_height": 239,
+      "used": [
+        2,
+        2,
+        167,
+        241
+      ],
+      "scale": 0.8786610878661087
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        312,
+        778,
+        193,
+        235
+      ],
+      "pivot": [
+        69.0,
+        233
+      ],
+      "hair_top": 5,
+      "body_height": 228,
+      "used": [
+        2,
+        2,
+        191,
+        233
+      ],
+      "scale": 0.8786610878661087
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        547,
+        757,
+        179,
+        242
+      ],
+      "pivot": [
+        76.0,
+        240
+      ],
+      "hair_top": 5,
+      "body_height": 235,
+      "used": [
+        2,
+        2,
+        177,
+        240
+      ],
+      "scale": 0.8786610878661087
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        782,
+        769,
+        229,
+        239
+      ],
+      "pivot": [
+        107.0,
+        237
+      ],
+      "hair_top": 3,
+      "body_height": 234,
+      "used": [
+        2,
+        2,
+        227,
+        237
+      ],
+      "scale": 0.8786610878661087
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        1045,
+        812,
+        192,
+        193
+      ],
+      "pivot": [
+        118.0,
+        191
+      ],
+      "hair_top": 3,
+      "body_height": 188,
+      "used": [
+        2,
+        2,
+        190,
+        191
+      ],
+      "scale": 0.8786610878661087
+    },
+    {
+      "source_file": "wind-states-diagonal-source.png",
+      "rect": [
+        1335,
+        848,
+        172,
+        158
+      ],
+      "pivot": [
+        72.0,
+        156
+      ],
+      "hair_top": 3,
+      "body_height": 153,
+      "used": [
+        2,
+        2,
+        170,
+        156
+      ],
+      "scale": 0.8786610878661087
+    }
+  ]
+}
